@@ -8,6 +8,7 @@ SwiftUI Grid view layout with custom styles.
 
 ## Advantages
 - ZStack based layout
+- Supports all apple platforms
 - Custom Styles (AutoColumns, FixedColumns, SingleColumn)
 - SwiftUI code patterns (StyleStructs, EnvironmentValues)
 - Active development for production apps
@@ -72,8 +73,10 @@ Grid(0...100) { number in
 - watchOS 6+
 - Xcode 11.0+
 
+## Version 1.0.0
+Stable version will be released as soon as XCode 11 GM becomes available. We will strictly follow semantic versioning moving forward.
+
 ## Roadmap
-- tvOS Support
 - Items selection and rearranging
 - 'CSS Grid'-like features
 
