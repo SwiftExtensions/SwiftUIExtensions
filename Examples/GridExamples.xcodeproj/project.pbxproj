@@ -32,6 +32,13 @@
 		FA61E99B231351FD006A5B6B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA61E99A231351FD006A5B6B /* Assets.xcassets */; };
 		FA61E99E231351FD006A5B6B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA61E99D231351FD006A5B6B /* Preview Assets.xcassets */; };
 		FA61E9A1231351FD006A5B6B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA61E99F231351FD006A5B6B /* LaunchScreen.storyboard */; };
+		FA61E9A723135319006A5B6B /* Grid in Frameworks */ = {isa = PBXBuildFile; productRef = FA61E9A623135319006A5B6B /* Grid */; };
+		FA61E9A82313535F006A5B6B /* Color+Random.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA902160230B379D00BF9341 /* Color+Random.swift */; };
+		FA61E9A92313535F006A5B6B /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA902163230B389900BF9341 /* Card.swift */; };
+		FA61E9AA23135368006A5B6B /* AutoColumnsLayoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA902169230B39C800BF9341 /* AutoColumnsLayoutView.swift */; };
+		FA61E9AB23135368006A5B6B /* FixedColumnsLayoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA61E9512312FF0F006A5B6B /* FixedColumnsLayoutView.swift */; };
+		FA61E9AC23135368006A5B6B /* SingleColumnLayoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA61E94E2312FE6D006A5B6B /* SingleColumnLayoutView.swift */; };
+		FA61E9AD23135368006A5B6B /* PerformanceLayoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA90216C230B3EC100BF9341 /* PerformanceLayoutView.swift */; };
 		FA6ED893231090FF00651DD9 /* BuilderLayoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6ED892231090FF00651DD9 /* BuilderLayoutView.swift */; };
 		FA6ED894231090FF00651DD9 /* BuilderLayoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6ED892231090FF00651DD9 /* BuilderLayoutView.swift */; };
 		FA902115230B32EA00BF9341 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA902114230B32EA00BF9341 /* AppDelegate.swift */; };
@@ -160,6 +167,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA61E9A723135319006A5B6B /* Grid in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -399,6 +407,9 @@
 			dependencies = (
 			);
 			name = "GridExamples tvOS";
+			packageProductDependencies = (
+				FA61E9A623135319006A5B6B /* Grid */,
+			);
 			productName = "GridExamples tvOS";
 			productReference = FA61E994231351FC006A5B6B /* GridExamples tvOS.app */;
 			productType = "com.apple.product-type.application";
@@ -577,8 +588,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA61E9AC23135368006A5B6B /* SingleColumnLayoutView.swift in Sources */,
+				FA61E9AD23135368006A5B6B /* PerformanceLayoutView.swift in Sources */,
+				FA61E9A82313535F006A5B6B /* Color+Random.swift in Sources */,
+				FA61E9AB23135368006A5B6B /* FixedColumnsLayoutView.swift in Sources */,
 				FA61E999231351FC006A5B6B /* ContentView.swift in Sources */,
 				FA61E997231351FC006A5B6B /* AppDelegate.swift in Sources */,
+				FA61E9A92313535F006A5B6B /* Card.swift in Sources */,
+				FA61E9AA23135368006A5B6B /* AutoColumnsLayoutView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1600,6 +1617,10 @@
 
 /* Begin XCSwiftPackageProductDependency section */
 		FA61E98423134656006A5B6B /* Grid */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Grid;
+		};
+		FA61E9A623135319006A5B6B /* Grid */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = Grid;
 		};
