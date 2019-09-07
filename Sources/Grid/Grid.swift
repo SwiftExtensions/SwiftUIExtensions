@@ -14,10 +14,13 @@ public struct Grid<Content> : View where Content : View {
                         self.items[index]
                             .frame(
                                 width: self.style.frameWidth(at: index, with: geometry, itemsCount: self.items.count),
-                                height: self.style.frameHeight(at: index, with: geometry, itemsCount: self.items.count),
-                                alignment: Alignment(horizontal: .leading, vertical: .top)
+                                height: self.style.frameHeight(at: index, with: geometry, itemsCount: self.items.count)
                             )
+
                             .position(self.style.position(at: index, with: geometry, itemsCount: self.items.count))
+                            .anchorPreference(key: GridItemPreferences.Key.self, value: .rect(self.style.itemRect(at: index, with: geometry, itemsCount: self.items.count))) {
+                                [GridItemPreferences(index: index, bounds: $0)]
+                            }
                     }
                 }
                 .frame(

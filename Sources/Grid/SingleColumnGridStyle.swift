@@ -12,10 +12,10 @@ public struct SingleColumnGridStyle: GridStyle {
         self.spacing = spacing
     }
     
-    public func frameHeight(at index: Int, with geometry: GeometryProxy, itemsCount: Int) -> CGFloat? {
+    public func frameHeight(at index: Int, with geometry: GeometryProxy, itemsCount: Int) -> CGFloat {
         itemHeight
     }
-    public func frameWidth(at index: Int, with geometry: GeometryProxy, itemsCount: Int) -> CGFloat? {
+    public func frameWidth(at index: Int, with geometry: GeometryProxy, itemsCount: Int) -> CGFloat {
         geometry.size.width - (padding.leading + padding.trailing)
     }
     

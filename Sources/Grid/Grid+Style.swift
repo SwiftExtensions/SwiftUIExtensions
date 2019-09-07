@@ -4,10 +4,24 @@ import SwiftUI
 public protocol GridStyle {
     var padding: EdgeInsets { get set }
     
-    func frameHeight(at index: Int, with geometry: GeometryProxy, itemsCount: Int) -> CGFloat?
-    func frameWidth(at index: Int, with geometry: GeometryProxy, itemsCount: Int) -> CGFloat?
+    func frameHeight(at index: Int, with geometry: GeometryProxy, itemsCount: Int) -> CGFloat
+    func frameWidth(at index: Int, with geometry: GeometryProxy, itemsCount: Int) -> CGFloat
     func position(at index: Int, with geometry: GeometryProxy, itemsCount: Int) -> CGPoint
     func gridHeight(with geometry: GeometryProxy, itemsCount: Int) -> CGFloat
+    
+    func itemRect(at index: Int, with geometry: GeometryProxy, itemsCount: Int) -> CGRect
+}
+
+public extension GridStyle {
+    /// Translated from center origin to leading.
+    @inlinable func itemRect(at index: Int, with geometry: GeometryProxy, itemsCount: Int) -> CGRect {
+        CGRect(
+            x: self.position(at: index, with: geometry, itemsCount: itemsCount).x - geometry.size.width / 2,
+            y: self.position(at: index, with: geometry, itemsCount: itemsCount).y - geometry.size.height / 2,
+            width: self.frameWidth(at: index, with: geometry, itemsCount: itemsCount),
+            height: self.frameHeight(at: index, with: geometry, itemsCount: itemsCount)
+        )
+    }
 }
 
 

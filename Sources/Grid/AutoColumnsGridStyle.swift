@@ -23,10 +23,10 @@ public struct AutoColumnsGridStyle: GridStyle {
         self.vSpacing = vSpacing
     }
     
-    public func frameHeight(at index: Int, with geometry: GeometryProxy, itemsCount: Int) -> CGFloat? {
+    public func frameHeight(at index: Int, with geometry: GeometryProxy, itemsCount: Int) -> CGFloat {
         self.itemHeight
     }
-    public func frameWidth(at index: Int, with geometry: GeometryProxy, itemsCount: Int) -> CGFloat? {
+    public func frameWidth(at index: Int, with geometry: GeometryProxy, itemsCount: Int) -> CGFloat {
         self.itemWidth(for: geometry, minItemWidth: self.minItemWidth, padding: self.padding, hSpacing: self.hSpacing)
     }
     
