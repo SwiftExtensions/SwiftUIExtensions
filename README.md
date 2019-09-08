@@ -73,6 +73,40 @@ Grid(0...100) { number in
 - watchOS 6+
 - Xcode 11.0+
 
+## Preferences
+Get item size and position with preferences
+```swift
+struct CardsView: View {
+    @State var selection: Int = 0
+    
+    var body: some View {
+        Grid(0..<100) { number in
+            Card(title: "\(number)")
+                .onTapGesture {
+                    self.selection = number
+                }
+        }
+        .padding()
+        .overlayPreferenceValue(GridItemPreferences.Key.self) { preferences in
+            GeometryReader { geometry in
+                RoundedRectangle(cornerRadius: 16)
+                    .strokeBorder(lineWidth: 4)
+                    .foregroundColor(.white)
+                    .frame(
+                        width: geometry[preferences[self.selection].bounds].size.width,
+                        height: geometry[preferences[self.selection].bounds].size.height
+                    )
+                    .offset(
+                        x: geometry[preferences[self.selection].bounds].minX,
+                        y: geometry[preferences[self.selection].bounds].minY
+                    )
+                    .animation(.spring())
+            }
+        }
+    }
+}
+```
+
 ## Version 1.0.0
 Stable version will be released as soon as XCode 11 GM becomes available. We will strictly follow semantic versioning moving forward.
 
