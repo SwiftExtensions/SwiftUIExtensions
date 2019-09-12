@@ -8,7 +8,7 @@ struct FixedColumnsLayoutView: View {
         }
         .padding()
         .gridStyle(
-            FixedColumnsGridStyle(columns: 3, itemHeight: 80)
+            FixedColumnsGridStyle(columns: 3, itemHeight: 120)
         )
     }
 }

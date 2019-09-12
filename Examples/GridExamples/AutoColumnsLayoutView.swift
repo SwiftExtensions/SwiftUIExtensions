@@ -6,12 +6,24 @@ struct AutoColumnsLayoutView: View {
     
     var body: some View {
         Grid(0..<100) { number in
+            #if os(tvOS)
+            Card(title: "\(number)")
+                .focusable(true) { focus in
+                    if focus {
+                       self.selection = number
+                    }
+                }
+            #else
             Card(title: "\(number)")
                 .onTapGesture {
                     self.selection = number
                 }
+            #endif
+
         }
         .padding()
+        .gridStyle(AutoColumnsGridStyle(minItemWidth: 240, itemHeight: 120))
+        
         .overlayPreferenceValue(GridItemPreferences.Key.self) { preferences in
             GeometryReader { geometry in
                 RoundedRectangle(cornerRadius: 16)
