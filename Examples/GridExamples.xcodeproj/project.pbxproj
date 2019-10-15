@@ -39,6 +39,7 @@
 		FA61E9AB23135368006A5B6B /* FixedColumnsLayoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA61E9512312FF0F006A5B6B /* FixedColumnsLayoutView.swift */; };
 		FA61E9AC23135368006A5B6B /* SingleColumnLayoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA61E94E2312FE6D006A5B6B /* SingleColumnLayoutView.swift */; };
 		FA61E9AD23135368006A5B6B /* PerformanceLayoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA90216C230B3EC100BF9341 /* PerformanceLayoutView.swift */; };
+		FA66B37D235653DC00AB542A /* Grid in Frameworks */ = {isa = PBXBuildFile; productRef = FA66B37C235653DC00AB542A /* Grid */; };
 		FA6ED893231090FF00651DD9 /* BuilderLayoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6ED892231090FF00651DD9 /* BuilderLayoutView.swift */; };
 		FA6ED894231090FF00651DD9 /* BuilderLayoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6ED892231090FF00651DD9 /* BuilderLayoutView.swift */; };
 		FA902115230B32EA00BF9341 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA902114230B32EA00BF9341 /* AppDelegate.swift */; };
@@ -47,7 +48,6 @@
 		FA90211B230B32EC00BF9341 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA90211A230B32EC00BF9341 /* Assets.xcassets */; };
 		FA90211E230B32EC00BF9341 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA90211D230B32EC00BF9341 /* Preview Assets.xcassets */; };
 		FA902121230B32EC00BF9341 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA90211F230B32EC00BF9341 /* LaunchScreen.storyboard */; };
-		FA902128230B334800BF9341 /* Grid in Frameworks */ = {isa = PBXBuildFile; productRef = FA902127230B334800BF9341 /* Grid */; };
 		FA902149230B341C00BF9341 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA902148230B341C00BF9341 /* AppDelegate.swift */; };
 		FA90214B230B341C00BF9341 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA90214A230B341C00BF9341 /* ContentView.swift */; };
 		FA90214D230B341D00BF9341 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA90214C230B341D00BF9341 /* Assets.xcassets */; };
@@ -175,7 +175,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FA902128230B334800BF9341 /* Grid in Frameworks */,
+				FA66B37D235653DC00AB542A /* Grid in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -428,7 +428,7 @@
 			);
 			name = "GridExamples iOS";
 			packageProductDependencies = (
-				FA902127230B334800BF9341 /* Grid */,
+				FA66B37C235653DC00AB542A /* Grid */,
 			);
 			productName = "GridExamples iOS";
 			productReference = FA902111230B32EA00BF9341 /* GridExamples iOS.app */;
@@ -493,7 +493,7 @@
 			);
 			mainGroup = FA902106230B32A500BF9341;
 			packageReferences = (
-				FA902126230B334800BF9341 /* XCRemoteSwiftPackageReference "grid" */,
+				FA66B37B235653DC00AB542A /* XCRemoteSwiftPackageReference "Grid" */,
 			);
 			productRefGroup = FA902112230B32EA00BF9341 /* Products */;
 			projectDirPath = "";
@@ -740,7 +740,7 @@
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = com.spacenation.grid.examples.watchos;
+				PRODUCT_BUNDLE_IDENTIFIER = com.swiftuiextensions.grid.examples.watchos;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
@@ -799,7 +799,7 @@
 				MARKETING_VERSION = 1.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = com.spacenation.grid.examples.watchos;
+				PRODUCT_BUNDLE_IDENTIFIER = com.swiftuiextensions.grid.examples.watchos;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
@@ -867,7 +867,7 @@
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = com.spacenation.grid.examples.watchos.watchkitapp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.swiftuiextensions.grid.examples.watchos.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -930,7 +930,7 @@
 				INFOPLIST_FILE = "GridExamples watchOS WatchKit App/Info.plist";
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = com.spacenation.grid.examples.watchos.watchkitapp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.swiftuiextensions.grid.examples.watchos.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -1007,7 +1007,7 @@
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = com.spacenation.grid.examples.watchos.watchkitapp.watchkitextension;
+				PRODUCT_BUNDLE_IDENTIFIER = com.swiftuiextensions.grid.examples.watchos.watchkitapp.watchkitextension;
 				PRODUCT_NAME = "${TARGET_NAME}";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -1076,7 +1076,7 @@
 				);
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = com.spacenation.grid.examples.watchos.watchkitapp.watchkitextension;
+				PRODUCT_BUNDLE_IDENTIFIER = com.swiftuiextensions.grid.examples.watchos.watchkitapp.watchkitextension;
 				PRODUCT_NAME = "${TARGET_NAME}";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -1152,7 +1152,7 @@
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = com.spacenation.grid.examples.tvos;
+				PRODUCT_BUNDLE_IDENTIFIER = com.swiftuiextensions.grid.examples.tvos;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
@@ -1219,7 +1219,7 @@
 				);
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = com.spacenation.grid.examples.tvos;
+				PRODUCT_BUNDLE_IDENTIFIER = com.swiftuiextensions.grid.examples.tvos;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
 				SWIFT_COMPILATION_MODE = wholemodule;
@@ -1309,7 +1309,7 @@
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = com.spacenation.grid.examples.ios;
+				PRODUCT_BUNDLE_IDENTIFIER = com.swiftuiextensions.grid.examples.ios;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SUPPORTS_MACCATALYST = YES;
@@ -1379,7 +1379,7 @@
 				);
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = com.spacenation.grid.examples.ios;
+				PRODUCT_BUNDLE_IDENTIFIER = com.swiftuiextensions.grid.examples.ios;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SUPPORTS_MACCATALYST = YES;
@@ -1458,7 +1458,7 @@
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = com.spacenation.grid.examples.macos;
+				PRODUCT_BUNDLE_IDENTIFIER = com.swiftuiextensions.grid.examples.macos;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
@@ -1527,7 +1527,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.15;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = com.spacenation.grid.examples.macos;
+				PRODUCT_BUNDLE_IDENTIFIER = com.swiftuiextensions.grid.examples.macos;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
 				SWIFT_COMPILATION_MODE = wholemodule;
@@ -1605,12 +1605,12 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		FA902126230B334800BF9341 /* XCRemoteSwiftPackageReference "grid" */ = {
+		FA66B37B235653DC00AB542A /* XCRemoteSwiftPackageReference "Grid" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "git@github.com:spacenation/grid.git";
+			repositoryURL = "git@github.com:SwiftUIExtensions/Grid.git";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 0.2.0;
+				minimumVersion = 0.6.2;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
@@ -1624,9 +1624,9 @@
 			isa = XCSwiftPackageProductDependency;
 			productName = Grid;
 		};
-		FA902127230B334800BF9341 /* Grid */ = {
+		FA66B37C235653DC00AB542A /* Grid */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = FA902126230B334800BF9341 /* XCRemoteSwiftPackageReference "grid" */;
+			package = FA66B37B235653DC00AB542A /* XCRemoteSwiftPackageReference "Grid" */;
 			productName = Grid;
 		};
 		FA90215A230B346600BF9341 /* Grid */ = {
