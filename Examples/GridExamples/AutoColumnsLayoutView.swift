@@ -21,8 +21,10 @@ struct AutoColumnsLayoutView: View {
             #endif
 
         }
-        .padding()
-        .gridStyle(AutoColumnsGridStyle(minItemWidth: 240, itemHeight: 120))
+        //.padding()
+        .gridStyle(
+            AutoColumnsGridStyle(minItemWidth: 240, itemHeight: 120)
+        )
         
 //        .overlayPreferenceValue(GridItemPreferences.Key.self) { preferences in
 //            GeometryReader { geometry in
