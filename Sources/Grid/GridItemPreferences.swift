@@ -1,7 +1,7 @@
 import Foundation
 import SwiftUI
 
-public struct GridItemPreferences {
+public struct GridItemPreferences: Equatable {    
     public struct Key: PreferenceKey {
         public static var defaultValue: [GridItemPreferences] = []
         
@@ -11,5 +11,5 @@ public struct GridItemPreferences {
     }
     
     public let index: Int
-    public let bounds: Anchor<CGRect>
+    public let bounds: CGRect
 }

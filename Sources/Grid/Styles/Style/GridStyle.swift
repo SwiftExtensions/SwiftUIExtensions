@@ -16,15 +16,4 @@ public protocol GridStyle {
 
     /// The properties of a `Grid` instance being created.
     typealias Configuration = GridStyleConfiguration
-    
-    
-    ///
-//    var padding: EdgeInsets { get set }
-//
-//    func frameHeight(at index: Int, with geometry: GeometryProxy, itemsCount: Int) -> CGFloat
-//    func frameWidth(at index: Int, with geometry: GeometryProxy, itemsCount: Int) -> CGFloat
-//    func position(at index: Int, with geometry: GeometryProxy, itemsCount: Int) -> CGPoint
-//    func gridHeight(with geometry: GeometryProxy, itemsCount: Int) -> CGFloat
-//
-//    func itemRect(at index: Int, with geometry: GeometryProxy, itemsCount: Int) -> CGRect
 }

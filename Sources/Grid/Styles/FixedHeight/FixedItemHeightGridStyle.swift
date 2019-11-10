@@ -24,7 +24,7 @@ public extension FixedItemHeightGridStyle {
 
                             .position(self.position(at: index, with: geometry, itemsCount: configuration.items.count))
                             .anchorPreference(key: GridItemPreferences.Key.self, value: .rect(self.itemRect(at: index, with: geometry, itemsCount: configuration.items.count))) {
-                                [GridItemPreferences(index: index, bounds: $0)]
+                                [GridItemPreferences(index: index, bounds: geometry[$0])]
                             }
                     }
                 }

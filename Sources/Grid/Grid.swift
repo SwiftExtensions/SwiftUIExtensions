@@ -3,21 +3,23 @@ import SwiftUI
 /// A view that arranges its children in a grid.
 public struct Grid<Content> : View where Content : View {
     @Environment(\.gridStyle) private var style
+    @State private var alignmentGuides: [Int: CGPoint] = [:]
     private var configuration: GridStyleConfiguration
     
     public var body: some View {
-        self.style.makeBody(configuration: self.configuration)
+        return self.style.makeBody(configuration: self.configuration.with(alignmentGuides: $alignmentGuides))
     }
+    
 }
 
 extension Grid {
-    public init<Data: RandomAccessCollection>(_ data: Data, @ViewBuilder content: @escaping (Data.Element) -> Content) {
-        self.configuration = GridStyleConfiguration(items: data.map({ AnyView(content($0)) }))
+    public init<Data: RandomAccessCollection>(_ data: Data, axis: Axis = .vertical, @ViewBuilder content: @escaping (Data.Element) -> Content) {
+        self.configuration = GridStyleConfiguration(axis: axis, items: data.map({ AnyView(content($0)) }))
     }
     
-    public init<Data: RandomAccessCollection, ID, Item: View>(@ViewBuilder content: () -> Content) where Content == ForEach<Data, ID, Item> {
+    public init<Data: RandomAccessCollection, ID, Item: View>(_ axis: Axis = .vertical, @ViewBuilder content: () -> Content) where Content == ForEach<Data, ID, Item> {
         let views = content()
-        self.configuration = GridStyleConfiguration(items: views.data.map { AnyView(views.content($0)) })
+        self.configuration = GridStyleConfiguration(axis: axis, items: views.data.map { AnyView(views.content($0)) })
     }
 }
 

@@ -15,6 +15,7 @@ struct AutoColumnsLayoutView: View {
                 }
             #else
             Card(title: "\(number)")
+                .frame(height: CGFloat(Int.random(in: 50...200)))
                 .onTapGesture {
                     self.selection = number
                 }
@@ -23,23 +24,30 @@ struct AutoColumnsLayoutView: View {
         }
         //.padding()
         .gridStyle(
-            AutoColumnsGridStyle(minItemWidth: 240, itemHeight: 120)
+            FlowGridStyle()
         )
+//        .gridStyle(
+//            AutoColumnsGridStyle(minItemWidth: 240, itemHeight: 120)
+//        )
         
 //        .overlayPreferenceValue(GridItemPreferences.Key.self) { preferences in
-//            GeometryReader { geometry in
-//                RoundedRectangle(cornerRadius: 16)
-//                    .strokeBorder(lineWidth: 4)
-//                    .foregroundColor(.white)
-//                    .frame(
-//                        width: geometry[preferences[self.selection].bounds].size.width,
-//                        height: geometry[preferences[self.selection].bounds].size.height
-//                    )
-//                    .offset(
-//                        x: geometry[preferences[self.selection].bounds].minX,
-//                        y: geometry[preferences[self.selection].bounds].minY
-//                    )
-//                    .animation(.spring())
+//            if preferences.isEmpty {
+//                EmptyView()
+//            } else {
+//                ZStack(alignment: .topLeading) {
+//                    RoundedRectangle(cornerRadius: 16)
+//                        .strokeBorder(lineWidth: 4)
+//                        .foregroundColor(.white)
+//                        .frame(
+//                            width: preferences[self.selection].bounds.size.width,
+//                            height: preferences[self.selection].bounds.size.height
+//                        )
+//                        .alignmentGuide(.top, computeValue: { _ in preferences[self.selection].bounds.minY })
+//                        .alignmentGuide(.leading, computeValue: { _ in preferences[self.selection].bounds.minX })
+//
+//                        .animation(.spring())
+//                }
+//
 //            }
 //        }
     }
