@@ -1,11 +1,11 @@
 import SwiftUI
 import Grid
 
-struct AutoColumnsLayoutView: View {
+struct StaggeredGridView: View {
     @State var selection: Int = 0
     
     var body: some View {
-        Grid(0..<100) { number in
+        Grid(0...50) { number in
             #if os(tvOS)
             Card(title: "\(number)")
                 .focusable(true) { focus in
@@ -22,9 +22,10 @@ struct AutoColumnsLayoutView: View {
             #endif
 
         }
+
         //.padding()
         .gridStyle(
-            FlowGridStyle()
+            StaggeredGridStyle()
         )
 //        .gridStyle(
 //            AutoColumnsGridStyle(minItemWidth: 240, itemHeight: 120)
@@ -56,7 +57,7 @@ struct AutoColumnsLayoutView: View {
 #if DEBUG
 struct AutoColumnsGridView_Previews: PreviewProvider {
     static var previews: some View {
-        AutoColumnsLayoutView()
+        StaggeredGridView()
     }
 }
 #endif

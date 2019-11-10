@@ -5,46 +5,22 @@ struct ContentView: View {
  
     var body: some View {
         TabView(selection: $selection) {
-            AutoColumnsLayoutView()
+            ModularGridView()
                 .tabItem {
                     VStack {
                         Image(systemName: "square.grid.3x2.fill")
-                        Text("Auto Columns")
+                        Text("Modular")
                     }
                 }
                 .tag(0)
-            FixedColumnsLayoutView()
-                .tabItem {
-                    VStack {
-                        Image(systemName: "rectangle.split.3x3.fill")
-                        Text("Fixed Columns")
-                    }
-                }
-                .tag(1)
-            SingleColumnLayoutView()
-                .tabItem {
-                    VStack {
-                        Image(systemName: "rectangle.grid.1x2.fill")
-                        Text("One Column")
-                    }
-                }
-                .tag(2)
-            PerformanceLayoutView()
-                .tabItem {
-                    VStack {
-                        Image(systemName: "square.grid.4x3.fill")
-                        Text("Performance")
-                    }
-                }
-                .tag(3)
-            BuilderLayoutView()
+            StaggeredGridView()
                 .tabItem {
                     VStack {
                         Image(systemName: "rectangle.3.offgrid.fill")
-                        Text("Builder")
+                        Text("Staggered")
                     }
                 }
-                .tag(4)
+                .tag(1)
         }
         .accentColor(.purple)
     }

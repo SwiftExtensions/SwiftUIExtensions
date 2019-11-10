@@ -29,7 +29,7 @@ struct BuilderLayoutView: View {
             }
             .padding(self.padding)
             .gridStyle(
-                AutoColumnsGridStyle(minItemWidth: minItemWidth, itemHeight: itemHeight, hSpacing: hSpacing, vSpacing: vSpacing)
+                OLDModularGridStyle(minItemWidth: minItemWidth, itemHeight: itemHeight, hSpacing: hSpacing, vSpacing: vSpacing)
             )
             
             VStack {

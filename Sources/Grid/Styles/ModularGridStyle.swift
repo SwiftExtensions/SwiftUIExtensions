@@ -1,11 +1,10 @@
 import SwiftUI
 
-/// Flow `Grid` style.
-public struct FlowGridStyle: GridStyle {
-    let columns: Int = 4
+/// Staggered `Grid` style.
+public struct ModularGridStyle: GridStyle {
+    let columns: Int = 1
     let spacing: CGFloat = 8
     let padding: EdgeInsets = EdgeInsets.init(top: 8, leading: 8, bottom: 8, trailing: 8)
-    let axis: Axis.Set = .vertical
     
     public init() {}
     
@@ -16,13 +15,13 @@ public struct FlowGridStyle: GridStyle {
                     ForEach(0..<configuration.items.count, id: \.self) { index in
                         configuration.items[index]
                             .frame(
-                                width: self.axis == .vertical ? self.columnWidth(
-                                    columns: self.columns,
+                                width: itemLength(
+                                    tracks: self.columns,
                                     spacing: self.spacing,
-                                    padding: self.padding,
-                                    scrollDirection: self.axis,
-                                    geometrySize: geometry.size
-                                ) : nil
+                                    padding: self.padding.leading + self.padding.trailing,
+                                    availableLength: geometry.size.width
+                                ),
+                                height: 160
                             )
                             .alignmentGuide(.top, computeValue: { _ in configuration.alignmentGuides?.wrappedValue[index]?.y ?? 0 } )
                             .alignmentGuide(.leading, computeValue: { _ in configuration.alignmentGuides?.wrappedValue[index]?.x ?? 0 })
@@ -31,7 +30,7 @@ public struct FlowGridStyle: GridStyle {
                             }
                     }
                 }
-                .frame(width: geometry.size.width)
+                .frame(maxWidth: .infinity, maxHeight: .infinity)
                 .padding(self.padding)
             }
             .frame(width: geometry.size.width, height: geometry.size.height)
@@ -41,7 +40,6 @@ public struct FlowGridStyle: GridStyle {
         }
 
     }
-    
     
     func alignmentGuides(tracks: Int, spacing: CGFloat, axis: Axis.Set, preferences: [GridItemPreferences]) -> [Int: CGPoint] {
         var heights = Array(repeating: CGFloat(0), count: tracks)
@@ -66,10 +64,5 @@ public struct FlowGridStyle: GridStyle {
         return alignmentGuides
     }
     
-    func columnWidth(columns: Int, spacing: CGFloat, padding: EdgeInsets, scrollDirection: Axis.Set, geometrySize: CGSize) -> CGFloat {
-        let geometrySizeWidth = scrollDirection == .vertical ? geometrySize.width : geometrySize.height
-        let padding = scrollDirection == .vertical ? padding.leading + padding.trailing : padding.top + padding.bottom
-        let width = geometrySizeWidth - padding - (spacing * (CGFloat(columns) - 1))
-        return width / CGFloat(columns)
-    }
+
 }

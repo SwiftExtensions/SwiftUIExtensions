@@ -1,20 +1,21 @@
 import SwiftUI
 import Grid
 
-struct FixedColumnsLayoutView: View {
+struct ModularGridView: View {
     var body: some View {
-        Grid(0...100) { number in
+        Grid(0...50) { number in
             Card(title: "\(number)")
         }
-        .padding()
+        //.padding()
         .gridStyle(
-            FixedColumnsGridStyle(columns: 3, itemHeight: 120)
+            ModularGridStyle()
+            //FixedColumnsGridStyle(columns: 3, itemHeight: 120)
         )
     }
 }
 
 struct FixedColumnsLayoutView_Previews: PreviewProvider {
     static var previews: some View {
-        FixedColumnsLayoutView()
+        ModularGridView()
     }
 }
