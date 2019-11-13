@@ -6,11 +6,11 @@ func itemLength(tracks: Tracks, spacing: CGFloat, padding: CGFloat, availableLen
         switch dimensions {
         case .min:
             let suggestedTracksCount = tracksCount(tracks: tracks, spacing: spacing, padding: padding, availableLength: availableLength)
-            return itemLength(tracks: suggestedTracksCount, spacing: spacing, padding: padding, availableLength: availableLength)
+            return itemLength(tracksCount: suggestedTracksCount, spacing: spacing, padding: padding, availableLength: availableLength)
         }
 
     case .count(let count):
-        return itemLength(tracks: count, spacing: spacing, padding: padding, availableLength: availableLength)
+        return itemLength(tracksCount: count, spacing: spacing, padding: padding, availableLength: availableLength)
     }
 }
 
@@ -23,7 +23,7 @@ func tracksCount(tracks: Tracks, spacing: CGFloat, padding: CGFloat, availableLe
             let columnCount = Int(usableAvailableWidth / minWidth)
             
             for columns in (0...columnCount).reversed() {
-                let suggestedItemWidth = itemLength(tracks: columns, spacing: spacing, padding: padding, availableLength: availableLength)
+                let suggestedItemWidth = itemLength(tracksCount: columns, spacing: spacing, padding: padding, availableLength: availableLength)
                 if (suggestedItemWidth * CGFloat(columns)) + (CGFloat(columns - 1) * spacing) <= usableAvailableWidth {
                     return columns
                 }
@@ -34,30 +34,11 @@ func tracksCount(tracks: Tracks, spacing: CGFloat, padding: CGFloat, availableLe
         return count
     }
 }
-//
-//func itemLength(minItemWidth: CGFloat, spacing: CGFloat, padding: CGFloat, availableLength: CGFloat) -> CGFloat {
-//    let suggestedTracksCount = tracksCount(tracks: <#T##Tracks#>, spacing: <#T##CGFloat#>, padding: <#T##CGFloat#>, availableLength: <#T##CGFloat#>)
-//
-//    let usableAvailableWidth = availableLength - padding
-//    let columnCount = Int(usableAvailableWidth / minItemWidth)
-//
-//    for columns in (0...columnCount).reversed() {
-//        let suggestedItemWidth = itemLength(tracks: columns, spacing: spacing, padding: padding, availableLength: availableLength)
-//        if (suggestedItemWidth * CGFloat(columns)) + (CGFloat(columns - 1) * spacing) <= usableAvailableWidth {
-//            return suggestedItemWidth.rounded()
-//        }
-//    }
-//    return usableAvailableWidth.rounded()
-//}
 
-func itemLength(tracks: Int, spacing: CGFloat, padding: CGFloat, availableLength: CGFloat) -> CGFloat {
-    let width = availableLength - padding - (spacing * (CGFloat(tracks) - 1))
-    return (width / CGFloat(tracks)).rounded()
+func itemLength(tracksCount: Int, spacing: CGFloat, padding: CGFloat, availableLength: CGFloat) -> CGFloat {
+    let width = availableLength - padding - (spacing * (CGFloat(tracksCount) - 1))
+    return (width / CGFloat(tracksCount)).rounded()
 }
-
-
-
-
 
 @inlinable func alignmentGuides(tracks: Int, spacing: CGFloat, axis: Axis.Set, preferences: [GridItemPreferences]) -> [Int: CGPoint] {
     var heights = Array(repeating: CGFloat(0), count: tracks)

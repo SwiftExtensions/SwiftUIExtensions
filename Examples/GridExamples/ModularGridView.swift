@@ -9,7 +9,7 @@ struct ModularGridView: View {
         }
         //.padding()
         .gridStyle(
-            ModularGridStyle(columns: 3)
+            ModularGridStyle(columns: .auto(.min(100)))
         )
     }
 }
