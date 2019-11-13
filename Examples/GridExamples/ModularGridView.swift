@@ -5,10 +5,11 @@ struct ModularGridView: View {
     var body: some View {
         Grid(0...50) { number in
             Card(title: "\(number)")
+                .frame(height: 160)
         }
         //.padding()
         .gridStyle(
-            ModularGridStyle()
+            ModularGridStyle(columns: 4)
             //FixedColumnsGridStyle(columns: 3, itemHeight: 120)
         )
     }

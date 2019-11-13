@@ -25,7 +25,7 @@ struct StaggeredGridView: View {
 
         //.padding()
         .gridStyle(
-            StaggeredGridStyle()
+            StaggeredGridStyle(tracks: 3)
         )
 //        .gridStyle(
 //            AutoColumnsGridStyle(minItemWidth: 240, itemHeight: 120)
