@@ -2,11 +2,11 @@ import SwiftUI
 
 /// Staggered `Grid` style.
 public struct StaggeredGridStyle: GridStyle {
-    let tracks: Int
+    let tracks: Tracks
     let spacing: CGFloat
     let padding: EdgeInsets
     
-    public init(tracks: Int, spacing: CGFloat = 8, padding: EdgeInsets = .init(top: 8, leading: 8, bottom: 8, trailing: 8)) {
+    public init(tracks: Tracks, spacing: CGFloat = 8, padding: EdgeInsets = .init(top: 8, leading: 8, bottom: 8, trailing: 8)) {
         self.tracks = tracks
         self.spacing = spacing
         self.padding = padding
@@ -38,7 +38,17 @@ public struct StaggeredGridStyle: GridStyle {
             }
             .frame(width: geometry.size.width, height: geometry.size.height)
             .onPreferenceChange(GridItemPreferences.Key.self) { preferences in
-                configuration.alignmentGuides?.wrappedValue = alignmentGuides(tracks: self.tracks, spacing: self.spacing, axis: .vertical, preferences: preferences)
+                configuration.alignmentGuides?.wrappedValue = alignmentGuides(
+                    tracks: tracksCount(
+                        tracks: self.tracks,
+                        spacing: self.spacing,
+                        padding: self.padding.leading + self.padding.trailing,
+                        availableLength: geometry.size.width
+                    ),
+                    spacing: self.spacing,
+                    axis: .vertical,
+                    preferences: preferences
+                )
             }
         }
     }

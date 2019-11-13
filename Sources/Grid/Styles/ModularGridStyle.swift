@@ -2,11 +2,11 @@ import SwiftUI
 
 /// Staggered `Grid` style.
 public struct ModularGridStyle: GridStyle {
-    let columns: Int
+    let columns: Tracks
     let spacing: CGFloat
     let padding: EdgeInsets
-    
-    public init(columns: Int, spacing: CGFloat = 8, padding: EdgeInsets = .init(top: 8, leading: 8, bottom: 8, trailing: 8)) {
+        
+    public init(columns: Tracks, spacing: CGFloat = 8, padding: EdgeInsets = .init(top: 8, leading: 8, bottom: 8, trailing: 8)) {
         self.columns = columns
         self.spacing = spacing
         self.padding = padding
@@ -24,8 +24,7 @@ public struct ModularGridStyle: GridStyle {
                                     spacing: self.spacing,
                                     padding: self.padding.leading + self.padding.trailing,
                                     availableLength: geometry.size.width
-                                )//,
-                                //height: 160
+                                )
                             )
                             .alignmentGuide(.top, computeValue: { _ in configuration.alignmentGuides?.wrappedValue[index]?.y ?? 0 } )
                             .alignmentGuide(.leading, computeValue: { _ in configuration.alignmentGuides?.wrappedValue[index]?.x ?? 0 })
@@ -39,7 +38,17 @@ public struct ModularGridStyle: GridStyle {
             }
             .frame(width: geometry.size.width, height: geometry.size.height)
             .onPreferenceChange(GridItemPreferences.Key.self) { preferences in
-                configuration.alignmentGuides?.wrappedValue = alignmentGuides(tracks: self.columns, spacing: self.spacing, axis: .vertical, preferences: preferences)
+                configuration.alignmentGuides?.wrappedValue = alignmentGuides(
+                    tracks: tracksCount(
+                        tracks: self.columns,
+                        spacing: self.spacing,
+                        padding: self.padding.leading + self.padding.trailing,
+                        availableLength: geometry.size.width
+                    ),
+                    spacing: self.spacing,
+                    axis: .vertical,
+                    preferences: preferences
+                )
             }
         }
     }
