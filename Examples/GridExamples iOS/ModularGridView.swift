@@ -3,10 +3,15 @@ import Grid
 
 struct ModularGridView: View {
     var body: some View {
-        Grid(0...50) { number in
-            Card(title: "\(number)")
-                .frame(height: 160)
+        NavigationView {
+            Grid(0...100) { number in
+                Card(title: "\(number)")
+            }
+            .navigationBarTitle("Modular", displayMode: .inline)
         }
+        .navigationViewStyle(
+            StackNavigationViewStyle()
+        )
         .gridStyle(
             ModularGridStyle(columns: .auto(.min(100)))
         )

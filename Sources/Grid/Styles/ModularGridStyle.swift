@@ -24,17 +24,18 @@ public struct ModularGridStyle: GridStyle {
                                     spacing: self.spacing,
                                     padding: self.padding.leading + self.padding.trailing,
                                     availableLength: geometry.size.width
-                                )
+                                ),
+                                height: 160
                             )
                             .alignmentGuide(.top, computeValue: { _ in configuration.alignmentGuides?.wrappedValue[index]?.y ?? 0 } )
                             .alignmentGuide(.leading, computeValue: { _ in configuration.alignmentGuides?.wrappedValue[index]?.x ?? 0 })
                             .anchorPreference(key: GridItemPreferences.Key.self, value: .bounds) {
-                                [GridItemPreferences(index: index, bounds: geometry[$0])]
+                                [GridItemPreferences(index: index, bounds: geometry[$0], anchor: $0)]
                             }
                     }
                 }
                 .padding(self.padding)
-                .frame(maxWidth: geometry.size.width, maxHeight: .infinity)
+                .frame(width: geometry.size.width)
             }
             .frame(width: geometry.size.width, height: geometry.size.height)
             .onPreferenceChange(GridItemPreferences.Key.self) { preferences in
@@ -47,7 +48,8 @@ public struct ModularGridStyle: GridStyle {
                     ),
                     spacing: self.spacing,
                     axis: .vertical,
-                    preferences: preferences
+                    preferences: preferences,
+                    geometry: geometry
                 )
             }
         }
