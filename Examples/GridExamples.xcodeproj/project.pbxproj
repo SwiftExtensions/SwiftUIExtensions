@@ -17,6 +17,8 @@
 		FA0A03762378A369009DF93F /* ModularGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0A03722378A369009DF93F /* ModularGridView.swift */; };
 		FA1CEB06237BC11C0037A44F /* SharedAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA1CEB05237BC11C0037A44F /* SharedAssets.xcassets */; };
 		FA1CEB07237BC11C0037A44F /* SharedAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA1CEB05237BC11C0037A44F /* SharedAssets.xcassets */; };
+		FA1CEB0B237BC4EB0037A44F /* SharedAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA1CEB05237BC11C0037A44F /* SharedAssets.xcassets */; };
+		FA1CEB0C237BC5B00037A44F /* SharedAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA1CEB05237BC11C0037A44F /* SharedAssets.xcassets */; };
 		FA61E95A23134505006A5B6B /* GridExamples watchOS WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = FA61E95923134505006A5B6B /* GridExamples watchOS WatchKit App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		FA61E96023134505006A5B6B /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA61E95E23134505006A5B6B /* Interface.storyboard */; };
 		FA61E96223134507006A5B6B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA61E96123134507006A5B6B /* Assets.xcassets */; };
@@ -522,6 +524,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA1CEB0B237BC4EB0037A44F /* SharedAssets.xcassets in Resources */,
 				FA61E97723134508006A5B6B /* Preview Assets.xcassets in Resources */,
 				FA61E97423134508006A5B6B /* Assets.xcassets in Resources */,
 			);
@@ -534,6 +537,7 @@
 				FA61E9A1231351FD006A5B6B /* LaunchScreen.storyboard in Resources */,
 				FA61E99E231351FD006A5B6B /* Preview Assets.xcassets in Resources */,
 				FA61E99B231351FD006A5B6B /* Assets.xcassets in Resources */,
+				FA1CEB0C237BC5B00037A44F /* SharedAssets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

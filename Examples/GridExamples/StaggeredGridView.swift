@@ -5,7 +5,7 @@ struct StaggeredGridView: View {
     @State var selection: Int = 0
     
     var body: some View {
-        Grid(1...26) { number in
+        Grid(1...70) { number in
             #if os(tvOS)
             Card(title: "\(number)")
                 .focusable(true) { focus in

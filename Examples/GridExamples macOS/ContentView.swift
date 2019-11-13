@@ -6,35 +6,17 @@ struct ContentView: View {
     
     var body: some View {
         TabView(selection: $selection) {
-            AutoColumnsLayoutView()
+            ModularGridView()
                 .tabItem {
-                    Text("Auto Columns")
+                    Text("Modular")
                 }
                 .tag(0)
                 .frame(minWidth: 300)
-            FixedColumnsLayoutView()
+            StaggeredGridView()
                 .tabItem {
-                    Text("Fixed Columns")
+                    Text("Staggered")
                 }
                 .tag(1)
-                .frame(minWidth: 300)
-            SingleColumnLayoutView()
-                .tabItem {
-                    Text("One Column")
-                }
-                .tag(2)
-                .frame(minWidth: 300)
-            PerformanceLayoutView()
-                .tabItem {
-                    Text("Performance")
-                }
-                .tag(3)
-                .frame(minWidth: 300)
-            BuilderLayoutView()
-                .tabItem {
-                    Text("Builder")
-                }
-                .tag(4)
                 .frame(minWidth: 300)
         }
         .frame(minWidth: 600, maxWidth: .infinity, maxHeight: .infinity)
