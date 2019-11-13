@@ -7,7 +7,6 @@ struct ModularGridView: View {
             Card(title: "\(number)")
                 .frame(height: 160)
         }
-        //.padding()
         .gridStyle(
             ModularGridStyle(columns: .auto(.min(100)))
         )

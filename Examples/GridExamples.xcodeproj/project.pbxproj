@@ -15,6 +15,8 @@
 		FA0A03742378A369009DF93F /* ModularGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0A03722378A369009DF93F /* ModularGridView.swift */; };
 		FA0A03752378A369009DF93F /* ModularGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0A03722378A369009DF93F /* ModularGridView.swift */; };
 		FA0A03762378A369009DF93F /* ModularGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0A03722378A369009DF93F /* ModularGridView.swift */; };
+		FA1CEB06237BC11C0037A44F /* SharedAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA1CEB05237BC11C0037A44F /* SharedAssets.xcassets */; };
+		FA1CEB07237BC11C0037A44F /* SharedAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA1CEB05237BC11C0037A44F /* SharedAssets.xcassets */; };
 		FA61E95A23134505006A5B6B /* GridExamples watchOS WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = FA61E95923134505006A5B6B /* GridExamples watchOS WatchKit App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		FA61E96023134505006A5B6B /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA61E95E23134505006A5B6B /* Interface.storyboard */; };
 		FA61E96223134507006A5B6B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA61E96123134507006A5B6B /* Assets.xcassets */; };
@@ -101,6 +103,7 @@
 /* Begin PBXFileReference section */
 		FA0A036D2378A29F009DF93F /* StaggeredGridView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StaggeredGridView.swift; sourceTree = "<group>"; };
 		FA0A03722378A369009DF93F /* ModularGridView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModularGridView.swift; sourceTree = "<group>"; };
+		FA1CEB05237BC11C0037A44F /* SharedAssets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = SharedAssets.xcassets; sourceTree = "<group>"; };
 		FA61E95623134504006A5B6B /* GridExamples watchOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "GridExamples watchOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA61E95923134505006A5B6B /* GridExamples watchOS WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "GridExamples watchOS WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA61E95F23134505006A5B6B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
@@ -321,6 +324,7 @@
 				FA6ED892231090FF00651DD9 /* BuilderLayoutView.swift */,
 				FA902160230B379D00BF9341 /* Color+Random.swift */,
 				FA902163230B389900BF9341 /* Card.swift */,
+				FA1CEB05237BC11C0037A44F /* SharedAssets.xcassets */,
 			);
 			path = GridExamples;
 			sourceTree = "<group>";
@@ -540,6 +544,7 @@
 				FA902121230B32EC00BF9341 /* LaunchScreen.storyboard in Resources */,
 				FA90211E230B32EC00BF9341 /* Preview Assets.xcassets in Resources */,
 				FA90211B230B32EC00BF9341 /* Assets.xcassets in Resources */,
+				FA1CEB06237BC11C0037A44F /* SharedAssets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -550,6 +555,7 @@
 				FA902153230B341D00BF9341 /* Main.storyboard in Resources */,
 				FA902150230B341D00BF9341 /* Preview Assets.xcassets in Resources */,
 				FA90214D230B341D00BF9341 /* Assets.xcassets in Resources */,
+				FA1CEB07237BC11C0037A44F /* SharedAssets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

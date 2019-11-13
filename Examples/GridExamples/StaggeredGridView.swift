@@ -5,7 +5,7 @@ struct StaggeredGridView: View {
     @State var selection: Int = 0
     
     var body: some View {
-        Grid(0...100) { number in
+        Grid(1...26) { number in
             #if os(tvOS)
             Card(title: "\(number)")
                 .focusable(true) { focus in
@@ -14,9 +14,12 @@ struct StaggeredGridView: View {
                     }
                 }
             #else
-            Rectangle()
-                .foregroundColor(.random)
-                .frame(height: CGFloat(Int.random(in: 60...100)))
+//            Rectangle()
+//                .foregroundColor(.random)
+//                .frame(height: CGFloat(Int.random(in: 60...100)))
+            Image("\(number)")
+                .resizable()
+                .scaledToFit()
                 .onTapGesture {
                     self.selection = number
                 }
@@ -26,7 +29,7 @@ struct StaggeredGridView: View {
 
         //.padding()
         .gridStyle(
-            StaggeredGridStyle(tracks: .auto(.min(60)), spacing: 1)
+            StaggeredGridStyle(tracks: .auto(.min(100)), spacing: 1)
         )
 //        .gridStyle(
 //            AutoColumnsGridStyle(minItemWidth: 240, itemHeight: 120)

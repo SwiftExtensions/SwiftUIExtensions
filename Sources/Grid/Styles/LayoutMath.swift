@@ -37,7 +37,7 @@ func tracksCount(tracks: Tracks, spacing: CGFloat, padding: CGFloat, availableLe
 
 func itemLength(tracksCount: Int, spacing: CGFloat, padding: CGFloat, availableLength: CGFloat) -> CGFloat {
     let width = availableLength - padding - (spacing * (CGFloat(tracksCount) - 1))
-    return (width / CGFloat(tracksCount)).rounded()
+    return (width / CGFloat(tracksCount))
 }
 
 @inlinable func alignmentGuides(tracks: Int, spacing: CGFloat, axis: Axis.Set, preferences: [GridItemPreferences]) -> [Int: CGPoint] {
@@ -52,8 +52,8 @@ func itemLength(tracksCount: Int, spacing: CGFloat, padding: CGFloat, availableL
             let width = preferenceSizeWidth * CGFloat(indexMin) + CGFloat(indexMin) * spacing
             let height = heights[indexMin]
             let offset = CGPoint(
-                x: (0 - (axis == .vertical ? width : height)).rounded(),
-                y: (0 - (axis == .vertical ? height : width)).rounded()
+                x: 0 - (axis == .vertical ? width : height),
+                y: 0 - (axis == .vertical ? height : width)
             )
             heights[indexMin] += preferenceSizeHeight + spacing
             alignmentGuides[preference.index] = offset
