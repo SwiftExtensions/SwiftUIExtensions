@@ -42,8 +42,10 @@ Grid {
 ### FixedColumnsGridStyle
 
 ```swift
-Grid(0...100) { number in
-    Card(title: "\(number)")
+Grid {
+    Card(title: "1")
+    Card(title: "2")
+    Card(title: "3")
 }
 .gridStyle(
     FixedColumnsGridStyle(columns: 3, itemHeight: 160)

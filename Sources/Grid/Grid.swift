@@ -1,7 +1,7 @@
 import SwiftUI
 
 /// A view that arranges its children in a grid.
-public struct Grid<Content> : View where Content : View {
+public struct Grid: View {
     @Environment(\.gridStyle) var style
     
     let items: [AnyView]
