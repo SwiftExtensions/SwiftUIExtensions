@@ -36,7 +36,7 @@ public struct OLDModularGridStyle: GridStyle {
 
                             .position(self.position(at: index, with: geometry, itemsCount: configuration.items.count))
                             .anchorPreference(key: GridItemPreferences.Key.self, value: .rect(self.itemRect(at: index, with: geometry, itemsCount: configuration.items.count))) {
-                                [GridItemPreferences(index: index, bounds: geometry[$0], anchor: $0)]
+                                [GridItemPreferences(index: index, anchor: $0)]
                             }
                     }
                 }

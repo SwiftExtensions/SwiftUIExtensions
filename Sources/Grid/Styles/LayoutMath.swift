@@ -4,6 +4,8 @@ func itemLength(tracks: Tracks, spacing: CGFloat, padding: CGFloat, availableLen
     switch tracks {
     case .auto(let dimensions):
         switch dimensions {
+        case .fixedSize(let length):
+            return length
         case .min:
             let suggestedTracksCount = tracksCount(tracks: tracks, spacing: spacing, padding: padding, availableLength: availableLength)
             return itemLength(tracksCount: suggestedTracksCount, spacing: spacing, padding: padding, availableLength: availableLength)
@@ -18,6 +20,17 @@ func tracksCount(tracks: Tracks, spacing: CGFloat, padding: CGFloat, availableLe
     switch tracks {
     case .auto(let dimensions):
         switch dimensions {
+        case .fixedSize(let length):
+            let usableAvailableWidth = availableLength - padding
+            let columnCount = Int(usableAvailableWidth / length)
+            
+            for columns in (0...columnCount).reversed() {
+                let suggestedItemWidth = itemLength(tracksCount: columns, spacing: spacing, padding: padding, availableLength: availableLength)
+                if (suggestedItemWidth * CGFloat(columns)) + (CGFloat(columns - 1) * spacing) <= usableAvailableWidth {
+                    return columns
+                }
+            }
+            return 1
         case .min(let minWidth):
             let usableAvailableWidth = availableLength - padding
             let columnCount = Int(usableAvailableWidth / minWidth)
@@ -57,6 +70,30 @@ func itemLength(tracksCount: Int, spacing: CGFloat, padding: CGFloat, availableL
             )
             heights[indexMin] += preferenceSizeHeight + spacing
             alignmentGuides[preference.index] = offset
+        }
+    }
+
+    return alignmentGuides
+}
+
+
+@inlinable func gridAlignmentGuides(tracks: Int, spacing: CGFloat, axis: Axis.Set, size: CGSize, views: [AnyView], geometry: GeometryProxy) -> [CGPoint] {
+    var heights = Array(repeating: CGFloat(0), count: tracks)
+    var alignmentGuides: [CGPoint] = []
+
+    views.forEach { preference in
+        if let minValue = heights.min(), let indexMin = heights.firstIndex(of: minValue) {
+            //let size = geometry[preference.anchor].size
+            let preferenceSizeWidth = axis == .vertical ? size.width : size.height
+            let preferenceSizeHeight = axis == .vertical ? size.height : size.width
+            let width = preferenceSizeWidth * CGFloat(indexMin) + CGFloat(indexMin) * spacing
+            let height = heights[indexMin]
+            let offset = CGPoint(
+                x: 0 - (axis == .vertical ? width : height),
+                y: 0 - (axis == .vertical ? height : width)
+            )
+            heights[indexMin] += preferenceSizeHeight + spacing
+            alignmentGuides.append(offset)
         }
     }
 

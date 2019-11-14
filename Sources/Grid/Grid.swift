@@ -7,7 +7,8 @@ public struct Grid<Content> : View where Content : View {
     private var configuration: GridStyleConfiguration
     
     public var body: some View {
-        return self.style.makeBody(configuration: self.configuration.with(alignmentGuides: $alignmentGuides))
+        return self.style.makeBody(configuration: self.configuration)
+
     }
     
 }
