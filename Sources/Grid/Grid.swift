@@ -2,32 +2,52 @@ import SwiftUI
 
 /// A view that arranges its children in a grid.
 public struct Grid: View {
-    @Environment(\.gridStyle) var style
+    @Environment(\.gridStyle) private var style
     
     let items: [AnyView]
+    @State private var itemsPreferences: [GridItemPreferences]?
     
     public var body: some View {
         GeometryReader { geometry in
             ScrollView {
-                ZStack {
+                ZStack(alignment: .topLeading) {
                     ForEach(0..<self.items.count, id: \.self) { index in
                         self.items[index]
+                            .background(GridItemPreferenceModifier())
                             .frame(
-                                width: self.style.frameWidth(at: index, with: geometry, itemsCount: self.items.count),
-                                height: self.style.frameHeight(at: index, with: geometry, itemsCount: self.items.count)
+                                width: self.itemsPreferences?[index].itemWidth,
+                                height: self.itemsPreferences?[index].itemHeight
                             )
-                            .position(self.style.position(at: index, with: geometry, itemsCount: self.items.count))
-                            .anchorPreference(key: GridItemPreferences.Key.self, value: .rect(self.style.itemRect(at: index, with: geometry, itemsCount: self.items.count))) {
-                                [GridItemPreferences(index: index, bounds: $0)]
-                            }
+                            .alignmentGuide(.leading, computeValue: { _ in self.itemsPreferences?[index].origin?.x ?? 0 })
+                            .alignmentGuide(.top, computeValue: { _ in self.itemsPreferences?[index].origin?.y ?? 0 })
+                        
                     }
+
                 }
+                .padding(self.style.padding)
                 .frame(
-                    width: geometry.size.width,
-                    height: self.style.gridHeight(with: geometry, itemsCount: self.items.count)
+                    width: geometry.size.width
                 )
             }
+            .frame(width: geometry.size.width)
+            .transformPreference(GridItemPreferencesKey.self) { preferences in
+                preferences = self.style.itemPreferences(with: geometry, itemsCount: self.items.count, preferences: preferences)
+            }
+            .onPreferenceChange(GridItemPreferencesKey.self) { preferences in
+                self.itemsPreferences = preferences
+            }
         }
+    }
+}
+
+struct GridItemPreferenceModifier: View {
+    var body: some View {
+        GeometryReader { geometry in
+            Color.clear.preference(key: GridItemPreferencesKey.self, value:
+                [GridItemPreferences(index: 0, bounds: CGRect(x: 0, y: 0, width: geometry.size.width, height: geometry.size.height))]
+            )
+        }
+
     }
 }
 

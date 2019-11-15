@@ -89,7 +89,7 @@ struct CardsView: View {
                 }
         }
         .padding()
-        .overlayPreferenceValue(GridItemPreferences.Key.self) { preferences in
+        .overlayPreferenceValue(GridItemPreferencesKey.self) { preferences in
             GeometryReader { geometry in
                 RoundedRectangle(cornerRadius: 16)
                     .strokeBorder(lineWidth: 4)
