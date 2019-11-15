@@ -37,27 +37,3 @@ extension GridStyle {
         return usableWidth / CGFloat(columns)
     }
 }
-
-extension View {
-
-    /// Sets the style for `Grid` within the environment of `self`.
-    public func gridStyle<S>(_ style: S) -> some View where S : GridStyle {
-        self.environment(\.gridStyle, style)
-    }
-
-}
-
-struct GridStyleKey: EnvironmentKey {
-    static let defaultValue: GridStyle = AutoColumnsGridStyle()
-}
-
-extension EnvironmentValues {
-    var gridStyle: GridStyle {
-        get {
-            return self[GridStyleKey.self]
-        }
-        set {
-            self[GridStyleKey.self] = newValue
-        }
-    }
-}
