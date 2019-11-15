@@ -3,14 +3,20 @@ import Grid
 
 struct StaggeredGridView: View {
     var body: some View {
-        Grid(1...70) { number in
-            Image("\(number)")
-                .resizable()
-                .scaledToFit()
+        NavigationView {
+            Grid(1...70) { number in
+                Image("\(number)")
+                    .resizable()
+                    .scaledToFit()
+            }
+            .navigationBarTitle("Staggered")
         }
         .gridStyle(
-            //ModularGridStyle(columns: 3, rows: 3)
-            StaggeredGridStyle(tracks: 3)
+            ModularGridStyle(columns: 3, rows: 3)
+            //StaggeredGridStyle(tracks: 3)
+        )
+        .navigationViewStyle(
+            StackNavigationViewStyle()
         )
     }
 }

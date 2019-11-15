@@ -9,30 +9,31 @@ public struct Grid: View {
     
     public var body: some View {
         GeometryReader { geometry in
-            ScrollView {
-                ZStack(alignment: .topLeading) {
-                    ForEach(0..<self.items.count, id: \.self) { index in
-                        self.items[index]
-                            .background(GridItemPreferenceModifier(index: index))
-                            .frame(
-                                width: self.itemsPreferences?[index].itemWidth,
-                                height: self.itemsPreferences?[index].itemHeight
-                            )
-                            .alignmentGuide(.leading, computeValue: { _ in self.itemsPreferences?[index].origin?.x ?? 0 })
-                            .alignmentGuide(.top, computeValue: { _ in self.itemsPreferences?[index].origin?.y ?? 0 })
-                    }
+            self.grid(with: geometry)
+        }
+        .onPreferenceChange(GridItemPreferencesKey.self) { preferences in
+            self.itemsPreferences = preferences
+        }
+    }
+    
+    private func grid(with geometry: GeometryProxy) -> some View {
+        ScrollView {
+            ZStack(alignment: .topLeading) {
+                ForEach(0..<self.items.count, id: \.self) { index in
+                    self.items[index]
+                        .background(GridItemPreferenceModifier(index: index))
+                        .frame(
+                            width: self.itemsPreferences?[index].itemWidth,
+                            height: self.itemsPreferences?[index].itemHeight
+                        )
+                        .alignmentGuide(.leading, computeValue: { _ in self.itemsPreferences?[index].origin?.x ?? 0 })
+                        .alignmentGuide(.top, computeValue: { _ in self.itemsPreferences?[index].origin?.y ?? 0 })
                 }
-                .padding(self.style.padding)
-                .frame(
-                    width: geometry.size.width
-                )
             }
-            .frame(width: geometry.size.width)
+            .padding(self.style.padding)
+            .frame(maxWidth: .infinity, maxHeight: .infinity)
             .transformPreference(GridItemPreferencesKey.self) { preferences in
                 preferences = self.style.itemPreferences(with: geometry, itemsCount: self.items.count, preferences: preferences)
-            }
-            .onPreferenceChange(GridItemPreferencesKey.self) { preferences in
-                self.itemsPreferences = preferences
             }
         }
     }

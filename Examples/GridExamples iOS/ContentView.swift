@@ -14,16 +14,15 @@ struct ContentView: View {
                     }
                 }
                 .tag(0)
-//            Grid {
-//                Text("1234")
-//            }
-//                .tabItem {
-//                    VStack {
-//                        Image(systemName: "rectangle.3.offgrid.fill")
-//                        Text("Staggered")
-//                    }
-//                }
-//                .tag(1)
+            
+            StaggeredGridView()
+                .tabItem {
+                    VStack {
+                        Image(systemName: "rectangle.3.offgrid.fill")
+                        Text("Staggered")
+                    }
+                }
+                .tag(1)
         }
         .accentColor(.purple)
     }
