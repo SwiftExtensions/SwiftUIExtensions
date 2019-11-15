@@ -54,7 +54,7 @@ public struct StaggeredGridStyle: GridStyle {
 
         (0..<viewsCount).forEach { index in
             if let minValue = heights.min(), let indexMin = heights.firstIndex(of: minValue) {
-                let anchorSize = preferences[index].bounds.size
+                let anchorSize = preferences[index].prefferedItemSize
                 let preferenceSizeWidth = axis == .vertical ? anchorSize.width : anchorSize.height
                 let preferenceSizeHeight = axis == .vertical ? anchorSize.height : anchorSize.width
                 let width = preferenceSizeWidth * CGFloat(indexMin) + CGFloat(indexMin) * spacing
@@ -64,7 +64,7 @@ public struct StaggeredGridStyle: GridStyle {
                     y: (0 - (axis == .vertical ? height : width)).rounded()
                 )
                 heights[indexMin] += preferenceSizeHeight + spacing
-                alignmentGuides.append(GridItemPreferences(index: index, bounds: preferences[index].bounds, origin: offset, itemWidth: size.width, itemHeight: nil))
+                alignmentGuides.append(GridItemPreferences(index: index, prefferedItemSize: preferences[index].prefferedItemSize, origin: offset, itemWidth: size.width, itemHeight: nil))
             }
         }
 

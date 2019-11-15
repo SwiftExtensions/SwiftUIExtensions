@@ -6,7 +6,7 @@ struct ModularGridView: View {
     
     var body: some View {
         NavigationView {
-            Grid(0...100) { number in
+            Grid(1...100) { number in
                 Card(title: "\(number)")
                     .onTapGesture {
                         self.selection = number

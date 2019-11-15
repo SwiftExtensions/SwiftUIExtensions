@@ -9,8 +9,8 @@ struct StaggeredGridView: View {
                 .scaledToFit()
         }
         .gridStyle(
-            ModularGridStyle(columns: 3, rows: 3)
-            //StaggeredGridStyle(tracks: 3)
+            //ModularGridStyle(columns: 3, rows: 3)
+            StaggeredGridStyle(tracks: 3)
         )
     }
 }

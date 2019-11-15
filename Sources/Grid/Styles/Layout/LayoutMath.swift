@@ -94,7 +94,7 @@ func itemLength(tracksCount: Int, spacing: CGFloat, padding: CGFloat, availableL
                 y: 0 - (axis == .vertical ? height : width)
             )
             heights[indexMin] += preferenceSizeHeight + spacing
-            alignmentGuides.append(GridItemPreferences(index: index, bounds: preferences[index].bounds, origin: offset, itemWidth: size.width, itemHeight: size.height))
+            alignmentGuides.append(GridItemPreferences(index: index, prefferedItemSize: preferences[index].prefferedItemSize, origin: offset, itemWidth: size.width, itemHeight: size.height))
         }
     }
 

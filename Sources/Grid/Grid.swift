@@ -13,16 +13,14 @@ public struct Grid: View {
                 ZStack(alignment: .topLeading) {
                     ForEach(0..<self.items.count, id: \.self) { index in
                         self.items[index]
-                            .background(GridItemPreferenceModifier())
+                            .background(GridItemPreferenceModifier(index: index))
                             .frame(
                                 width: self.itemsPreferences?[index].itemWidth,
                                 height: self.itemsPreferences?[index].itemHeight
                             )
                             .alignmentGuide(.leading, computeValue: { _ in self.itemsPreferences?[index].origin?.x ?? 0 })
                             .alignmentGuide(.top, computeValue: { _ in self.itemsPreferences?[index].origin?.y ?? 0 })
-                        
                     }
-
                 }
                 .padding(self.style.padding)
                 .frame(
@@ -41,10 +39,12 @@ public struct Grid: View {
 }
 
 struct GridItemPreferenceModifier: View {
+    let index: Int
+    
     var body: some View {
         GeometryReader { geometry in
             Color.clear.preference(key: GridItemPreferencesKey.self, value:
-                [GridItemPreferences(index: 0, bounds: CGRect(x: 0, y: 0, width: geometry.size.width, height: geometry.size.height))]
+                [GridItemPreferences(index: self.index, prefferedItemSize: geometry.size)]
             )
         }
 
