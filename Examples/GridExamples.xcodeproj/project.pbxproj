@@ -11,10 +11,6 @@
 		FA31E11F237E511B005799AD /* ModularGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA31E11E237E511B005799AD /* ModularGridView.swift */; };
 		FA31E121237E521A005799AD /* ModularGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA31E120237E521A005799AD /* ModularGridView.swift */; };
 		FA31E123237E5381005799AD /* ModularGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA31E122237E5381005799AD /* ModularGridView.swift */; };
-		FA31E129237E634C005799AD /* SharedAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA31E128237E634C005799AD /* SharedAssets.xcassets */; };
-		FA31E12A237E634C005799AD /* SharedAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA31E128237E634C005799AD /* SharedAssets.xcassets */; };
-		FA31E12B237E634C005799AD /* SharedAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA31E128237E634C005799AD /* SharedAssets.xcassets */; };
-		FA31E12C237E634C005799AD /* SharedAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA31E128237E634C005799AD /* SharedAssets.xcassets */; };
 		FA61E95A23134505006A5B6B /* GridExamples watchOS WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = FA61E95923134505006A5B6B /* GridExamples watchOS WatchKit App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		FA61E96023134505006A5B6B /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA61E95E23134505006A5B6B /* Interface.storyboard */; };
 		FA61E96223134507006A5B6B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA61E96123134507006A5B6B /* Assets.xcassets */; };
@@ -101,7 +97,6 @@
 		FA31E11E237E511B005799AD /* ModularGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModularGridView.swift; sourceTree = "<group>"; };
 		FA31E120237E521A005799AD /* ModularGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModularGridView.swift; sourceTree = "<group>"; };
 		FA31E122237E5381005799AD /* ModularGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModularGridView.swift; sourceTree = "<group>"; };
-		FA31E128237E634C005799AD /* SharedAssets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = SharedAssets.xcassets; sourceTree = "<group>"; };
 		FA61E95623134504006A5B6B /* GridExamples watchOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "GridExamples watchOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA61E95923134505006A5B6B /* GridExamples watchOS WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "GridExamples watchOS WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA61E95F23134505006A5B6B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
@@ -322,7 +317,6 @@
 			children = (
 				FA902160230B379D00BF9341 /* Color+Random.swift */,
 				FA902163230B389900BF9341 /* Card.swift */,
-				FA31E128237E634C005799AD /* SharedAssets.xcassets */,
 			);
 			path = GridExamples;
 			sourceTree = "<group>";
@@ -520,7 +514,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FA31E12B237E634C005799AD /* SharedAssets.xcassets in Resources */,
 				FA61E97723134508006A5B6B /* Preview Assets.xcassets in Resources */,
 				FA61E97423134508006A5B6B /* Assets.xcassets in Resources */,
 			);
@@ -533,7 +526,6 @@
 				FA61E9A1231351FD006A5B6B /* LaunchScreen.storyboard in Resources */,
 				FA61E99E231351FD006A5B6B /* Preview Assets.xcassets in Resources */,
 				FA61E99B231351FD006A5B6B /* Assets.xcassets in Resources */,
-				FA31E12C237E634C005799AD /* SharedAssets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -544,7 +536,6 @@
 				FA902121230B32EC00BF9341 /* LaunchScreen.storyboard in Resources */,
 				FA90211E230B32EC00BF9341 /* Preview Assets.xcassets in Resources */,
 				FA90211B230B32EC00BF9341 /* Assets.xcassets in Resources */,
-				FA31E129237E634C005799AD /* SharedAssets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -555,7 +546,6 @@
 				FA902153230B341D00BF9341 /* Main.storyboard in Resources */,
 				FA902150230B341D00BF9341 /* Preview Assets.xcassets in Resources */,
 				FA90214D230B341D00BF9341 /* Assets.xcassets in Resources */,
-				FA31E12A237E634C005799AD /* SharedAssets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

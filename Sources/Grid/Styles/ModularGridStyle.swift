@@ -1,6 +1,6 @@
 import SwiftUI
 
-/// Staggered `Grid` style.
+/// Modular `Grid` style.
 public struct ModularGridStyle: GridStyle {
     let columns: Tracks
     let rows: Tracks

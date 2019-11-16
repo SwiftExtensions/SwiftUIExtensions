@@ -1,17 +1,5 @@
 import SwiftUI
 
-//extension Grid {
-//    public init(_ data: Data, @ViewBuilder content: @escaping (Data.Element) -> Content) {
-//        self.items = data.map({ AnyView(content($0)) })
-//    }
-//
-//    public init(@ViewBuilder content: @escaping () -> ForEach<Data, ID, Content>) {
-//        let views = content()
-//        self.items = views.data.map { AnyView(views.content($0)) }
-//    }
-//}
-
-
 extension Grid {
     public init(_ data: Data, id: KeyPath<Data.Element, ID>, content: @escaping (Data.Element) -> Content) {
         self.data = data
@@ -28,6 +16,13 @@ extension Grid where ID == Data.Element.ID, Data.Element : Identifiable {
     }
 }
 
+extension Grid where Data == ClosedRange<Int>, ID == Int {
+    public init(_ data: Data, content: @escaping (Data.Element) -> Content) {
+        self.data = data
+        self.id = \Data.Element.self
+        self.content = content
+    }
+}
 
 //extension Grid {
 //    public init<C0: View>(@ViewBuilder content: () -> C0) {
