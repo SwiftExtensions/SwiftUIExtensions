@@ -3,12 +3,15 @@ import SwiftUI
 /// A view that arranges its children in a grid.
 public struct Grid<Data, ID, Content>: View where Data : RandomAccessCollection, Content : View, ID : Hashable {
     @Environment(\.gridStyle) private var style
+    
     let data: Data
     let id: KeyPath<Data.Element, ID>
     let content: (Data.Element) -> Content
+    
     @State private var gridPreference: [AnyHashable: GridItemPreferences] = [:] {
         didSet { enableAnimations = !oldValue.isEmpty }
     }
+    
     @State private var enableAnimations = false
     
     public var body: some View {
@@ -26,7 +29,6 @@ public struct Grid<Data, ID, Content>: View where Data : RandomAccessCollection,
                 }
                 .frame(width: geometry.size.width, height: geometry.size.height)
         }
-
     }
     
     private func grid(with geometry: GeometryProxy) -> some View {
@@ -49,7 +51,7 @@ public struct Grid<Data, ID, Content>: View where Data : RandomAccessCollection,
             }
             .padding(self.style.padding)
             .frame(width: geometry.size.width)
-            .animation(self.enableAnimations ? .linear : nil)
+            .animation(self.enableAnimations ? self.style.layoutAnimation : nil)
         }
     }
 }
