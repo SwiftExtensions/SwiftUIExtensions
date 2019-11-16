@@ -6,7 +6,6 @@ public struct ModularGridStyle: GridStyle {
     let rows: Tracks
     let spacing: CGFloat
     public let padding: EdgeInsets
-    public let layoutAnimation: Animation? = nil
         
     public init(columns: Tracks, rows: Tracks, spacing: CGFloat = 8, padding: EdgeInsets = .init(top: 8, leading: 8, bottom: 8, trailing: 8)) {
         self.columns = columns
@@ -38,7 +37,7 @@ public struct ModularGridStyle: GridStyle {
             )
         )
         
-        preferences = gridAlignmentGuides(
+        preferences = layoutPreferences(
             tracks: computedTracksCount,
             spacing: self.spacing,
             axis: .vertical,
@@ -48,12 +47,12 @@ public struct ModularGridStyle: GridStyle {
         )
     }
     
-    private func gridAlignmentGuides(tracks: Int, spacing: CGFloat, axis: Axis.Set, size: CGSize, geometry: GeometryProxy, preferences: [GridItemPreferences]) -> [GridItemPreferences] {
+    private func layoutPreferences(tracks: Int, spacing: CGFloat, axis: Axis, size: CGSize, geometry: GeometryProxy, preferences: [GridItemPreferences]) -> [GridItemPreferences] {
         var heights = Array(repeating: CGFloat(0), count: tracks)
-        var alignmentGuides: [GridItemPreferences] = []
+        var newPreferences: [GridItemPreferences] = []
+        
         preferences.forEach { preference in
             if let minValue = heights.min(), let indexMin = heights.firstIndex(of: minValue) {
-                //let size = geometry[preference.anchor].size
                 let preferenceSizeWidth = axis == .vertical ? size.width : size.height
                 let preferenceSizeHeight = axis == .vertical ? size.height : size.width
                 let width = preferenceSizeWidth * CGFloat(indexMin) + CGFloat(indexMin) * spacing
@@ -64,13 +63,15 @@ public struct ModularGridStyle: GridStyle {
                 )
                 heights[indexMin] += preferenceSizeHeight + spacing
                 
-                alignmentGuides.append(GridItemPreferences(
-                    id: preference.id,
-                    bounds: CGRect(origin: offset, size: CGSize(width: preferenceSizeWidth, height: preferenceSizeHeight))
-                ))
+                newPreferences.append(
+                    GridItemPreferences(
+                        id: preference.id,
+                        bounds: CGRect(origin: offset, size: CGSize(width: preferenceSizeWidth, height: preferenceSizeHeight))
+                    )
+                )
             }
         }
 
-        return alignmentGuides
+        return newPreferences
     }
 }

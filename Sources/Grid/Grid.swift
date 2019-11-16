@@ -8,11 +8,7 @@ public struct Grid<Data, ID, Content>: View where Data : RandomAccessCollection,
     let id: KeyPath<Data.Element, ID>
     let content: (Data.Element) -> Content
     
-    @State private var gridPreference: [AnyHashable: GridItemPreferences] = [:] {
-        didSet { enableAnimations = !oldValue.isEmpty }
-    }
-    
-    @State private var enableAnimations = false
+    @State private var gridPreference: [AnyHashable: GridItemPreferences] = [:]
     
     public var body: some View {
         GeometryReader { geometry in
@@ -51,7 +47,6 @@ public struct Grid<Data, ID, Content>: View where Data : RandomAccessCollection,
             }
             .padding(self.style.padding)
             .frame(width: geometry.size.width)
-            .animation(self.enableAnimations ? self.style.layoutAnimation : nil)
         }
     }
 }
