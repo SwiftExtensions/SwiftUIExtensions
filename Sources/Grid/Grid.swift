@@ -7,15 +7,13 @@ public struct Grid<Data, ID, Content>: View where Data : RandomAccessCollection,
     let id: KeyPath<Data.Element, ID>
     let content: (Data.Element) -> Content
     @State private var gridPreference: [AnyHashable: GridItemPreferences] = [:] {
-        didSet { loaded = !oldValue.isEmpty }
+        didSet { enableAnimations = !oldValue.isEmpty }
     }
-    
-    @State private var loaded = false
+    @State private var enableAnimations = false
     
     public var body: some View {
         GeometryReader { geometry in
             self.grid(with: geometry)
-                
                 .onPreferenceChange(GridItemPreferencesKey.self) { preferences in
                     DispatchQueue.global(qos: .utility).async {
                         let gridPreferences = preferences.reduce(into: [AnyHashable: GridItemPreferences](), { (result, preference) in
@@ -25,10 +23,6 @@ public struct Grid<Data, ID, Content>: View where Data : RandomAccessCollection,
                             self.gridPreference = gridPreferences
                         }
                     }
-                    
-                    self.gridPreference = preferences.reduce(into: [AnyHashable: GridItemPreferences](), { (result, preference) in
-                        result[preference.id] = preference
-                    })
                 }
                 .frame(width: geometry.size.width, height: geometry.size.height)
         }
@@ -55,7 +49,7 @@ public struct Grid<Data, ID, Content>: View where Data : RandomAccessCollection,
             }
             .padding(self.style.padding)
             .frame(width: geometry.size.width)
-            .animation(self.loaded ? .linear : nil)
+            .animation(self.enableAnimations ? .linear : nil)
         }
     }
 }

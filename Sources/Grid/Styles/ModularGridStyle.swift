@@ -6,6 +6,7 @@ public struct ModularGridStyle: GridStyle {
     let rows: Tracks
     let spacing: CGFloat
     public let padding: EdgeInsets
+    public let layoutAnimation: Animation? = nil
         
     public init(columns: Tracks, rows: Tracks, spacing: CGFloat = 8, padding: EdgeInsets = .init(top: 8, leading: 8, bottom: 8, trailing: 8)) {
         self.columns = columns
