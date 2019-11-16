@@ -8,10 +8,10 @@ public struct GridItemPreferencesKey: PreferenceKey {
     }
 }
 
-public struct GridItemBoundsKey: PreferenceKey {
-    public static var defaultValue: [Anchor<CGRect>] = []
+public struct GridItemBoundsPreferencesKey: PreferenceKey {
+    public static var defaultValue: [CGRect] = []
     
-    public static func reduce(value: inout [Anchor<CGRect>], nextValue: () -> [Anchor<CGRect>]) {
+    public static func reduce(value: inout [CGRect], nextValue: () -> [CGRect]) {
         value.append(contentsOf: nextValue())
     }
 }

@@ -15,7 +15,7 @@ import SwiftUI
 extension Grid {
     public init(_ data: Data, id: KeyPath<Data.Element, ID>, content: @escaping (Data.Element) -> Content) {
         self.data = data
-        self.dataId = id
+        self.id = id
         self.content = content
     }
 }
@@ -23,7 +23,7 @@ extension Grid {
 extension Grid where ID == Data.Element.ID, Data.Element : Identifiable {
     public init(_ data: Data, content: @escaping (Data.Element) -> Content) {
         self.data = data
-        self.dataId = \Data.Element.id
+        self.id = \Data.Element.id
         self.content = content
     }
 }

@@ -13,22 +13,20 @@ struct ModularGridView: View {
                         self.selection = item.0
                     }
             }
-            .navigationBarTitle("Modular")
-            .overlayPreferenceValue(GridItemBoundsKey.self) { preferences in
-                GeometryReader { geometry in
-                    RoundedRectangle(cornerRadius: 16)
-                        .strokeBorder(lineWidth: 4)
-                        .foregroundColor(.white)
-                        .frame(
-                            width: geometry[preferences[self.selection]].size.width,
-                            height: geometry[preferences[self.selection]].size.height
-                        )
-                        .position(
-                            x: geometry[preferences[self.selection]].midX,
-                            y: geometry[preferences[self.selection]].midY
-                        )
-                        .animation(.easeInOut)
-                }
+            .navigationBarTitle("Modular", displayMode: .inline)
+            .overlayPreferenceValue(GridItemBoundsPreferencesKey.self) { preferences in
+                RoundedRectangle(cornerRadius: 16)
+                    .strokeBorder(lineWidth: 4)
+                    .foregroundColor(.white)
+                    .frame(
+                        width: preferences[self.selection].width,
+                        height: preferences[self.selection].height
+                    )
+                    .position(
+                        x: preferences[self.selection].midX,
+                        y: preferences[self.selection].midY
+                    )
+                    .animation(.linear)
             }
         }
         .gridStyle(

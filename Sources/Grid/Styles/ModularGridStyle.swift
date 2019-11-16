@@ -65,10 +65,8 @@ public struct ModularGridStyle: GridStyle {
                 
                 alignmentGuides.append(GridItemPreferences(
                     id: preference.id,
-                    origin: offset,
-                    itemWidth: preferenceSizeWidth,
-                    itemHeight: preferenceSizeHeight)
-                )
+                    bounds: CGRect(origin: offset, size: CGSize(width: preferenceSizeWidth, height: preferenceSizeHeight))
+                ))
             }
         }
 

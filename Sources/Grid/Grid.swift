@@ -4,44 +4,58 @@ import SwiftUI
 public struct Grid<Data, ID, Content>: View where Data : RandomAccessCollection, Content : View, ID : Hashable {
     @Environment(\.gridStyle) private var style
     let data: Data
-    let dataId: KeyPath<Data.Element, ID>
+    let id: KeyPath<Data.Element, ID>
     let content: (Data.Element) -> Content
-    @State private var gridPreference: [AnyHashable: GridItemPreferences] = [:]
+    @State private var gridPreference: [AnyHashable: GridItemPreferences] = [:] {
+        didSet { loaded = !oldValue.isEmpty }
+    }
+    
+    @State private var loaded = false
     
     public var body: some View {
         GeometryReader { geometry in
             self.grid(with: geometry)
+                
+                .onPreferenceChange(GridItemPreferencesKey.self) { preferences in
+                    DispatchQueue.global(qos: .utility).async {
+                        let gridPreferences = preferences.reduce(into: [AnyHashable: GridItemPreferences](), { (result, preference) in
+                            result[preference.id] = preference
+                        })
+                        DispatchQueue.main.async {
+                            self.gridPreference = gridPreferences
+                        }
+                    }
+                    
+                    self.gridPreference = preferences.reduce(into: [AnyHashable: GridItemPreferences](), { (result, preference) in
+                        result[preference.id] = preference
+                    })
+                }
+                .frame(width: geometry.size.width, height: geometry.size.height)
         }
-        .onPreferenceChange(GridItemPreferencesKey.self) { preferences in
-            self.gridPreference = preferences.reduce(into: [AnyHashable: GridItemPreferences](), { (result, preference) in
-                result[preference.id] = preference
-            })
-        }
+
     }
     
     private func grid(with geometry: GeometryProxy) -> some View {
         ScrollView {
             ZStack(alignment: .topLeading) {
-                ForEach(data, id: self.dataId) { element in
-                    self.content(element)
+                ForEach(data, id: self.id) { item in
+                    self.content(item)
                         .frame(
-                            width: self.gridPreference[element[keyPath: self.dataId]]?.itemWidth,
-                            height: self.gridPreference[element[keyPath: self.dataId]]?.itemHeight
+                            width: self.gridPreference[item[keyPath: self.id]]?.bounds.width,
+                            height: self.gridPreference[item[keyPath: self.id]]?.bounds.height
                         )
-                        
-                        .background(GridItemPreferenceReader(id: element[keyPath: self.dataId]))
-                        .alignmentGuide(.leading, computeValue: { _ in self.gridPreference[element[keyPath: self.dataId]]?.origin?.x ?? 0 })
-                        .alignmentGuide(.top, computeValue: { _ in self.gridPreference[element[keyPath: self.dataId]]?.origin?.y ?? 0 })
-                        .anchorPreference(key: GridItemBoundsKey.self, value: .bounds) { [$0] }
+                        .alignmentGuide(.leading, computeValue: { _ in self.gridPreference[item[keyPath: self.id]]?.bounds.origin.x ?? 0 })
+                        .alignmentGuide(.top, computeValue: { _ in self.gridPreference[item[keyPath: self.id]]?.bounds.origin.y ?? 0 })
+                        .preference(key: GridItemPreferencesKey.self, value: [GridItemPreferences(id: AnyHashable(item[keyPath: self.id]), bounds: .zero)])
+                        .anchorPreference(key: GridItemBoundsPreferencesKey.self, value: .bounds) { [geometry[$0]] }
                 }
-                
             }
-            .padding(self.style.padding)
-            .frame(width: geometry.size.width)
-            .frame(maxWidth: .infinity, maxHeight: .infinity)
             .transformPreference(GridItemPreferencesKey.self) {
                 self.style.transform(preferences: &$0, in: geometry)
             }
+            .padding(self.style.padding)
+            .frame(width: geometry.size.width)
+            .animation(self.loaded ? .linear : nil)
         }
     }
 }
