@@ -5,7 +5,7 @@ struct ModularGridView: View {
     @State var selection: Int = 0
     
     var body: some View {
-        Grid(0...100) { number in
+        Grid(0...100, id: \.self) { number in
             Card(title: "\(number)")
                 .onTapGesture {
                     self.selection = number

@@ -1,54 +1,48 @@
 import SwiftUI
 
 /// A view that arranges its children in a grid.
-public struct Grid: View {
+public struct Grid<Data, ID, Content>: View where Data : RandomAccessCollection, Content : View, ID : Hashable {
     @Environment(\.gridStyle) private var style
-    
-    let items: [AnyView]
-    @State private var itemsPreferences: [GridItemPreferences]?
+    let data: Data
+    let dataId: KeyPath<Data.Element, ID>
+    let content: (Data.Element) -> Content
+    @State private var gridPreference: [AnyHashable: GridItemPreferences] = [:]
     
     public var body: some View {
         GeometryReader { geometry in
             self.grid(with: geometry)
         }
         .onPreferenceChange(GridItemPreferencesKey.self) { preferences in
-            self.itemsPreferences = preferences
+            self.gridPreference = preferences.reduce(into: [AnyHashable: GridItemPreferences](), { (result, preference) in
+                result[preference.id] = preference
+            })
         }
     }
     
     private func grid(with geometry: GeometryProxy) -> some View {
         ScrollView {
             ZStack(alignment: .topLeading) {
-                ForEach(0..<self.items.count, id: \.self) { index in
-                    self.items[index]
-                        .background(GridItemPreferenceModifier(index: index))
+                ForEach(data, id: self.dataId) { element in
+                    self.content(element)
                         .frame(
-                            width: self.itemsPreferences?[index].itemWidth,
-                            height: self.itemsPreferences?[index].itemHeight
+                            width: self.gridPreference[element[keyPath: self.dataId]]?.itemWidth,
+                            height: self.gridPreference[element[keyPath: self.dataId]]?.itemHeight
                         )
-                        .alignmentGuide(.leading, computeValue: { _ in self.itemsPreferences?[index].origin?.x ?? 0 })
-                        .alignmentGuide(.top, computeValue: { _ in self.itemsPreferences?[index].origin?.y ?? 0 })
+                        
+                        .background(GridItemPreferenceReader(id: element[keyPath: self.dataId]))
+                        .alignmentGuide(.leading, computeValue: { _ in self.gridPreference[element[keyPath: self.dataId]]?.origin?.x ?? 0 })
+                        .alignmentGuide(.top, computeValue: { _ in self.gridPreference[element[keyPath: self.dataId]]?.origin?.y ?? 0 })
+                        .anchorPreference(key: GridItemBoundsKey.self, value: .bounds) { [$0] }
                 }
+                
             }
             .padding(self.style.padding)
+            .frame(width: geometry.size.width)
             .frame(maxWidth: .infinity, maxHeight: .infinity)
-            .transformPreference(GridItemPreferencesKey.self) { preferences in
-                preferences = self.style.itemPreferences(with: geometry, itemsCount: self.items.count, preferences: preferences)
+            .transformPreference(GridItemPreferencesKey.self) {
+                self.style.transform(preferences: &$0, in: geometry)
             }
         }
-    }
-}
-
-struct GridItemPreferenceModifier: View {
-    let index: Int
-    
-    var body: some View {
-        GeometryReader { geometry in
-            Color.clear.preference(key: GridItemPreferencesKey.self, value:
-                [GridItemPreferences(index: self.index, prefferedItemSize: geometry.size)]
-            )
-        }
-
     }
 }
 
@@ -56,7 +50,7 @@ struct GridItemPreferenceModifier: View {
 @available(iOS 13.0, OSX 10.15, tvOS 13.0, watchOS 6.0, *)
 struct Grid_Previews: PreviewProvider {
     static var previews: some View {
-        Grid(0...100) {
+        Grid(0...100, id: \.self) {
             Text("\($0)")
         }
     }

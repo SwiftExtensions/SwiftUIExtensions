@@ -1,11 +1,13 @@
 import SwiftUI
 
 struct Card: View {
-    var title: String
+    let title: String
+    let color: Color
+    
     var body: some View {
         ZStack(alignment: .init(horizontal: .center, vertical: .center)) {
             Rectangle()
-                .foregroundColor(.random)
+                .foregroundColor(color)
             Text(title)
                 .font(.title)
                 .foregroundColor(.white)
@@ -22,7 +24,7 @@ struct Card: View {
 #if DEBUG
 struct Card_Previews: PreviewProvider {
     static var previews: some View {
-        Card(title: "1")
+        Card(title: "1", color: .red)
     }
 }
 #endif

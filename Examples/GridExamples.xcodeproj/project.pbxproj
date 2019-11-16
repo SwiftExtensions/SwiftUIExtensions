@@ -11,7 +11,6 @@
 		FA31E11F237E511B005799AD /* ModularGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA31E11E237E511B005799AD /* ModularGridView.swift */; };
 		FA31E121237E521A005799AD /* ModularGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA31E120237E521A005799AD /* ModularGridView.swift */; };
 		FA31E123237E5381005799AD /* ModularGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA31E122237E5381005799AD /* ModularGridView.swift */; };
-		FA31E127237E60E2005799AD /* StaggeredGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA31E126237E60E2005799AD /* StaggeredGridView.swift */; };
 		FA31E129237E634C005799AD /* SharedAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA31E128237E634C005799AD /* SharedAssets.xcassets */; };
 		FA31E12A237E634C005799AD /* SharedAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA31E128237E634C005799AD /* SharedAssets.xcassets */; };
 		FA31E12B237E634C005799AD /* SharedAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA31E128237E634C005799AD /* SharedAssets.xcassets */; };
@@ -102,7 +101,6 @@
 		FA31E11E237E511B005799AD /* ModularGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModularGridView.swift; sourceTree = "<group>"; };
 		FA31E120237E521A005799AD /* ModularGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModularGridView.swift; sourceTree = "<group>"; };
 		FA31E122237E5381005799AD /* ModularGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModularGridView.swift; sourceTree = "<group>"; };
-		FA31E126237E60E2005799AD /* StaggeredGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaggeredGridView.swift; sourceTree = "<group>"; };
 		FA31E128237E634C005799AD /* SharedAssets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = SharedAssets.xcassets; sourceTree = "<group>"; };
 		FA61E95623134504006A5B6B /* GridExamples watchOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "GridExamples watchOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA61E95923134505006A5B6B /* GridExamples watchOS WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "GridExamples watchOS WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -272,7 +270,6 @@
 				FA902116230B32EA00BF9341 /* SceneDelegate.swift */,
 				FA902118230B32EA00BF9341 /* ContentView.swift */,
 				FA31E11C237E4EED005799AD /* ModularGridView.swift */,
-				FA31E126237E60E2005799AD /* StaggeredGridView.swift */,
 				FA90211A230B32EC00BF9341 /* Assets.xcassets */,
 				FA90211F230B32EC00BF9341 /* LaunchScreen.storyboard */,
 				FA902122230B32EC00BF9341 /* Info.plist */,
@@ -598,7 +595,6 @@
 				FA31E11D237E4EED005799AD /* ModularGridView.swift in Sources */,
 				FA902164230B389900BF9341 /* Card.swift in Sources */,
 				FA902117230B32EA00BF9341 /* SceneDelegate.swift in Sources */,
-				FA31E127237E60E2005799AD /* StaggeredGridView.swift in Sources */,
 				FA902119230B32EA00BF9341 /* ContentView.swift in Sources */,
 				FA902161230B379D00BF9341 /* Color+Random.swift in Sources */,
 			);

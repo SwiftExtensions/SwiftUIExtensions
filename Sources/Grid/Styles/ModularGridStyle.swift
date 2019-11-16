@@ -13,8 +13,8 @@ public struct ModularGridStyle: GridStyle {
         self.spacing = spacing
         self.padding = padding
     }
-        
-    public func itemPreferences(with geometry: GeometryProxy, itemsCount: Int, preferences: [GridItemPreferences]) -> [GridItemPreferences] {
+    
+    public func transform(preferences: inout [GridItemPreferences], in geometry: GeometryProxy) {
         let computedTracksCount = tracksCount(
             tracks: self.columns,
             spacing: self.spacing,
@@ -37,14 +37,41 @@ public struct ModularGridStyle: GridStyle {
             )
         )
         
-        return gridAlignmentGuides(
+        preferences = gridAlignmentGuides(
             tracks: computedTracksCount,
             spacing: self.spacing,
             axis: .vertical,
             size: size,
-            viewsCount: itemsCount,
             geometry: geometry,
             preferences: preferences
         )
+    }
+    
+    private func gridAlignmentGuides(tracks: Int, spacing: CGFloat, axis: Axis.Set, size: CGSize, geometry: GeometryProxy, preferences: [GridItemPreferences]) -> [GridItemPreferences] {
+        var heights = Array(repeating: CGFloat(0), count: tracks)
+        var alignmentGuides: [GridItemPreferences] = []
+        preferences.forEach { preference in
+            if let minValue = heights.min(), let indexMin = heights.firstIndex(of: minValue) {
+                //let size = geometry[preference.anchor].size
+                let preferenceSizeWidth = axis == .vertical ? size.width : size.height
+                let preferenceSizeHeight = axis == .vertical ? size.height : size.width
+                let width = preferenceSizeWidth * CGFloat(indexMin) + CGFloat(indexMin) * spacing
+                let height = heights[indexMin]
+                let offset = CGPoint(
+                    x: 0 - (axis == .vertical ? width : height),
+                    y: 0 - (axis == .vertical ? height : width)
+                )
+                heights[indexMin] += preferenceSizeHeight + spacing
+                
+                alignmentGuides.append(GridItemPreferences(
+                    id: preference.id,
+                    origin: offset,
+                    itemWidth: preferenceSizeWidth,
+                    itemHeight: preferenceSizeHeight)
+                )
+            }
+        }
+
+        return alignmentGuides
     }
 }
