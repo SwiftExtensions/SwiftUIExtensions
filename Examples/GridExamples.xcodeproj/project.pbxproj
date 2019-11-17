@@ -56,6 +56,10 @@
 		FA902162230B379D00BF9341 /* Color+Random.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA902160230B379D00BF9341 /* Color+Random.swift */; };
 		FA902164230B389900BF9341 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA902163230B389900BF9341 /* Card.swift */; };
 		FA902165230B389900BF9341 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA902163230B389900BF9341 /* Card.swift */; };
+		FAAF755F2381E9F500DFDE03 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAF755E2381E9F500DFDE03 /* Item.swift */; };
+		FAAF75602381E9F500DFDE03 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAF755E2381E9F500DFDE03 /* Item.swift */; };
+		FAAF75612381E9F500DFDE03 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAF755E2381E9F500DFDE03 /* Item.swift */; };
+		FAAF75622381E9F500DFDE03 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAF755E2381E9F500DFDE03 /* Item.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -122,7 +126,7 @@
 		FA61E97323134508006A5B6B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FA61E97623134508006A5B6B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		FA61E97823134508006A5B6B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FA61E994231351FC006A5B6B /* GridExamples tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "GridExamples tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FA61E994231351FC006A5B6B /* GridExamples.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GridExamples.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA61E996231351FC006A5B6B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FA61E998231351FC006A5B6B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		FA61E99A231351FD006A5B6B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -130,7 +134,7 @@
 		FA61E9A0231351FD006A5B6B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FA61E9A2231351FD006A5B6B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FA6ED895231197C600651DD9 /* GridExamples iOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "GridExamples iOS.entitlements"; sourceTree = "<group>"; };
-		FA902111230B32EA00BF9341 /* GridExamples iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "GridExamples iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FA902111230B32EA00BF9341 /* GridExamples.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GridExamples.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA902114230B32EA00BF9341 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FA902116230B32EA00BF9341 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		FA902118230B32EA00BF9341 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -139,7 +143,7 @@
 		FA902120230B32EC00BF9341 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FA902122230B32EC00BF9341 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FA902129230B335C00BF9341 /* grid */ = {isa = PBXFileReference; lastKnownFileType = folder; name = grid; path = ..; sourceTree = "<group>"; };
-		FA902146230B341C00BF9341 /* GridExamples macOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "GridExamples macOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FA902146230B341C00BF9341 /* GridExamples.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GridExamples.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA902148230B341C00BF9341 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FA90214A230B341C00BF9341 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		FA90214C230B341D00BF9341 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -150,6 +154,7 @@
 		FA902160230B379D00BF9341 /* Color+Random.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Random.swift"; sourceTree = "<group>"; };
 		FA902163230B389900BF9341 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		FA90216F230B4AC300BF9341 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		FAAF755E2381E9F500DFDE03 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -263,12 +268,12 @@
 		FA902112230B32EA00BF9341 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				FA902111230B32EA00BF9341 /* GridExamples iOS.app */,
-				FA902146230B341C00BF9341 /* GridExamples macOS.app */,
-				FA61E95623134504006A5B6B /* GridExamples watchOS.app */,
-				FA61E95923134505006A5B6B /* GridExamples watchOS WatchKit App.app */,
-				FA61E96823134507006A5B6B /* GridExamples watchOS WatchKit Extension.appex */,
-				FA61E994231351FC006A5B6B /* GridExamples tvOS.app */,
+				FA902111230B32EA00BF9341 /* GridExamples.app */,
+				FA902146230B341C00BF9341 /* GridExamples.app */,
+				FA61E95623134504006A5B6B /* GridExamples.app */,
+				FA61E95923134505006A5B6B /* GridExamples.app */,
+				FA61E96823134507006A5B6B /* GridExamples.appex */,
+				FA61E994231351FC006A5B6B /* GridExamples.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -333,6 +338,7 @@
 			isa = PBXGroup;
 			children = (
 				FA902160230B379D00BF9341 /* Color+Random.swift */,
+				FAAF755E2381E9F500DFDE03 /* Item.swift */,
 				FA902163230B389900BF9341 /* Card.swift */,
 				FA0FB89E23811E5900B6E84F /* SharedAssets.xcassets */,
 			);
@@ -413,7 +419,7 @@
 				FA61E9A623135319006A5B6B /* Grid */,
 			);
 			productName = "GridExamples tvOS";
-			productReference = FA61E994231351FC006A5B6B /* GridExamples tvOS.app */;
+			productReference = FA61E994231351FC006A5B6B /* GridExamples.app */;
 			productType = "com.apple.product-type.application";
 		};
 		FA902110230B32EA00BF9341 /* GridExamples iOS */ = {
@@ -433,7 +439,7 @@
 				FA66B37C235653DC00AB542A /* Grid */,
 			);
 			productName = "GridExamples iOS";
-			productReference = FA902111230B32EA00BF9341 /* GridExamples iOS.app */;
+			productReference = FA902111230B32EA00BF9341 /* GridExamples.app */;
 			productType = "com.apple.product-type.application";
 		};
 		FA902145230B341C00BF9341 /* GridExamples macOS */ = {
@@ -453,7 +459,7 @@
 				FA90215A230B346600BF9341 /* Grid */,
 			);
 			productName = "GridExamples macOS";
-			productReference = FA902146230B341C00BF9341 /* GridExamples macOS.app */;
+			productReference = FA902146230B341C00BF9341 /* GridExamples.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -583,6 +589,7 @@
 				FA61E98A23134CF8006A5B6B /* Color+Random.swift in Sources */,
 				FA61E97023134507006A5B6B /* HostingController.swift in Sources */,
 				FA0FB8A723812DFA00B6E84F /* StaggeredGridView.swift in Sources */,
+				FAAF75612381E9F500DFDE03 /* Item.swift in Sources */,
 				FA61E96E23134507006A5B6B /* ContentView.swift in Sources */,
 				FA61E97223134507006A5B6B /* ExtensionDelegate.swift in Sources */,
 			);
@@ -594,6 +601,7 @@
 			files = (
 				FA61E9A82313535F006A5B6B /* Color+Random.swift in Sources */,
 				FA61E999231351FC006A5B6B /* ContentView.swift in Sources */,
+				FAAF75622381E9F500DFDE03 /* Item.swift in Sources */,
 				FA61E997231351FC006A5B6B /* AppDelegate.swift in Sources */,
 				FA31E123237E5381005799AD /* ModularGridView.swift in Sources */,
 				FA0FB8A923812F3700B6E84F /* StaggeredGridView.swift in Sources */,
@@ -610,6 +618,7 @@
 				FA902164230B389900BF9341 /* Card.swift in Sources */,
 				FA902117230B32EA00BF9341 /* SceneDelegate.swift in Sources */,
 				FA0FB89D23811DC800B6E84F /* StaggeredGridView.swift in Sources */,
+				FAAF755F2381E9F500DFDE03 /* Item.swift in Sources */,
 				FA902119230B32EA00BF9341 /* ContentView.swift in Sources */,
 				FA902161230B379D00BF9341 /* Color+Random.swift in Sources */,
 			);
@@ -621,6 +630,7 @@
 			files = (
 				FA31E11F237E511B005799AD /* ModularGridView.swift in Sources */,
 				FA902162230B379D00BF9341 /* Color+Random.swift in Sources */,
+				FAAF75602381E9F500DFDE03 /* Item.swift in Sources */,
 				FA90214B230B341C00BF9341 /* ContentView.swift in Sources */,
 				FA902165230B389900BF9341 /* Card.swift in Sources */,
 				FA902149230B341C00BF9341 /* AppDelegate.swift in Sources */,
@@ -1149,7 +1159,7 @@
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.swiftuiextensions.grid.examples.tvos;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = GridExamples;
 				SDKROOT = appletvos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -1216,7 +1226,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.swiftuiextensions.grid.examples.tvos;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = GridExamples;
 				SDKROOT = appletvos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
@@ -1358,7 +1368,7 @@
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.swiftuiextensions.grid.examples.ios;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = GridExamples;
 				SDKROOT = iphoneos;
 				SUPPORTS_MACCATALYST = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
@@ -1428,7 +1438,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.swiftuiextensions.grid.examples.ios;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = GridExamples;
 				SDKROOT = iphoneos;
 				SUPPORTS_MACCATALYST = YES;
 				SWIFT_COMPILATION_MODE = wholemodule;
@@ -1508,7 +1518,7 @@
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.swiftuiextensions.grid.examples.macos;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = GridExamples;
 				SDKROOT = macosx;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -1578,7 +1588,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.swiftuiextensions.grid.examples.macos;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = GridExamples;
 				SDKROOT = macosx;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";

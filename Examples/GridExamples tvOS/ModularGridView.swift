@@ -3,14 +3,14 @@ import Grid
 
 struct ModularGridView: View {
     @State var selection: Int = 0
-    @State var items: [(Int, Color)] = (0...100).map { ($0, .random) }
+    @State var items: [Item] = (0...100).map { Item(number: $0) }
     
     var body: some View {
-        Grid(items, id: \.0) { item in
-            Card(title: "\(item.0)", color: item.1)
+        Grid(items) { item in
+            Card(title: "\(item.number)", color: item.color)
                 .focusable(true) { focus in
                     if focus {
-                       self.selection = item.0
+                       self.selection = item.number
                     }
                 }
         }
