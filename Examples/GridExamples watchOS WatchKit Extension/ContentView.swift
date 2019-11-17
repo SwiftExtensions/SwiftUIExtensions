@@ -12,27 +12,6 @@ struct ContentView: View {
                 }
                 
             }
-//            NavigationLink(destination: FixedColumnsLayoutView()) {
-//                HStack {
-//                    Image(systemName: "rectangle.split.3x3.fill")
-//                        .foregroundColor(.accentColor)
-//                    Text("Fixed Columns")
-//                }
-//            }
-//            NavigationLink(destination: SingleColumnLayoutView()) {
-//                HStack {
-//                    Image(systemName: "rectangle.grid.1x2.fill")
-//                        .foregroundColor(.accentColor)
-//                    Text("One Column")
-//                }
-//            }
-//            NavigationLink(destination: PerformanceLayoutView()) {
-//                HStack {
-//                    Image(systemName: "square.grid.4x3.fill")
-//                        .foregroundColor(.accentColor)
-//                    Text("Performance")
-//                }
-//            }
         }
         .accentColor(.purple)
     }
