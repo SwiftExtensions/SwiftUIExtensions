@@ -1,15 +1,14 @@
 ## SwiftUI Grid
 SwiftUI Grid view layout with custom styles.
 
-- ZStack based layout (vertical and horizontal)
+- ZStack based layout
+- Vertical and horizontal scrolling
 - Supports all apple platforms
-- Custom Styles (ModularGridStyle, StaggeredGridStyle)
-- SwiftUI code patterns (StyleStructs, EnvironmentValues)
+- Custom styles (ModularGridStyle, StaggeredGridStyle)
+- SwiftUI code patterns (StyleStructs, EnvironmentValues, ViewBuilder)
 - Active development for production apps
 
 Open `/Examples/GridExamples.xcodeproj` for more examples for iOS, macOS, watchOS and tvOS
-
-## GridStyles
 
 ### ModularGridStyle (Default)
 
@@ -19,7 +18,7 @@ Grid(colors) {
         .foregroundColor($0)
 }
 .gridStyle(
-    ModularGridStyle(columns: 2, rows: .auto(.min(100)))
+    ModularGridStyle(columns: .auto(.min(100)), rows: .auto(.min(100)))
 )
 ```
 <center>
@@ -35,7 +34,7 @@ Grid(1...69, id: \.self) { index in
         .scaledToFit()
 }
 .gridStyle(
-    StaggeredGridStyle(tracks: 5, axis: .horizontal, spacing: 4)
+    StaggeredGridStyle(tracks: 8, axis: .horizontal, spacing: 4)
 )
 ```
 
@@ -86,5 +85,8 @@ struct CardsView: View {
 -  Animations
 - 'CSS Grid'-like features
 
-## Contibutions
+## Code Contibutions
 Feel free to contribute via fork/pull request to master branch. If you want to request a feature or report a bug please start a new issue.
+
+## Coffee Contibutions
+If you find this project useful please consider becoming a sponsor.
