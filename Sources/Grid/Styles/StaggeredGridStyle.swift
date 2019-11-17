@@ -85,30 +85,4 @@ public struct StaggeredGridStyle: GridStyle {
 
         return newPreferences
     }
-
-//    private func layoutPreferences(tracks: Int, spacing: CGFloat, axis: Axis.Set, size: CGSize, geometry: GeometryProxy, preferences: [AnyHashable: GridItemPreferences]) -> [AnyHashable: GridItemPreferences] {
-//        var heights = Array(repeating: CGFloat(0), count: tracks)
-//        var alignmentGuides: [AnyHashable: GridItemPreferences] = [:]
-//        preferences.forEach { (key, value) in
-//            if let minValue = heights.min(), let indexMin = heights.firstIndex(of: minValue) {
-//                let size = CGSize(width: size.width, height: value.prefferedItemSize.height)
-//                let preferenceSizeWidth = axis == .vertical ? size.width : size.height
-//                let preferenceSizeHeight = axis == .vertical ? size.height : size.width
-//                let width = preferenceSizeWidth * CGFloat(indexMin) + CGFloat(indexMin) * spacing
-//                let height = heights[indexMin]
-//                let offset = CGPoint(
-//                    x: 0 - (axis == .vertical ? width : height),
-//                    y: 0 - (axis == .vertical ? height : width)
-//                )
-//                heights[indexMin] += preferenceSizeHeight + spacing
-//                alignmentGuides[key] = preferences[key]
-//                alignmentGuides[key]?.origin = offset
-//                alignmentGuides[key]?.itemWidth = preferenceSizeWidth
-//                //alignmentGuides[key]?.itemHeight = preferenceSizeHeight
-//            }
-//        }
-//
-//        return alignmentGuides
-//    }
-
 }
