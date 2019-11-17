@@ -1,6 +1,7 @@
-## SwiftUI Grid
+# SwiftUI Grid
 SwiftUI Grid view layout with custom styles.
 
+## Features
 - ZStack based layout
 - Vertical and horizontal scrolling
 - Supports all apple platforms
@@ -9,6 +10,8 @@ SwiftUI Grid view layout with custom styles.
 - Active development for production apps
 
 Open `/Examples/GridExamples.xcodeproj` for more examples for iOS, macOS, watchOS and tvOS
+
+## Styles
 
 ### ModularGridStyle (Default)
 
