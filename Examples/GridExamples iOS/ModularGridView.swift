@@ -7,7 +7,7 @@ struct ModularGridView: View {
     
     var body: some View {
         NavigationView {
-            Grid(items, id: \.0) { item in
+            Grid(items) { item in
                 Card(title: "\(item.0)", color: item.1)
                     .onTapGesture {
                         self.selection = item.0

@@ -1,25 +1,21 @@
 import SwiftUI
 
 /// A view that arranges its children in a grid.
-public struct Grid<Data, ID, Content>: View where Data : RandomAccessCollection, Content : View, ID : Hashable {
+public struct Grid<Content>: View where Content: View {
     @Environment(\.gridStyle) private var style
-    
-    let data: Data
-    let id: KeyPath<Data.Element, ID>
-    let content: (Data.Element) -> Content
-    
-    @State private var gridPreference: [AnyHashable: GridItemPreferences] = [:]
+    let items: [AnyView]
+    @State private var itemsPreferences: [AnyHashable : GridItemPreferences] = [:]
     
     public var body: some View {
         GeometryReader { geometry in
             self.grid(with: geometry)
                 .onPreferenceChange(GridItemPreferencesKey.self) { preferences in
                     DispatchQueue.global(qos: .utility).async {
-                        let gridPreferences = preferences.reduce(into: [AnyHashable: GridItemPreferences](), { (result, preference) in
+                        let itemsPreferences = preferences.reduce(into: [AnyHashable: GridItemPreferences](), { (result, preference) in
                             result[preference.id] = preference
                         })
                         DispatchQueue.main.async {
-                            self.gridPreference = gridPreferences
+                            self.itemsPreferences = itemsPreferences
                         }
                     }
                 }
@@ -30,15 +26,15 @@ public struct Grid<Data, ID, Content>: View where Data : RandomAccessCollection,
     private func grid(with geometry: GeometryProxy) -> some View {
         ScrollView {
             ZStack(alignment: .topLeading) {
-                ForEach(data, id: self.id) { item in
-                    self.content(item)
+                ForEach(0..<self.items.count, id: \.self) { index in
+                    self.items[index]
                         .frame(
-                            width: self.gridPreference[item[keyPath: self.id]]?.bounds.width,
-                            height: self.gridPreference[item[keyPath: self.id]]?.bounds.height
+                            width: self.itemsPreferences[AnyHashable(index)]?.bounds.width,
+                            height: self.itemsPreferences[AnyHashable(index)]?.bounds.height
                         )
-                        .alignmentGuide(.leading, computeValue: { _ in self.gridPreference[item[keyPath: self.id]]?.bounds.origin.x ?? 0 })
-                        .alignmentGuide(.top, computeValue: { _ in self.gridPreference[item[keyPath: self.id]]?.bounds.origin.y ?? 0 })
-                        .preference(key: GridItemPreferencesKey.self, value: [GridItemPreferences(id: AnyHashable(item[keyPath: self.id]), bounds: .zero)])
+                        .alignmentGuide(.leading, computeValue: { _ in self.itemsPreferences[AnyHashable(index)]?.bounds.origin.x ?? 0 })
+                        .alignmentGuide(.top, computeValue: { _ in self.itemsPreferences[AnyHashable(index)]?.bounds.origin.y ?? 0 })
+                        .preference(key: GridItemPreferencesKey.self, value: [GridItemPreferences(id: AnyHashable(index), bounds: .zero)])
                         .anchorPreference(key: GridItemBoundsPreferencesKey.self, value: .bounds) { [geometry[$0]] }
                 }
             }
@@ -55,7 +51,7 @@ public struct Grid<Data, ID, Content>: View where Data : RandomAccessCollection,
 @available(iOS 13.0, OSX 10.15, tvOS 13.0, watchOS 6.0, *)
 struct Grid_Previews: PreviewProvider {
     static var previews: some View {
-        Grid(0...100, id: \.self) {
+        Grid(0...100) {
             Text("\($0)")
         }
     }
