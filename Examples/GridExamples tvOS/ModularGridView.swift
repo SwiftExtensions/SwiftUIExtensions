@@ -29,7 +29,7 @@ struct ModularGridView: View {
                 .animation(.linear)
         }
         .gridStyle(
-            ModularGridStyle(columns: .auto(.min(300)), rows: .auto(.min(100)), axis: .horizontal)
+            ModularGridStyle(columns: .auto(.min(300)), rows: .auto(.min(100)))
         )
     }
 }
