@@ -6,12 +6,12 @@ struct ModularGridView: View {
     @State var items: [(Int, Color)] = (0...100).map { ($0, .random) }
     
     var body: some View {
-        Grid(0...100) { index in
+       Grid(items, id: \.0) { item in
             Rectangle()
-                .foregroundColor(self.items[index].1)
+                .foregroundColor(item.1)
                 .cornerRadius(4)
                 .onTapGesture {
-                    self.selection = index
+                    self.selection = item.0
                 }
         }
         .overlayPreferenceValue(GridItemBoundsPreferencesKey.self) { preferences in

@@ -4,69 +4,75 @@ import SwiftUI
 public struct ModularGridStyle: GridStyle {
     let columns: Tracks
     let rows: Tracks
+    public let axis: Axis
     let spacing: CGFloat
     public let padding: EdgeInsets
         
-    public init(columns: Tracks, rows: Tracks, spacing: CGFloat = 8, padding: EdgeInsets = .init(top: 8, leading: 8, bottom: 8, trailing: 8)) {
+    public init(columns: Tracks, rows: Tracks, axis: Axis = .vertical, spacing: CGFloat = 8, padding: EdgeInsets = .init(top: 8, leading: 8, bottom: 8, trailing: 8)) {
         self.columns = columns
         self.rows = rows
+        self.axis = axis
         self.spacing = spacing
         self.padding = padding
     }
     
-    public func transform(preferences: inout [GridItemPreferences], in geometry: GeometryProxy) {
-        let computedTracksCount = tracksCount(
-            tracks: self.columns,
-            spacing: self.spacing,
-            padding: self.padding.leading + self.padding.trailing,
-            availableLength: geometry.size.width
-        )
+    public func transform(preferences: inout [GridItemPreferences], in size: CGSize) {
+        let computedTracksCount = self.axis == .vertical ?
+            tracksCount(
+                tracks: self.columns,
+                spacing: self.spacing,
+                padding: self.padding.leading + self.padding.trailing,
+                availableLength: size.width
+            ) :
+            tracksCount(
+                tracks: self.rows,
+                spacing: self.spacing,
+                padding: self.padding.top + self.padding.bottom,
+                availableLength: size.height
+            )
         
-        let size = CGSize(
+        let itemSize = CGSize(
             width: itemLength(
                 tracks: self.columns,
                 spacing: self.spacing,
                 padding: self.padding.leading + self.padding.trailing,
-                availableLength: geometry.size.width
+                availableLength: size.width
             ),
             height: itemLength(
                 tracks: self.rows,
                 spacing: self.spacing,
                 padding: self.padding.top + self.padding.bottom,
-                availableLength: geometry.size.height
+                availableLength: size.height
             )
         )
         
         preferences = layoutPreferences(
             tracks: computedTracksCount,
             spacing: self.spacing,
-            axis: .vertical,
-            size: size,
-            geometry: geometry,
+            axis: self.axis,
+            itemSize: itemSize,
             preferences: preferences
         )
     }
     
-    private func layoutPreferences(tracks: Int, spacing: CGFloat, axis: Axis, size: CGSize, geometry: GeometryProxy, preferences: [GridItemPreferences]) -> [GridItemPreferences] {
-        var heights = Array(repeating: CGFloat(0), count: tracks)
+    private func layoutPreferences(tracks: Int, spacing: CGFloat, axis: Axis, itemSize: CGSize, preferences: [GridItemPreferences]) -> [GridItemPreferences] {
+        var tracksLengths = Array(repeating: CGFloat(0.0), count: tracks)
         var newPreferences: [GridItemPreferences] = []
         
         preferences.forEach { preference in
-            if let minValue = heights.min(), let indexMin = heights.firstIndex(of: minValue) {
-                let preferenceSizeWidth = axis == .vertical ? size.width : size.height
-                let preferenceSizeHeight = axis == .vertical ? size.height : size.width
-                let width = preferenceSizeWidth * CGFloat(indexMin) + CGFloat(indexMin) * spacing
-                let height = heights[indexMin]
-                let offset = CGPoint(
-                    x: 0 - (axis == .vertical ? width : height),
-                    y: 0 - (axis == .vertical ? height : width)
-                )
-                heights[indexMin] += preferenceSizeHeight + spacing
+            if let minValue = tracksLengths.min(), let indexMin = tracksLengths.firstIndex(of: minValue) {
+                let itemSizeWidth = itemSize.width
+                let itemSizeHeight = itemSize.height
+                let width = axis == .vertical ? itemSizeWidth * CGFloat(indexMin) + CGFloat(indexMin) * spacing : tracksLengths[indexMin]
+                let height = axis == .vertical ? tracksLengths[indexMin] : itemSizeHeight * CGFloat(indexMin) + CGFloat(indexMin) * spacing
+        
+                let origin = CGPoint(x: 0 - width, y: 0 - height)
+                tracksLengths[indexMin] += (axis == .vertical ? itemSizeHeight : itemSizeWidth) + spacing
                 
                 newPreferences.append(
                     GridItemPreferences(
                         id: preference.id,
-                        bounds: CGRect(origin: offset, size: CGSize(width: preferenceSizeWidth, height: preferenceSizeHeight))
+                        bounds: CGRect(origin: origin, size: CGSize(width: itemSizeWidth, height: itemSizeHeight))
                     )
                 )
             }

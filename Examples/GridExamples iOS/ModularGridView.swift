@@ -7,7 +7,7 @@ struct ModularGridView: View {
     
     var body: some View {
         NavigationView {
-            Grid(items) { item in
+            Grid(items, id: \.0) { item in
                 Card(title: "\(item.0)", color: item.1)
                     .onTapGesture {
                         self.selection = item.0
@@ -35,28 +35,6 @@ struct ModularGridView: View {
         .navigationViewStyle(
             StackNavigationViewStyle()
         )
-
-
-
-        
-        
-//        .overlayPreferenceValue(GridItemPreferencesKey.self) { preferences in
-//            GeometryReader { geometry in
-//                ZStack(alignment: .topLeading) {
-//                    RoundedRectangle(cornerRadius: 16)
-//                        .strokeBorder(lineWidth: 4)
-//                        .foregroundColor(.white)
-//                        .frame(
-//                            width: preferences[self.selection].bounds.size.width,
-//                            height: preferences[self.selection].bounds.size.height
-//                        )
-//                        .alignmentGuide(.top, computeValue: { _ in preferences[self.selection].origin?.y ?? 0 })
-//                        .alignmentGuide(.leading, computeValue: { _ in preferences[self.selection].origin?.x ?? 0 })
-//                }
-//                .frame(width: geometry.size.width, height: geometry.size.height)
-//            }
-//
-//        }
     }
 }
 

@@ -6,7 +6,7 @@ struct ModularGridView: View {
     @State var items: [(Int, Color)] = (0...100).map { ($0, .random) }
     
     var body: some View {
-        Grid(items) { item in
+        Grid(items, id: \.0) { item in
             Card(title: "\(item.0)", color: item.1)
                 .onTapGesture {
                     self.selection = item.0
@@ -26,6 +26,9 @@ struct ModularGridView: View {
                 )
                 .animation(.linear)
         }
+        .gridStyle(
+            ModularGridStyle(columns: .auto(.min(200)), rows: .auto(.min(200)))
+        )
     }
 }
 

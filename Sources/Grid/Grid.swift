@@ -24,7 +24,7 @@ public struct Grid<Content>: View where Content: View {
     }
     
     private func grid(with geometry: GeometryProxy) -> some View {
-        ScrollView {
+        ScrollView(self.style.axis == .vertical ? .vertical : .horizontal) {
             ZStack(alignment: .topLeading) {
                 ForEach(0..<self.items.count, id: \.self) { index in
                     self.items[index]
@@ -39,10 +39,14 @@ public struct Grid<Content>: View where Content: View {
                 }
             }
             .transformPreference(GridItemPreferencesKey.self) {
-                self.style.transform(preferences: &$0, in: geometry)
+                self.style.transform(preferences: &$0, in: geometry.size)
             }
             .padding(self.style.padding)
-            .frame(width: geometry.size.width)
+            .frame(
+                width: self.style.axis == .vertical ? geometry.size.width : nil,
+                height: self.style.axis == .vertical ? nil : geometry.size.height,
+                alignment: .topLeading
+            )
         }
     }
 }
@@ -51,7 +55,7 @@ public struct Grid<Content>: View where Content: View {
 @available(iOS 13.0, OSX 10.15, tvOS 13.0, watchOS 6.0, *)
 struct Grid_Previews: PreviewProvider {
     static var previews: some View {
-        Grid(0...100) {
+        Grid(0...100, id: \.self) {
             Text("\($0)")
         }
     }
