@@ -14,6 +14,9 @@ Open `/Examples/GridExamples.xcodeproj` for more examples for iOS, macOS, watchO
 ## Styles
 
 ### ModularGridStyle (Default)
+<center>
+<img src="Resources/iPad1.png"/>
+</center>
 
 ```swift
 Grid(colors) {
@@ -24,11 +27,12 @@ Grid(colors) {
     ModularGridStyle(columns: .auto(.min(100)), rows: .auto(.min(100)))
 )
 ```
-<center>
-<img src="Resources/iPad1.png"/>
-</center>
 
 ### StaggeredGridStyle
+
+<center>
+<img src="Resources/iPad2.png"/>
+</center>
 
 ```swift
 Grid(1...69, id: \.self) { index in
@@ -40,10 +44,6 @@ Grid(1...69, id: \.self) { index in
     StaggeredGridStyle(tracks: 8, axis: .horizontal, spacing: 4)
 )
 ```
-
-<center>
-<img src="Resources/iPad2.png"/>
-</center>
 
 ## Preferences
 Get item size and position with preferences
