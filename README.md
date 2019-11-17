@@ -1,12 +1,6 @@
 ## SwiftUI Grid
-
 SwiftUI Grid view layout with custom styles.
 
-<center>
-<img src="Resources/iPad1.png"/>
-</center>
-
-## Advantages
 - ZStack based layout (vertical and horizontal)
 - Supports all apple platforms
 - Custom Styles (ModularGridStyle, StaggeredGridStyle)
@@ -18,7 +12,6 @@ Open `/Examples/GridExamples.xcodeproj` for more examples for iOS, macOS, watchO
 ## GridStyles
 
 ### ModularGridStyle (Default)
-CSS Grid inspired layout with auto columns and rows
 
 ```swift
 Grid(colors) {
@@ -29,10 +22,22 @@ Grid(colors) {
     ModularGridStyle(columns: 2, rows: .auto(.min(100)))
 )
 ```
-### StaggeredGridStyle
-...Soon
+<center>
+<img src="Resources/iPad1.png"/>
+</center>
 
-## Performance
+### StaggeredGridStyle
+
+```swift
+Grid(1...69, id: \.self) { index in
+    Image("\(index)")
+        .resizable()
+        .scaledToFit()
+}
+.gridStyle(
+    StaggeredGridStyle(tracks: 5, axis: .horizontal, spacing: 4)
+)
+```
 
 <center>
 <img src="Resources/iPad2.png"/>

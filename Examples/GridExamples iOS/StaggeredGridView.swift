@@ -9,10 +9,10 @@ struct StaggeredGridView: View {
                     .resizable()
                     .scaledToFit()
             }
-            .navigationBarTitle("Staggered", displayMode: .inline)
+            .navigationBarTitle("Staggered Grid", displayMode: .inline)
         }
         .gridStyle(
-            StaggeredGridStyle(tracks: .auto(.min(100)), axis: .vertical, spacing: 1)
+            StaggeredGridStyle(tracks: .auto(.min(100)), axis: .vertical, spacing: 1, padding: .init(top: 1, leading: 1, bottom: 1, trailing: 1))
         )
         .navigationViewStyle(
             StackNavigationViewStyle()

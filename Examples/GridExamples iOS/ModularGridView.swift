@@ -13,7 +13,7 @@ struct ModularGridView: View {
                         self.selection = item.0
                     }
             }
-            .navigationBarTitle("Modular", displayMode: .inline)
+            .navigationBarTitle("Modular Grid", displayMode: .inline)
             .overlayPreferenceValue(GridItemBoundsPreferencesKey.self) { preferences in
                 RoundedRectangle(cornerRadius: 16)
                     .strokeBorder(lineWidth: 4)
