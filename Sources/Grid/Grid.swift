@@ -29,12 +29,12 @@ public struct Grid<Content>: View where Content: View {
                 ForEach(0..<self.items.count, id: \.self) { index in
                     self.items[index]
                         .frame(
-                            width: self.itemsPreferences[AnyHashable(index)]?.bounds.width,
-                            height: self.itemsPreferences[AnyHashable(index)]?.bounds.height
+                            width: self.style.autoWidth ? self.itemsPreferences[AnyHashable(index)]?.bounds.width : nil,
+                            height: self.style.autoHeight ? self.itemsPreferences[AnyHashable(index)]?.bounds.height : nil
                         )
                         .alignmentGuide(.leading, computeValue: { _ in self.itemsPreferences[AnyHashable(index)]?.bounds.origin.x ?? 0 })
                         .alignmentGuide(.top, computeValue: { _ in self.itemsPreferences[AnyHashable(index)]?.bounds.origin.y ?? 0 })
-                        .preference(key: GridItemPreferencesKey.self, value: [GridItemPreferences(id: AnyHashable(index), bounds: .zero)])
+                        .background(GridItemPreferencesModifier(id: AnyHashable(index), bounds: self.itemsPreferences[AnyHashable(index)]?.bounds ?? .zero))
                         .anchorPreference(key: GridItemBoundsPreferencesKey.self, value: .bounds) { [geometry[$0]] }
                 }
             }

@@ -7,6 +7,8 @@ public struct ModularGridStyle: GridStyle {
     public let axis: Axis
     let spacing: CGFloat
     public let padding: EdgeInsets
+    public var autoWidth: Bool = true
+    public var autoHeight: Bool = true
         
     public init(columns: Tracks, rows: Tracks, axis: Axis = .vertical, spacing: CGFloat = 8, padding: EdgeInsets = .init(top: 8, leading: 8, bottom: 8, trailing: 8)) {
         self.columns = columns

@@ -11,6 +11,11 @@ struct ContentView: View {
                     Text("Modular")
                 }
                 .tag(0)
+            StaggeredGridView()
+                .tabItem {
+                    Text("Staggered")
+                }
+                .tag(0)
         }
         .frame(minWidth: 600, maxWidth: .infinity, maxHeight: .infinity)
         .padding()

@@ -12,6 +12,15 @@ struct ContentView: View {
                 }
                 
             }
+            
+            NavigationLink(destination: StaggeredGridView()) {
+                HStack {
+                    Image(systemName: "rectangle.3.offgrid.fill")
+                        .foregroundColor(.accentColor)
+                    Text("Staggered")
+                }
+                
+            }
         }
         .accentColor(.purple)
     }

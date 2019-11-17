@@ -15,6 +15,15 @@ struct ContentView: View {
                     }
                 }
                 .tag(0)
+            StaggeredGridView()
+                .font(.title)
+                .tabItem {
+                    HStack {
+                        Image(systemName: "rectangle.3.offgrid.fill")
+                        Text("Staggered")
+                    }
+                }
+                .tag(0)
         }
     }
 }
