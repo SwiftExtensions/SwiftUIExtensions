@@ -1,8 +1,9 @@
 import SwiftUI
 
-public enum Tracks {
-    case auto(Dimensions)
+public enum Tracks: Hashable {
     case count(Int)
+    case fixed(CGFloat)
+    case min(CGFloat)
 }
 
 extension Tracks: ExpressibleByIntegerLiteral {

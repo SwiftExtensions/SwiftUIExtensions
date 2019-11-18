@@ -9,7 +9,7 @@ struct StaggeredGridView: View {
                 .scaledToFit()
         }
         .gridStyle(
-            StaggeredGridStyle(tracks: .auto(.min(200)))
+            StaggeredGridStyle(tracks: .min(200))
         )
     }
 }

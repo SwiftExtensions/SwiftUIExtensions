@@ -2,11 +2,11 @@ import SwiftUI
 
 /// Modular `Grid` style.
 public struct ModularGridStyle: GridStyle {
-    let columns: Tracks
-    let rows: Tracks
-    public let axis: Axis
-    let spacing: CGFloat
-    public let padding: EdgeInsets
+    public var columns: Tracks
+    public var rows: Tracks
+    public var axis: Axis
+    public var spacing: CGFloat
+    public var padding: EdgeInsets
     public var autoWidth: Bool = true
     public var autoHeight: Bool = true
         

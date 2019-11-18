@@ -24,7 +24,7 @@ Grid(colors) {
         .foregroundColor($0)
 }
 .gridStyle(
-    ModularGridStyle(columns: .auto(.min(100)), rows: .auto(.min(100)))
+    ModularGridStyle(columns: .min(100), rows: .min(100))
 )
 ```
 
@@ -43,6 +43,39 @@ Grid(1...69, id: \.self) { index in
 .gridStyle(
     StaggeredGridStyle(tracks: 8, axis: .horizontal, spacing: 4)
 )
+```
+
+## Tracks
+Tracks setting allows you to customize grid behaviour to your specific use-case. Both Modular and Staggered grid use tracks value to calculate layout. In Modular layout both columns and rows are tracks.
+
+```swift
+public enum Tracks: Hashable {
+    case count(Int)
+    case fixed(CGFloat)
+    case min(CGFloat)
+}
+```
+
+### Count
+Grid is split into equal fractions of size provided by a parent view.
+
+```swift
+ModularGridStyle(columns: 3, rows: 3)
+StaggeredGridStyle(tracks: 8)
+```
+
+### Fixed
+Item size is fixed to a specific width or height.
+```swift
+ModularGridStyle(columns: .fixed(100), rows: .fixed(100))
+StaggeredGridStyle(tracks: .fixed(100))
+```
+
+### Min
+Autolayout respecting a min item width or height.
+```swift
+ModularGridStyle(columns: .min(100), rows: .min(100))
+StaggeredGridStyle(tracks: .min(100))
 ```
 
 ## Preferences

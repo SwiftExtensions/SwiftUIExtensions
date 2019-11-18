@@ -2,10 +2,10 @@ import SwiftUI
 
 /// Staggered `Grid` style.
 public struct StaggeredGridStyle: GridStyle {
-    let tracks: Tracks
-    public let axis: Axis
-    let spacing: CGFloat
-    public let padding: EdgeInsets
+    public var tracks: Tracks
+    public var axis: Axis
+    public var spacing: CGFloat
+    public var padding: EdgeInsets
     
     public var autoWidth: Bool {
         axis == .vertical

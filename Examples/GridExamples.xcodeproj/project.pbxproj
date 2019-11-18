@@ -56,6 +56,8 @@
 		FA902162230B379D00BF9341 /* Color+Random.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA902160230B379D00BF9341 /* Color+Random.swift */; };
 		FA902164230B389900BF9341 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA902163230B389900BF9341 /* Card.swift */; };
 		FA902165230B389900BF9341 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA902163230B389900BF9341 /* Card.swift */; };
+		FAA99F032381FCBB00CE1632 /* ModularGridSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA99F022381FCBB00CE1632 /* ModularGridSettingsView.swift */; };
+		FAA99F0523821F3200CE1632 /* StaggeredGridSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA99F0423821F3200CE1632 /* StaggeredGridSettingsView.swift */; };
 		FAAF755F2381E9F500DFDE03 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAF755E2381E9F500DFDE03 /* Item.swift */; };
 		FAAF75602381E9F500DFDE03 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAF755E2381E9F500DFDE03 /* Item.swift */; };
 		FAAF75612381E9F500DFDE03 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAF755E2381E9F500DFDE03 /* Item.swift */; };
@@ -154,6 +156,8 @@
 		FA902160230B379D00BF9341 /* Color+Random.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Random.swift"; sourceTree = "<group>"; };
 		FA902163230B389900BF9341 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		FA90216F230B4AC300BF9341 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		FAA99F022381FCBB00CE1632 /* ModularGridSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModularGridSettingsView.swift; sourceTree = "<group>"; };
+		FAA99F0423821F3200CE1632 /* StaggeredGridSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaggeredGridSettingsView.swift; sourceTree = "<group>"; };
 		FAAF755E2381E9F500DFDE03 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -270,9 +274,9 @@
 			children = (
 				FA902111230B32EA00BF9341 /* GridExamples.app */,
 				FA902146230B341C00BF9341 /* GridExamples.app */,
-				FA61E95623134504006A5B6B /* GridExamples.app */,
-				FA61E95923134505006A5B6B /* GridExamples.app */,
-				FA61E96823134507006A5B6B /* GridExamples.appex */,
+				FA61E95623134504006A5B6B /* GridExamples watchOS.app */,
+				FA61E95923134505006A5B6B /* GridExamples watchOS WatchKit App.app */,
+				FA61E96823134507006A5B6B /* GridExamples watchOS WatchKit Extension.appex */,
 				FA61E994231351FC006A5B6B /* GridExamples.app */,
 			);
 			name = Products;
@@ -285,7 +289,9 @@
 				FA902116230B32EA00BF9341 /* SceneDelegate.swift */,
 				FA902118230B32EA00BF9341 /* ContentView.swift */,
 				FA31E11C237E4EED005799AD /* ModularGridView.swift */,
+				FAA99F022381FCBB00CE1632 /* ModularGridSettingsView.swift */,
 				FA0FB89C23811DC800B6E84F /* StaggeredGridView.swift */,
+				FAA99F0423821F3200CE1632 /* StaggeredGridSettingsView.swift */,
 				FA90211A230B32EC00BF9341 /* Assets.xcassets */,
 				FA90211F230B32EC00BF9341 /* LaunchScreen.storyboard */,
 				FA902122230B32EC00BF9341 /* Info.plist */,
@@ -618,6 +624,8 @@
 				FA902164230B389900BF9341 /* Card.swift in Sources */,
 				FA902117230B32EA00BF9341 /* SceneDelegate.swift in Sources */,
 				FA0FB89D23811DC800B6E84F /* StaggeredGridView.swift in Sources */,
+				FAA99F032381FCBB00CE1632 /* ModularGridSettingsView.swift in Sources */,
+				FAA99F0523821F3200CE1632 /* StaggeredGridSettingsView.swift in Sources */,
 				FAAF755F2381E9F500DFDE03 /* Item.swift in Sources */,
 				FA902119230B32EA00BF9341 /* ContentView.swift in Sources */,
 				FA902161230B379D00BF9341 /* Color+Random.swift in Sources */,
