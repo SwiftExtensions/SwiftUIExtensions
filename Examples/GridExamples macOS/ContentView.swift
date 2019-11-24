@@ -15,7 +15,7 @@ struct ContentView: View {
                 .tabItem {
                     Text("Staggered")
                 }
-                .tag(0)
+                .tag(1)
         }
         .frame(minWidth: 600, maxWidth: .infinity, maxHeight: .infinity)
         .padding()

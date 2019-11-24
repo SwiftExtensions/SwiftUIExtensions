@@ -19,6 +19,8 @@
 		FA31E11F237E511B005799AD /* ModularGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA31E11E237E511B005799AD /* ModularGridView.swift */; };
 		FA31E121237E521A005799AD /* ModularGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA31E120237E521A005799AD /* ModularGridView.swift */; };
 		FA31E123237E5381005799AD /* ModularGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA31E122237E5381005799AD /* ModularGridView.swift */; };
+		FA392B92238B16B400B74DCD /* ModularGridSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA392B91238B16B400B74DCD /* ModularGridSettingsView.swift */; };
+		FA392B94238B1A1C00B74DCD /* StaggeredGridSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA392B93238B1A1C00B74DCD /* StaggeredGridSettingsView.swift */; };
 		FA61E95A23134505006A5B6B /* GridExamples watchOS WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = FA61E95923134505006A5B6B /* GridExamples watchOS WatchKit App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		FA61E96023134505006A5B6B /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA61E95E23134505006A5B6B /* Interface.storyboard */; };
 		FA61E96223134507006A5B6B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA61E96123134507006A5B6B /* Assets.xcassets */; };
@@ -116,6 +118,8 @@
 		FA31E11E237E511B005799AD /* ModularGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModularGridView.swift; sourceTree = "<group>"; };
 		FA31E120237E521A005799AD /* ModularGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModularGridView.swift; sourceTree = "<group>"; };
 		FA31E122237E5381005799AD /* ModularGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModularGridView.swift; sourceTree = "<group>"; };
+		FA392B91238B16B400B74DCD /* ModularGridSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModularGridSettingsView.swift; sourceTree = "<group>"; };
+		FA392B93238B1A1C00B74DCD /* StaggeredGridSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaggeredGridSettingsView.swift; sourceTree = "<group>"; };
 		FA61E95623134504006A5B6B /* GridExamples watchOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "GridExamples watchOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA61E95923134505006A5B6B /* GridExamples watchOS WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "GridExamples watchOS WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA61E95F23134505006A5B6B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
@@ -315,7 +319,9 @@
 				FA902148230B341C00BF9341 /* AppDelegate.swift */,
 				FA90214A230B341C00BF9341 /* ContentView.swift */,
 				FA31E11E237E511B005799AD /* ModularGridView.swift */,
+				FA392B91238B16B400B74DCD /* ModularGridSettingsView.swift */,
 				FA0FB8A323812AA500B6E84F /* StaggeredGridView.swift */,
+				FA392B93238B1A1C00B74DCD /* StaggeredGridSettingsView.swift */,
 				FA90214C230B341D00BF9341 /* Assets.xcassets */,
 				FA902151230B341D00BF9341 /* Main.storyboard */,
 				FA902154230B341D00BF9341 /* Info.plist */,
@@ -637,11 +643,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA31E11F237E511B005799AD /* ModularGridView.swift in Sources */,
+				FA392B94238B1A1C00B74DCD /* StaggeredGridSettingsView.swift in Sources */,
 				FA902162230B379D00BF9341 /* Color+Random.swift in Sources */,
 				FAAF75602381E9F500DFDE03 /* Item.swift in Sources */,
 				FA90214B230B341C00BF9341 /* ContentView.swift in Sources */,
 				FA902165230B389900BF9341 /* Card.swift in Sources */,
 				FA902149230B341C00BF9341 /* AppDelegate.swift in Sources */,
+				FA392B92238B16B400B74DCD /* ModularGridSettingsView.swift in Sources */,
 				FA0FB8A423812AA500B6E84F /* StaggeredGridView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
