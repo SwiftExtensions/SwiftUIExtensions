@@ -4,18 +4,20 @@
 import PackageDescription
 
 let package = Package(
-    name: "Grid",
+    name: "SwiftUIExtensions",
     platforms: [
         .iOS(.v13), .macOS(.v10_15), .watchOS(.v6), .tvOS(.v13)
     ],
     products: [
         .library(
-            name: "Grid",
-            targets: ["Grid"]),
+            name: "SwiftUIExtensions",
+            targets: ["SwiftUIExtensions"]),
     ],
     targets: [
         .target(
-            name: "Grid",
-            dependencies: [])
+            name: "SwiftUIExtensions",
+            dependencies: [],
+            exclude: ["Demo"]
+        )
     ]
 )
