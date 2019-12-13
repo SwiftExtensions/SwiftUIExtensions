@@ -7,6 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FA2C326E23A35EA0002DF6F7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2C326D23A35EA0002DF6F7 /* AppDelegate.swift */; };
+		FA2C327023A35EA0002DF6F7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2C326F23A35EA0002DF6F7 /* ContentView.swift */; };
+		FA2C327223A35EA1002DF6F7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA2C327123A35EA1002DF6F7 /* Assets.xcassets */; };
+		FA2C327523A35EA1002DF6F7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA2C327423A35EA1002DF6F7 /* Preview Assets.xcassets */; };
+		FA2C327823A35EA1002DF6F7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA2C327623A35EA1002DF6F7 /* LaunchScreen.storyboard */; };
+		FA2C328123A35F58002DF6F7 /* StaggeredGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2C328023A35F58002DF6F7 /* StaggeredGridView.swift */; };
+		FA2C328323A35F73002DF6F7 /* ModularGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2C328223A35F73002DF6F7 /* ModularGridView.swift */; };
+		FA2C328523A35FD2002DF6F7 /* SwiftUIExtensions in Frameworks */ = {isa = PBXBuildFile; productRef = FA2C328423A35FD2002DF6F7 /* SwiftUIExtensions */; };
+		FA2C328623A35FE6002DF6F7 /* Color+Random.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA37C458239DE7330037BFE3 /* Color+Random.swift */; };
+		FA2C328723A35FE6002DF6F7 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA37C459239DE7330037BFE3 /* Item.swift */; };
+		FA2C328823A35FE6002DF6F7 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA37C45B239DE7330037BFE3 /* Card.swift */; };
+		FA2C328923A35FE6002DF6F7 /* SharedAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA37C45A239DE7330037BFE3 /* SharedAssets.xcassets */; };
 		FA37C437239DE2560037BFE3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA37C436239DE2560037BFE3 /* AppDelegate.swift */; };
 		FA37C439239DE2560037BFE3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA37C438239DE2560037BFE3 /* SceneDelegate.swift */; };
 		FA37C43B239DE2560037BFE3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA37C43A239DE2560037BFE3 /* ContentView.swift */; };
@@ -99,6 +111,15 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		FA2C326B23A35EA0002DF6F7 /* SwiftUIExtensionsDemo tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SwiftUIExtensionsDemo tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FA2C326D23A35EA0002DF6F7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		FA2C326F23A35EA0002DF6F7 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		FA2C327123A35EA1002DF6F7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FA2C327423A35EA1002DF6F7 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		FA2C327723A35EA1002DF6F7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		FA2C327923A35EA1002DF6F7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FA2C328023A35F58002DF6F7 /* StaggeredGridView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StaggeredGridView.swift; sourceTree = "<group>"; };
+		FA2C328223A35F73002DF6F7 /* ModularGridView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModularGridView.swift; sourceTree = "<group>"; };
 		FA37C433239DE2560037BFE3 /* SwiftUIExtensionsDemo iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SwiftUIExtensionsDemo iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA37C436239DE2560037BFE3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FA37C438239DE2560037BFE3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -148,6 +169,14 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		FA2C326823A35EA0002DF6F7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FA2C328523A35FD2002DF6F7 /* SwiftUIExtensions in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		FA37C430239DE2560037BFE3 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -175,6 +204,53 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FA2C326C23A35EA0002DF6F7 /* SwiftUIExtensionsDemo tvOS */ = {
+			isa = PBXGroup;
+			children = (
+				FA2C327D23A35EFA002DF6F7 /* Layouts */,
+				FA2C326D23A35EA0002DF6F7 /* AppDelegate.swift */,
+				FA2C326F23A35EA0002DF6F7 /* ContentView.swift */,
+				FA2C327123A35EA1002DF6F7 /* Assets.xcassets */,
+				FA2C327623A35EA1002DF6F7 /* LaunchScreen.storyboard */,
+				FA2C327923A35EA1002DF6F7 /* Info.plist */,
+				FA2C327323A35EA1002DF6F7 /* Preview Content */,
+			);
+			path = "SwiftUIExtensionsDemo tvOS";
+			sourceTree = "<group>";
+		};
+		FA2C327323A35EA1002DF6F7 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				FA2C327423A35EA1002DF6F7 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		FA2C327D23A35EFA002DF6F7 /* Layouts */ = {
+			isa = PBXGroup;
+			children = (
+				FA2C327F23A35F12002DF6F7 /* StaggeredGrid */,
+				FA2C327E23A35F0B002DF6F7 /* ModularGrid */,
+			);
+			path = Layouts;
+			sourceTree = "<group>";
+		};
+		FA2C327E23A35F0B002DF6F7 /* ModularGrid */ = {
+			isa = PBXGroup;
+			children = (
+				FA2C328223A35F73002DF6F7 /* ModularGridView.swift */,
+			);
+			path = ModularGrid;
+			sourceTree = "<group>";
+		};
+		FA2C327F23A35F12002DF6F7 /* StaggeredGrid */ = {
+			isa = PBXGroup;
+			children = (
+				FA2C328023A35F58002DF6F7 /* StaggeredGridView.swift */,
+			);
+			path = StaggeredGrid;
+			sourceTree = "<group>";
+		};
 		FA37C434239DE2560037BFE3 /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -183,6 +259,7 @@
 				FAD4B55323A35A2300308E28 /* SwiftUIExtensionsDemo.app */,
 				FAD4B55623A35A2300308E28 /* SwiftUIExtensionsDemo WatchKit App.app */,
 				FAD4B56523A35A2800308E28 /* SwiftUIExtensionsDemo WatchKit Extension.appex */,
+				FA2C326B23A35EA0002DF6F7 /* SwiftUIExtensionsDemo tvOS.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -321,6 +398,7 @@
 				FA37C465239DE9960037BFE3 /* SwiftUIExtensionsDemo macOS */,
 				FAD4B55A23A35A2400308E28 /* SwiftUIExtensionsDemo WatchKit App */,
 				FAD4B56923A35A2800308E28 /* SwiftUIExtensionsDemo WatchKit Extension */,
+				FA2C326C23A35EA0002DF6F7 /* SwiftUIExtensionsDemo tvOS */,
 				FA37C434239DE2560037BFE3 /* Products */,
 				FA37C453239DE6B60037BFE3 /* Frameworks */,
 				FA800E30239DE144005D2211 /* Grid */,
@@ -390,6 +468,26 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		FA2C326A23A35EA0002DF6F7 /* SwiftUIExtensionsDemo tvOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FA2C327C23A35EA1002DF6F7 /* Build configuration list for PBXNativeTarget "SwiftUIExtensionsDemo tvOS" */;
+			buildPhases = (
+				FA2C326723A35EA0002DF6F7 /* Sources */,
+				FA2C326823A35EA0002DF6F7 /* Frameworks */,
+				FA2C326923A35EA0002DF6F7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "SwiftUIExtensionsDemo tvOS";
+			packageProductDependencies = (
+				FA2C328423A35FD2002DF6F7 /* SwiftUIExtensions */,
+			);
+			productName = "SwiftUIExtensionsDemo tvOS";
+			productReference = FA2C326B23A35EA0002DF6F7 /* SwiftUIExtensionsDemo tvOS.app */;
+			productType = "com.apple.product-type.application";
+		};
 		FA37C432239DE2560037BFE3 /* SwiftUIExtensionsDemo iOS */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = FA37C447239DE2570037BFE3 /* Build configuration list for PBXNativeTarget "SwiftUIExtensionsDemo iOS" */;
@@ -493,6 +591,9 @@
 				LastSwiftUpdateCheck = 1130;
 				LastUpgradeCheck = 1130;
 				TargetAttributes = {
+					FA2C326A23A35EA0002DF6F7 = {
+						CreatedOnToolsVersion = 11.3;
+					};
 					FA37C432239DE2560037BFE3 = {
 						CreatedOnToolsVersion = 11.2.1;
 					};
@@ -531,11 +632,23 @@
 				FAD4B55223A35A2300308E28 /* SwiftUIExtensionsDemo */,
 				FAD4B55523A35A2300308E28 /* SwiftUIExtensionsDemo WatchKit App */,
 				FAD4B56423A35A2800308E28 /* SwiftUIExtensionsDemo WatchKit Extension */,
+				FA2C326A23A35EA0002DF6F7 /* SwiftUIExtensionsDemo tvOS */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		FA2C326923A35EA0002DF6F7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FA2C327823A35EA1002DF6F7 /* LaunchScreen.storyboard in Resources */,
+				FA2C327523A35EA1002DF6F7 /* Preview Assets.xcassets in Resources */,
+				FA2C327223A35EA1002DF6F7 /* Assets.xcassets in Resources */,
+				FA2C328923A35FE6002DF6F7 /* SharedAssets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		FA37C431239DE2560037BFE3 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -587,6 +700,20 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		FA2C326723A35EA0002DF6F7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FA2C327023A35EA0002DF6F7 /* ContentView.swift in Sources */,
+				FA2C328323A35F73002DF6F7 /* ModularGridView.swift in Sources */,
+				FA2C328823A35FE6002DF6F7 /* Card.swift in Sources */,
+				FA2C326E23A35EA0002DF6F7 /* AppDelegate.swift in Sources */,
+				FA2C328623A35FE6002DF6F7 /* Color+Random.swift in Sources */,
+				FA2C328723A35FE6002DF6F7 /* Item.swift in Sources */,
+				FA2C328123A35F58002DF6F7 /* StaggeredGridView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		FA37C42F239DE2560037BFE3 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -653,6 +780,14 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		FA2C327623A35EA1002DF6F7 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FA2C327723A35EA1002DF6F7 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
 		FA37C441239DE2570037BFE3 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -680,6 +815,100 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		FA2C327A23A35EA1002DF6F7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_ASSET_PATHS = "\"SwiftUIExtensionsDemo tvOS/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				INFOPLIST_FILE = "SwiftUIExtensionsDemo tvOS/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.swiftextensions.SwiftUIExtensionsDemo-tvOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 13.2;
+			};
+			name = Debug;
+		};
+		FA2C327B23A35EA1002DF6F7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_ASSET_PATHS = "\"SwiftUIExtensionsDemo tvOS/Preview Content\"";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_PREVIEWS = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				INFOPLIST_FILE = "SwiftUIExtensionsDemo tvOS/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.swiftextensions.SwiftUIExtensionsDemo-tvOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 13.2;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
 		FA37C445239DE2570037BFE3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1288,6 +1517,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		FA2C327C23A35EA1002DF6F7 /* Build configuration list for PBXNativeTarget "SwiftUIExtensionsDemo tvOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FA2C327A23A35EA1002DF6F7 /* Debug */,
+				FA2C327B23A35EA1002DF6F7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		FA37C447239DE2570037BFE3 /* Build configuration list for PBXNativeTarget "SwiftUIExtensionsDemo iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -1356,6 +1594,10 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		FA2C328423A35FD2002DF6F7 /* SwiftUIExtensions */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = SwiftUIExtensions;
+		};
 		FA37C454239DE6B60037BFE3 /* SwiftUIExtensions */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = SwiftUIExtensions;
