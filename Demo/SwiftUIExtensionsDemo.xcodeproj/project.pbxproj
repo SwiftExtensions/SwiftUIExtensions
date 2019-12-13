@@ -47,6 +47,13 @@
 		FAD4B57323A35A2800308E28 /* NotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD4B57223A35A2800308E28 /* NotificationView.swift */; };
 		FAD4B57523A35A2900308E28 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAD4B57423A35A2900308E28 /* Assets.xcassets */; };
 		FAD4B57823A35A2900308E28 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAD4B57723A35A2900308E28 /* Preview Assets.xcassets */; };
+		FAD4B58723A35BCA00308E28 /* SwiftUIExtensions in Frameworks */ = {isa = PBXBuildFile; productRef = FAD4B58623A35BCA00308E28 /* SwiftUIExtensions */; };
+		FAD4B58C23A35C8300308E28 /* ModularGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD4B58B23A35C8300308E28 /* ModularGridView.swift */; };
+		FAD4B58E23A35C9500308E28 /* StaggeredGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD4B58D23A35C9500308E28 /* StaggeredGridView.swift */; };
+		FAD4B58F23A35CC400308E28 /* Color+Random.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA37C458239DE7330037BFE3 /* Color+Random.swift */; };
+		FAD4B59023A35CC400308E28 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA37C459239DE7330037BFE3 /* Item.swift */; };
+		FAD4B59123A35CCC00308E28 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA37C45B239DE7330037BFE3 /* Card.swift */; };
+		FAD4B59223A35CCC00308E28 /* SharedAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA37C45A239DE7330037BFE3 /* SharedAssets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -136,6 +143,8 @@
 		FAD4B57723A35A2900308E28 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		FAD4B57923A35A2900308E28 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FAD4B57A23A35A2900308E28 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		FAD4B58B23A35C8300308E28 /* ModularGridView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModularGridView.swift; sourceTree = "<group>"; };
+		FAD4B58D23A35C9500308E28 /* StaggeredGridView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StaggeredGridView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -159,6 +168,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FAD4B58723A35BCA00308E28 /* SwiftUIExtensions in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -331,6 +341,7 @@
 			isa = PBXGroup;
 			children = (
 				FAD4B56A23A35A2800308E28 /* ContentView.swift */,
+				FAD4B58823A35C2700308E28 /* Layouts */,
 				FAD4B56C23A35A2800308E28 /* HostingController.swift */,
 				FAD4B56E23A35A2800308E28 /* ExtensionDelegate.swift */,
 				FAD4B57023A35A2800308E28 /* NotificationController.swift */,
@@ -349,6 +360,31 @@
 				FAD4B57723A35A2900308E28 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		FAD4B58823A35C2700308E28 /* Layouts */ = {
+			isa = PBXGroup;
+			children = (
+				FAD4B58923A35C3000308E28 /* ModularGrid */,
+				FAD4B58A23A35C4700308E28 /* StaggeredGrid */,
+			);
+			path = Layouts;
+			sourceTree = "<group>";
+		};
+		FAD4B58923A35C3000308E28 /* ModularGrid */ = {
+			isa = PBXGroup;
+			children = (
+				FAD4B58B23A35C8300308E28 /* ModularGridView.swift */,
+			);
+			path = ModularGrid;
+			sourceTree = "<group>";
+		};
+		FAD4B58A23A35C4700308E28 /* StaggeredGrid */ = {
+			isa = PBXGroup;
+			children = (
+				FAD4B58D23A35C9500308E28 /* StaggeredGridView.swift */,
+			);
+			path = StaggeredGrid;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -441,6 +477,9 @@
 			dependencies = (
 			);
 			name = "SwiftUIExtensionsDemo WatchKit Extension";
+			packageProductDependencies = (
+				FAD4B58623A35BCA00308E28 /* SwiftUIExtensions */,
+			);
 			productName = "SwiftUIExtensionsDemo WatchKit Extension";
 			productReference = FAD4B56523A35A2800308E28 /* SwiftUIExtensionsDemo WatchKit Extension.appex */;
 			productType = "com.apple.product-type.watchkit2-extension";
@@ -539,6 +578,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FAD4B59223A35CCC00308E28 /* SharedAssets.xcassets in Resources */,
 				FAD4B57823A35A2900308E28 /* Preview Assets.xcassets in Resources */,
 				FAD4B57523A35A2900308E28 /* Assets.xcassets in Resources */,
 			);
@@ -584,9 +624,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FAD4B58F23A35CC400308E28 /* Color+Random.swift in Sources */,
+				FAD4B59023A35CC400308E28 /* Item.swift in Sources */,
 				FAD4B56D23A35A2800308E28 /* HostingController.swift in Sources */,
 				FAD4B56B23A35A2800308E28 /* ContentView.swift in Sources */,
 				FAD4B57123A35A2800308E28 /* NotificationController.swift in Sources */,
+				FAD4B58C23A35C8300308E28 /* ModularGridView.swift in Sources */,
+				FAD4B58E23A35C9500308E28 /* StaggeredGridView.swift in Sources */,
+				FAD4B59123A35CCC00308E28 /* Card.swift in Sources */,
 				FAD4B56F23A35A2800308E28 /* ExtensionDelegate.swift in Sources */,
 				FAD4B57323A35A2800308E28 /* NotificationView.swift in Sources */,
 			);
@@ -1316,6 +1361,10 @@
 			productName = SwiftUIExtensions;
 		};
 		FA37C477239DE9A50037BFE3 /* SwiftUIExtensions */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = SwiftUIExtensions;
+		};
+		FAD4B58623A35BCA00308E28 /* SwiftUIExtensions */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = SwiftUIExtensions;
 		};

@@ -1,10 +1,3 @@
-//
-//  NotificationView.swift
-//  SwiftUIExtensionsDemo WatchKit Extension
-//
-//  Created by Alex on 2019-12-12.
-//
-
 import SwiftUI
 
 struct NotificationView: View {

@@ -1,15 +1,30 @@
-//
-//  ContentView.swift
-//  SwiftUIExtensionsDemo WatchKit Extension
-//
-//  Created by Alex on 2019-12-12.
-//
-
 import SwiftUI
+import SwiftUIExtensions
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello, World!")
+        List {
+            Section(header: Text("Layouts")) {
+                NavigationLink(destination: ModularGridView()) {
+                    HStack {
+                        Image(systemName: "square.grid.3x2.fill")
+                            .foregroundColor(.accentColor)
+                        Text("Modular")
+                    }
+                    
+                }
+                
+                NavigationLink(destination: StaggeredGridView()) {
+                    HStack {
+                        Image(systemName: "rectangle.3.offgrid.fill")
+                            .foregroundColor(.accentColor)
+                        Text("Staggered")
+                    }
+                    
+                }
+            }
+        }
+        .accentColor(.purple)
     }
 }
 
