@@ -110,6 +110,7 @@ struct CardsView: View {
 ```
 
 ## Sliders
+
 Highly customizable sliders and tracks
 
 <center>
