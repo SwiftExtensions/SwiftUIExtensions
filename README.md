@@ -10,9 +10,7 @@ Open `/Demo/SwiftUIExtensionsDemo.xcodeproj` for more examples for iOS, macOS, w
 
 ## Layouts
 
-<details>
-  <summary>### Modular Grid</summary>
-
+### Modular Grid
 <center>
 <img src="Resources/iPad1.png"/>
 </center>
@@ -26,7 +24,6 @@ Grid(colors) {
     ModularGridStyle(columns: .min(100), rows: .min(100))
 )
 ```
-</details>
 
 ### Staggered Grid
 
