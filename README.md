@@ -113,7 +113,7 @@ struct CardsView: View {
 Highly customizable sliders and tracks
 
 <center>
-<img src="Resources/sliders.png"/>
+<img src="Resources/Sliders/sliders.png"/>
 </center>
 
 ### Simple gradient value slider style
