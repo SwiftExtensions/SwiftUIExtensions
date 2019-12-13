@@ -20,6 +20,12 @@
 		FA2C328823A35FE6002DF6F7 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA37C45B239DE7330037BFE3 /* Card.swift */; };
 		FA2C328923A35FE6002DF6F7 /* SharedAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA37C45A239DE7330037BFE3 /* SharedAssets.xcassets */; };
 		FA2C328C23A36DB5002DF6F7 /* SwiftUIExtensions in Frameworks */ = {isa = PBXBuildFile; productRef = FA2C328B23A36DB5002DF6F7 /* SwiftUIExtensions */; };
+		FA2C329123A3704B002DF6F7 /* PatternsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2C328E23A3704B002DF6F7 /* PatternsView.swift */; };
+		FA2C329223A3704B002DF6F7 /* RegularPolygonsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2C328F23A3704B002DF6F7 /* RegularPolygonsView.swift */; };
+		FA2C329323A3704B002DF6F7 /* LinesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2C329023A3704B002DF6F7 /* LinesView.swift */; };
+		FA2C329823A3725A002DF6F7 /* PatternsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2C329523A37259002DF6F7 /* PatternsView.swift */; };
+		FA2C329923A3725A002DF6F7 /* LinesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2C329623A37259002DF6F7 /* LinesView.swift */; };
+		FA2C329A23A3725A002DF6F7 /* RegularPolygonsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2C329723A37259002DF6F7 /* RegularPolygonsView.swift */; };
 		FA37C437239DE2560037BFE3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA37C436239DE2560037BFE3 /* AppDelegate.swift */; };
 		FA37C439239DE2560037BFE3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA37C438239DE2560037BFE3 /* SceneDelegate.swift */; };
 		FA37C43B239DE2560037BFE3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA37C43A239DE2560037BFE3 /* ContentView.swift */; };
@@ -121,6 +127,12 @@
 		FA2C327923A35EA1002DF6F7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FA2C328023A35F58002DF6F7 /* StaggeredGridView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StaggeredGridView.swift; sourceTree = "<group>"; };
 		FA2C328223A35F73002DF6F7 /* ModularGridView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModularGridView.swift; sourceTree = "<group>"; };
+		FA2C328E23A3704B002DF6F7 /* PatternsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PatternsView.swift; sourceTree = "<group>"; };
+		FA2C328F23A3704B002DF6F7 /* RegularPolygonsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegularPolygonsView.swift; sourceTree = "<group>"; };
+		FA2C329023A3704B002DF6F7 /* LinesView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LinesView.swift; sourceTree = "<group>"; };
+		FA2C329523A37259002DF6F7 /* PatternsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PatternsView.swift; sourceTree = "<group>"; };
+		FA2C329623A37259002DF6F7 /* LinesView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LinesView.swift; sourceTree = "<group>"; };
+		FA2C329723A37259002DF6F7 /* RegularPolygonsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegularPolygonsView.swift; sourceTree = "<group>"; };
 		FA37C433239DE2560037BFE3 /* SwiftUIExtensionsDemo iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SwiftUIExtensionsDemo iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA37C436239DE2560037BFE3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FA37C438239DE2560037BFE3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -253,6 +265,26 @@
 			path = StaggeredGrid;
 			sourceTree = "<group>";
 		};
+		FA2C328D23A37034002DF6F7 /* Shapes */ = {
+			isa = PBXGroup;
+			children = (
+				FA2C329023A3704B002DF6F7 /* LinesView.swift */,
+				FA2C328E23A3704B002DF6F7 /* PatternsView.swift */,
+				FA2C328F23A3704B002DF6F7 /* RegularPolygonsView.swift */,
+			);
+			path = Shapes;
+			sourceTree = "<group>";
+		};
+		FA2C329423A37236002DF6F7 /* Shapes */ = {
+			isa = PBXGroup;
+			children = (
+				FA2C329623A37259002DF6F7 /* LinesView.swift */,
+				FA2C329523A37259002DF6F7 /* PatternsView.swift */,
+				FA2C329723A37259002DF6F7 /* RegularPolygonsView.swift */,
+			);
+			path = Shapes;
+			sourceTree = "<group>";
+		};
 		FA37C434239DE2560037BFE3 /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -273,6 +305,7 @@
 				FA37C438239DE2560037BFE3 /* SceneDelegate.swift */,
 				FA37C43A239DE2560037BFE3 /* ContentView.swift */,
 				FA37C448239DE6250037BFE3 /* Layouts */,
+				FA2C328D23A37034002DF6F7 /* Shapes */,
 				FA37C43C239DE2570037BFE3 /* Assets.xcassets */,
 				FA37C441239DE2570037BFE3 /* LaunchScreen.storyboard */,
 				FA37C444239DE2570037BFE3 /* Info.plist */,
@@ -348,6 +381,7 @@
 				FA37C466239DE9960037BFE3 /* AppDelegate.swift */,
 				FA37C468239DE9960037BFE3 /* ContentView.swift */,
 				FA37C479239DEAF10037BFE3 /* Layouts */,
+				FA2C329423A37236002DF6F7 /* Shapes */,
 				FA37C46A239DE9990037BFE3 /* Assets.xcassets */,
 				FA37C46F239DE9990037BFE3 /* Main.storyboard */,
 				FA37C472239DE9990037BFE3 /* Info.plist */,
@@ -722,12 +756,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA37C45C239DE7330037BFE3 /* Color+Random.swift in Sources */,
+				FA2C329323A3704B002DF6F7 /* LinesView.swift in Sources */,
+				FA2C329123A3704B002DF6F7 /* PatternsView.swift in Sources */,
 				FA37C45D239DE7330037BFE3 /* Item.swift in Sources */,
 				FA37C437239DE2560037BFE3 /* AppDelegate.swift in Sources */,
 				FA37C44F239DE6820037BFE3 /* ModularGridView.swift in Sources */,
 				FA37C450239DE6820037BFE3 /* ModularGridSettingsView.swift in Sources */,
 				FA37C439239DE2560037BFE3 /* SceneDelegate.swift in Sources */,
 				FA37C452239DE6820037BFE3 /* StaggeredGridView.swift in Sources */,
+				FA2C329223A3704B002DF6F7 /* RegularPolygonsView.swift in Sources */,
 				FA37C45F239DE7330037BFE3 /* Card.swift in Sources */,
 				FA37C451239DE6820037BFE3 /* StaggeredGridSettingsView.swift in Sources */,
 				FA37C43B239DE2560037BFE3 /* ContentView.swift in Sources */,
@@ -741,12 +778,15 @@
 				FA37C484239DEB2C0037BFE3 /* Color+Random.swift in Sources */,
 				FA37C486239DEB2C0037BFE3 /* Card.swift in Sources */,
 				FA37C480239DEB200037BFE3 /* ModularGridView.swift in Sources */,
+				FA2C329823A3725A002DF6F7 /* PatternsView.swift in Sources */,
 				FA37C482239DEB200037BFE3 /* StaggeredGridSettingsView.swift in Sources */,
 				FA37C469239DE9960037BFE3 /* ContentView.swift in Sources */,
 				FA37C485239DEB2C0037BFE3 /* Item.swift in Sources */,
 				FA37C481239DEB200037BFE3 /* ModularGridSettingsView.swift in Sources */,
+				FA2C329A23A3725A002DF6F7 /* RegularPolygonsView.swift in Sources */,
 				FA37C467239DE9960037BFE3 /* AppDelegate.swift in Sources */,
 				FA37C483239DEB200037BFE3 /* StaggeredGridView.swift in Sources */,
+				FA2C329923A3725A002DF6F7 /* LinesView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

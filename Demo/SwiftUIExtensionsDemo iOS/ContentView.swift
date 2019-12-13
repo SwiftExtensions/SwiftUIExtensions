@@ -20,6 +20,29 @@ struct ContentView: View {
                         }
                     }
                 }
+                
+                Section(header: Text("Shapes")) {
+                    NavigationLink(destination: RegularPolygonsView()) {
+                        HStack {
+                            Image(systemName: "square.fill")
+                            Text("Regular Polygons")
+                        }
+                    }
+                    
+                    NavigationLink(destination: LinesView()) {
+                        HStack {
+                            Image(systemName: "pencil.and.outline")
+                            Text("Lines")
+                        }
+                    }
+                    
+                    NavigationLink(destination: PatternsView()) {
+                        HStack {
+                            Image(systemName: "rectangle.split.3x3.fill")
+                            Text("Patterns")
+                        }
+                    }
+                }
             }
             .listStyle(
                 GroupedListStyle()

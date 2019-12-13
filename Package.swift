@@ -17,7 +17,7 @@ let package = Package(
         .target(
             name: "SwiftUIExtensions",
             dependencies: [],
-            exclude: ["Demo"]
+            exclude: ["Demo", "Resources"]
         )
     ]
 )

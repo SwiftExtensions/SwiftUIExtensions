@@ -12,7 +12,7 @@ Open `/Demo/SwiftUIExtensionsDemo.xcodeproj` for more examples for iOS, macOS, w
 
 ### Modular Grid
 <center>
-<img src="Resources/iPad1.png"/>
+<img src="Resources/Layouts/modularGrid.png"/>
 </center>
 
 ```swift
@@ -28,7 +28,7 @@ Grid(colors) {
 ### Staggered Grid
 
 <center>
-<img src="Resources/iPad2.png"/>
+<img src="Resources/Layouts/staggeredGrid.png"/>
 </center>
 
 ```swift
@@ -107,6 +107,47 @@ struct CardsView: View {
 }
 ```
 
+## Shapes
+
+### Regular Polygons
+<center>
+<img src="Resources/Shapes/regularRectangles.png"/>
+</center>
+
+```swift
+Pentagon()
+Hexagon()
+RegularPolygon(sides: 32)
+```
+
+### Lines and Curves
+<center>
+<img src="Resources/Shapes/lines.png"/>
+</center>
+
+```swift
+QuadCurve(unitPoints: [
+    UnitPoint(x: 0.1, y: 0.1),
+    UnitPoint(x: 0.5, y: 0.9),
+    UnitPoint(x: 0.9, y: 0.1)
+])
+.stroke(Color.blue, style: .init(lineWidth: 2, lineCap: .round))
+.frame(height: 200)
+```
+
+### Patterns
+<center>
+<img src="Resources/Shapes/patterns.png"/>
+</center>
+
+```swift
+GridPattern(horizontalLines: 20, verticalLines: 40)
+    .stroke(Color.white.opacity(0.3), style: .init(lineWidth: 1, lineCap: .round))
+    .frame(height: 200)
+    .background(Color.blue)
+    .padding()
+```
+
 ## SDKs
 - iOS 13+
 - Mac Catalyst 13.0+
@@ -118,6 +159,7 @@ struct CardsView: View {
 -  Animations
 - 'CSS Grid'-like features for Modular Grid
 - View Modifiers
+- Rounded regular polygons
 
 ## Code Contibutions
 Feel free to contribute via fork/pull request to master branch. If you want to request a feature or report a bug please start a new issue.

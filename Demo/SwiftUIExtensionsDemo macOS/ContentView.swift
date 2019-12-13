@@ -13,9 +13,24 @@ struct ContentView: View {
                         Text("Staggered Grid")
                     }
                 }
+                
+                Section(header: Text("Shapes")) {
+                    NavigationLink(destination: RegularPolygonsView()) {
+                        Text("Regular Polygons")
+                    }
+                    
+                    NavigationLink(destination: LinesView()) {
+                        Text("Lines")
+                    }
+                    
+                    NavigationLink(destination: PatternsView()) {
+                        Text("Patterns")
+                    }
+                }
             }
-            .listStyle(SidebarListStyle())
             .frame(minWidth: 200, maxWidth: 300)
+            .listStyle(SidebarListStyle())
+            
         }
         .navigationViewStyle(
             DoubleColumnNavigationViewStyle()
