@@ -2,6 +2,7 @@
 Collection of useful SwiftUI extensions and elements
 
 - Grid based layouts
+- Sliders (horizontal, vertical, point)
 - Custom shapes
 - Data charts
 - Supports all apple platforms
