@@ -21,6 +21,15 @@ struct ContentView: View {
                     }
                 }
                 
+                Section(header: Text("Data Visualization")) {
+                    NavigationLink(destination: ChartsView()) {
+                        HStack {
+                            Image(systemName: "chart.pie.fill")
+                            Text("Charts")
+                        }
+                    }
+                }
+                
                 Section(header: Text("Shapes")) {
                     NavigationLink(destination: RegularPolygonsView()) {
                         HStack {

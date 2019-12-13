@@ -14,6 +14,12 @@ struct ContentView: View {
                     }
                 }
                 
+                Section(header: Text("Data Visualization")) {
+                    NavigationLink(destination: ChartsView()) {
+                        Text("Charts")
+                    }
+                }
+                
                 Section(header: Text("Shapes")) {
                     NavigationLink(destination: RegularPolygonsView()) {
                         Text("Regular Polygons")

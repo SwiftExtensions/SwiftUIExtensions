@@ -26,6 +26,7 @@
 		FA2C329823A3725A002DF6F7 /* PatternsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2C329523A37259002DF6F7 /* PatternsView.swift */; };
 		FA2C329923A3725A002DF6F7 /* LinesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2C329623A37259002DF6F7 /* LinesView.swift */; };
 		FA2C329A23A3725A002DF6F7 /* RegularPolygonsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2C329723A37259002DF6F7 /* RegularPolygonsView.swift */; };
+		FA2C329D23A37993002DF6F7 /* ChartsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2C329C23A37993002DF6F7 /* ChartsView.swift */; };
 		FA37C437239DE2560037BFE3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA37C436239DE2560037BFE3 /* AppDelegate.swift */; };
 		FA37C439239DE2560037BFE3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA37C438239DE2560037BFE3 /* SceneDelegate.swift */; };
 		FA37C43B239DE2560037BFE3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA37C43A239DE2560037BFE3 /* ContentView.swift */; };
@@ -55,6 +56,7 @@
 		FA37C485239DEB2C0037BFE3 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA37C459239DE7330037BFE3 /* Item.swift */; };
 		FA37C486239DEB2C0037BFE3 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA37C45B239DE7330037BFE3 /* Card.swift */; };
 		FA37C487239DEB2C0037BFE3 /* SharedAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA37C45A239DE7330037BFE3 /* SharedAssets.xcassets */; };
+		FAB94A0823A37B7500EBEB8C /* ChartsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB94A0723A37B7500EBEB8C /* ChartsView.swift */; };
 		FAD4B55723A35A2400308E28 /* SwiftUIExtensionsDemo WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = FAD4B55623A35A2300308E28 /* SwiftUIExtensionsDemo WatchKit App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		FAD4B55D23A35A2400308E28 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAD4B55B23A35A2400308E28 /* Interface.storyboard */; };
 		FAD4B55F23A35A2800308E28 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAD4B55E23A35A2800308E28 /* Assets.xcassets */; };
@@ -133,6 +135,7 @@
 		FA2C329523A37259002DF6F7 /* PatternsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PatternsView.swift; sourceTree = "<group>"; };
 		FA2C329623A37259002DF6F7 /* LinesView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LinesView.swift; sourceTree = "<group>"; };
 		FA2C329723A37259002DF6F7 /* RegularPolygonsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegularPolygonsView.swift; sourceTree = "<group>"; };
+		FA2C329C23A37993002DF6F7 /* ChartsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartsView.swift; sourceTree = "<group>"; };
 		FA37C433239DE2560037BFE3 /* SwiftUIExtensionsDemo iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SwiftUIExtensionsDemo iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA37C436239DE2560037BFE3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FA37C438239DE2560037BFE3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -162,6 +165,7 @@
 		FA37C47E239DEB200037BFE3 /* StaggeredGridSettingsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StaggeredGridSettingsView.swift; sourceTree = "<group>"; };
 		FA37C47F239DEB200037BFE3 /* StaggeredGridView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StaggeredGridView.swift; sourceTree = "<group>"; };
 		FA800E30239DE144005D2211 /* Grid */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Grid; path = ..; sourceTree = "<group>"; };
+		FAB94A0723A37B7500EBEB8C /* ChartsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartsView.swift; sourceTree = "<group>"; };
 		FAD4B55323A35A2300308E28 /* SwiftUIExtensionsDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUIExtensionsDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAD4B55623A35A2300308E28 /* SwiftUIExtensionsDemo WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SwiftUIExtensionsDemo WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAD4B55C23A35A2400308E28 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
@@ -285,6 +289,14 @@
 			path = Shapes;
 			sourceTree = "<group>";
 		};
+		FA2C329B23A3797F002DF6F7 /* DataVisualization */ = {
+			isa = PBXGroup;
+			children = (
+				FA2C329C23A37993002DF6F7 /* ChartsView.swift */,
+			);
+			path = DataVisualization;
+			sourceTree = "<group>";
+		};
 		FA37C434239DE2560037BFE3 /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -305,6 +317,7 @@
 				FA37C438239DE2560037BFE3 /* SceneDelegate.swift */,
 				FA37C43A239DE2560037BFE3 /* ContentView.swift */,
 				FA37C448239DE6250037BFE3 /* Layouts */,
+				FA2C329B23A3797F002DF6F7 /* DataVisualization */,
 				FA2C328D23A37034002DF6F7 /* Shapes */,
 				FA37C43C239DE2570037BFE3 /* Assets.xcassets */,
 				FA37C441239DE2570037BFE3 /* LaunchScreen.storyboard */,
@@ -381,6 +394,7 @@
 				FA37C466239DE9960037BFE3 /* AppDelegate.swift */,
 				FA37C468239DE9960037BFE3 /* ContentView.swift */,
 				FA37C479239DEAF10037BFE3 /* Layouts */,
+				FAB94A0623A37B6200EBEB8C /* DataVisualization */,
 				FA2C329423A37236002DF6F7 /* Shapes */,
 				FA37C46A239DE9990037BFE3 /* Assets.xcassets */,
 				FA37C46F239DE9990037BFE3 /* Main.storyboard */,
@@ -439,6 +453,14 @@
 				FA37C453239DE6B60037BFE3 /* Frameworks */,
 				FA800E30239DE144005D2211 /* Grid */,
 			);
+			sourceTree = "<group>";
+		};
+		FAB94A0623A37B6200EBEB8C /* DataVisualization */ = {
+			isa = PBXGroup;
+			children = (
+				FAB94A0723A37B7500EBEB8C /* ChartsView.swift */,
+			);
+			path = DataVisualization;
 			sourceTree = "<group>";
 		};
 		FAD4B55A23A35A2400308E28 /* SwiftUIExtensionsDemo WatchKit App */ = {
@@ -762,6 +784,7 @@
 				FA37C437239DE2560037BFE3 /* AppDelegate.swift in Sources */,
 				FA37C44F239DE6820037BFE3 /* ModularGridView.swift in Sources */,
 				FA37C450239DE6820037BFE3 /* ModularGridSettingsView.swift in Sources */,
+				FA2C329D23A37993002DF6F7 /* ChartsView.swift in Sources */,
 				FA37C439239DE2560037BFE3 /* SceneDelegate.swift in Sources */,
 				FA37C452239DE6820037BFE3 /* StaggeredGridView.swift in Sources */,
 				FA2C329223A3704B002DF6F7 /* RegularPolygonsView.swift in Sources */,
@@ -783,6 +806,7 @@
 				FA37C469239DE9960037BFE3 /* ContentView.swift in Sources */,
 				FA37C485239DEB2C0037BFE3 /* Item.swift in Sources */,
 				FA37C481239DEB200037BFE3 /* ModularGridSettingsView.swift in Sources */,
+				FAB94A0823A37B7500EBEB8C /* ChartsView.swift in Sources */,
 				FA2C329A23A3725A002DF6F7 /* RegularPolygonsView.swift in Sources */,
 				FA37C467239DE9960037BFE3 /* AppDelegate.swift in Sources */,
 				FA37C483239DEB200037BFE3 /* StaggeredGridView.swift in Sources */,
