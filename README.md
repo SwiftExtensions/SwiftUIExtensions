@@ -1,19 +1,16 @@
-# SwiftUI Grid
-SwiftUI Grid view layout with custom styles.
+# SwiftUI Extensions
+Collection of useful SwiftUI extensions and elements
 
-## Features
-- ZStack based layout
-- Vertical and horizontal scrolling
+- Grid based layouts
 - Supports all apple platforms
-- Custom styles (ModularGridStyle, StaggeredGridStyle)
-- SwiftUI code patterns (StyleStructs, EnvironmentValues, ViewBuilder)
+- SwiftUI code patterns (Styles, EnvironmentValues, ViewBuilder)
 - Active development for production apps
 
-Open `/Examples/GridExamples.xcodeproj` for more examples for iOS, macOS, watchOS and tvOS
+Open `/Demo/SwiftUIExtensionsDemo.xcodeproj` for more examples for iOS, macOS, watchOS and tvOS
 
-## Styles
+## Layouts
 
-### ModularGridStyle (Default)
+### Modular Grid
 <center>
 <img src="Resources/iPad1.png"/>
 </center>
@@ -28,7 +25,7 @@ Grid(colors) {
 )
 ```
 
-### StaggeredGridStyle
+### Staggered Grid
 
 <center>
 <img src="Resources/iPad2.png"/>
@@ -45,7 +42,7 @@ Grid(1...69, id: \.self) { index in
 )
 ```
 
-## Tracks
+#### Tracks
 Tracks setting allows you to customize grid behaviour to your specific use-case. Both Modular and Staggered grid use tracks value to calculate layout. In Modular layout both columns and rows are tracks.
 
 ```swift
@@ -56,7 +53,7 @@ public enum Tracks: Hashable {
 }
 ```
 
-### Count
+##### Count
 Grid is split into equal fractions of size provided by a parent view.
 
 ```swift
@@ -64,21 +61,21 @@ ModularGridStyle(columns: 3, rows: 3)
 StaggeredGridStyle(tracks: 8)
 ```
 
-### Fixed
+##### Fixed
 Item size is fixed to a specific width or height.
 ```swift
 ModularGridStyle(columns: .fixed(100), rows: .fixed(100))
 StaggeredGridStyle(tracks: .fixed(100))
 ```
 
-### Min
+##### Min
 Autolayout respecting a min item width or height.
 ```swift
 ModularGridStyle(columns: .min(100), rows: .min(100))
 StaggeredGridStyle(tracks: .min(100))
 ```
 
-## Preferences
+#### Preferences
 Get item size and position with preferences
 ```swift
 struct CardsView: View {
@@ -119,7 +116,8 @@ struct CardsView: View {
 
 ## Roadmap
 -  Animations
-- 'CSS Grid'-like features
+- 'CSS Grid'-like features for Modular Grid
+- View Modifiers
 
 ## Code Contibutions
 Feel free to contribute via fork/pull request to master branch. If you want to request a feature or report a bug please start a new issue.
