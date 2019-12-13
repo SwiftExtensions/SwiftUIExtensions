@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FA01CE5F23A3871200954D66 /* VerticalSliderExamplesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA01CE5C23A3871100954D66 /* VerticalSliderExamplesView.swift */; };
+		FA01CE6023A3871200954D66 /* PointSliderExamplesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA01CE5D23A3871100954D66 /* PointSliderExamplesView.swift */; };
+		FA01CE6123A3871200954D66 /* HorizontalSliderExamplesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA01CE5E23A3871200954D66 /* HorizontalSliderExamplesView.swift */; };
 		FA2C326E23A35EA0002DF6F7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2C326D23A35EA0002DF6F7 /* AppDelegate.swift */; };
 		FA2C327023A35EA0002DF6F7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2C326F23A35EA0002DF6F7 /* ContentView.swift */; };
 		FA2C327223A35EA1002DF6F7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA2C327123A35EA1002DF6F7 /* Assets.xcassets */; };
@@ -57,6 +60,13 @@
 		FA37C486239DEB2C0037BFE3 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA37C45B239DE7330037BFE3 /* Card.swift */; };
 		FA37C487239DEB2C0037BFE3 /* SharedAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA37C45A239DE7330037BFE3 /* SharedAssets.xcassets */; };
 		FAB94A0823A37B7500EBEB8C /* ChartsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB94A0723A37B7500EBEB8C /* ChartsView.swift */; };
+		FAB94A1323A384BA00EBEB8C /* HalfCapsule.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB94A1123A384B900EBEB8C /* HalfCapsule.swift */; };
+		FAB94A1423A384BA00EBEB8C /* HalfCapsule.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB94A1123A384B900EBEB8C /* HalfCapsule.swift */; };
+		FAB94A1523A384BA00EBEB8C /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB94A1223A384B900EBEB8C /* Model.swift */; };
+		FAB94A1623A384BA00EBEB8C /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB94A1223A384B900EBEB8C /* Model.swift */; };
+		FAB94A1B23A3850100EBEB8C /* VerticalSliderExamplesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB94A1823A3850000EBEB8C /* VerticalSliderExamplesView.swift */; };
+		FAB94A1C23A3850100EBEB8C /* HorizontalSliderExamplesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB94A1923A3850000EBEB8C /* HorizontalSliderExamplesView.swift */; };
+		FAB94A1D23A3850100EBEB8C /* PointSliderExamplesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB94A1A23A3850000EBEB8C /* PointSliderExamplesView.swift */; };
 		FAD4B55723A35A2400308E28 /* SwiftUIExtensionsDemo WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = FAD4B55623A35A2300308E28 /* SwiftUIExtensionsDemo WatchKit App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		FAD4B55D23A35A2400308E28 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAD4B55B23A35A2400308E28 /* Interface.storyboard */; };
 		FAD4B55F23A35A2800308E28 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAD4B55E23A35A2800308E28 /* Assets.xcassets */; };
@@ -120,6 +130,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		FA01CE5C23A3871100954D66 /* VerticalSliderExamplesView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VerticalSliderExamplesView.swift; sourceTree = "<group>"; };
+		FA01CE5D23A3871100954D66 /* PointSliderExamplesView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PointSliderExamplesView.swift; sourceTree = "<group>"; };
+		FA01CE5E23A3871200954D66 /* HorizontalSliderExamplesView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HorizontalSliderExamplesView.swift; sourceTree = "<group>"; };
 		FA2C326B23A35EA0002DF6F7 /* SwiftUIExtensionsDemo tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SwiftUIExtensionsDemo tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA2C326D23A35EA0002DF6F7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FA2C326F23A35EA0002DF6F7 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -166,6 +179,11 @@
 		FA37C47F239DEB200037BFE3 /* StaggeredGridView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StaggeredGridView.swift; sourceTree = "<group>"; };
 		FA800E30239DE144005D2211 /* Grid */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Grid; path = ..; sourceTree = "<group>"; };
 		FAB94A0723A37B7500EBEB8C /* ChartsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartsView.swift; sourceTree = "<group>"; };
+		FAB94A1123A384B900EBEB8C /* HalfCapsule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HalfCapsule.swift; sourceTree = "<group>"; };
+		FAB94A1223A384B900EBEB8C /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		FAB94A1823A3850000EBEB8C /* VerticalSliderExamplesView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VerticalSliderExamplesView.swift; sourceTree = "<group>"; };
+		FAB94A1923A3850000EBEB8C /* HorizontalSliderExamplesView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HorizontalSliderExamplesView.swift; sourceTree = "<group>"; };
+		FAB94A1A23A3850000EBEB8C /* PointSliderExamplesView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PointSliderExamplesView.swift; sourceTree = "<group>"; };
 		FAD4B55323A35A2300308E28 /* SwiftUIExtensionsDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUIExtensionsDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAD4B55623A35A2300308E28 /* SwiftUIExtensionsDemo WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SwiftUIExtensionsDemo WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAD4B55C23A35A2400308E28 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
@@ -222,6 +240,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FA01CE5B23A386FE00954D66 /* Sliders */ = {
+			isa = PBXGroup;
+			children = (
+				FA01CE5E23A3871200954D66 /* HorizontalSliderExamplesView.swift */,
+				FA01CE5D23A3871100954D66 /* PointSliderExamplesView.swift */,
+				FA01CE5C23A3871100954D66 /* VerticalSliderExamplesView.swift */,
+			);
+			path = Sliders;
+			sourceTree = "<group>";
+		};
 		FA2C326C23A35EA0002DF6F7 /* SwiftUIExtensionsDemo tvOS */ = {
 			isa = PBXGroup;
 			children = (
@@ -318,6 +346,7 @@
 				FA37C43A239DE2560037BFE3 /* ContentView.swift */,
 				FA37C448239DE6250037BFE3 /* Layouts */,
 				FA2C329B23A3797F002DF6F7 /* DataVisualization */,
+				FAB94A1723A384CD00EBEB8C /* Sliders */,
 				FA2C328D23A37034002DF6F7 /* Shapes */,
 				FA37C43C239DE2570037BFE3 /* Assets.xcassets */,
 				FA37C441239DE2570037BFE3 /* LaunchScreen.storyboard */,
@@ -372,6 +401,7 @@
 		FA37C456239DE6EA0037BFE3 /* SwiftUIExtensionsDemo */ = {
 			isa = PBXGroup;
 			children = (
+				FAB94A0923A3844100EBEB8C /* Sliders */,
 				FA37C457239DE7330037BFE3 /* Layouts */,
 			);
 			path = SwiftUIExtensionsDemo;
@@ -395,6 +425,7 @@
 				FA37C468239DE9960037BFE3 /* ContentView.swift */,
 				FA37C479239DEAF10037BFE3 /* Layouts */,
 				FAB94A0623A37B6200EBEB8C /* DataVisualization */,
+				FA01CE5B23A386FE00954D66 /* Sliders */,
 				FA2C329423A37236002DF6F7 /* Shapes */,
 				FA37C46A239DE9990037BFE3 /* Assets.xcassets */,
 				FA37C46F239DE9990037BFE3 /* Main.storyboard */,
@@ -461,6 +492,25 @@
 				FAB94A0723A37B7500EBEB8C /* ChartsView.swift */,
 			);
 			path = DataVisualization;
+			sourceTree = "<group>";
+		};
+		FAB94A0923A3844100EBEB8C /* Sliders */ = {
+			isa = PBXGroup;
+			children = (
+				FAB94A1123A384B900EBEB8C /* HalfCapsule.swift */,
+				FAB94A1223A384B900EBEB8C /* Model.swift */,
+			);
+			path = Sliders;
+			sourceTree = "<group>";
+		};
+		FAB94A1723A384CD00EBEB8C /* Sliders */ = {
+			isa = PBXGroup;
+			children = (
+				FAB94A1923A3850000EBEB8C /* HorizontalSliderExamplesView.swift */,
+				FAB94A1A23A3850000EBEB8C /* PointSliderExamplesView.swift */,
+				FAB94A1823A3850000EBEB8C /* VerticalSliderExamplesView.swift */,
+			);
+			path = Sliders;
 			sourceTree = "<group>";
 		};
 		FAD4B55A23A35A2400308E28 /* SwiftUIExtensionsDemo WatchKit App */ = {
@@ -777,20 +827,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FAB94A1D23A3850100EBEB8C /* PointSliderExamplesView.swift in Sources */,
 				FA37C45C239DE7330037BFE3 /* Color+Random.swift in Sources */,
 				FA2C329323A3704B002DF6F7 /* LinesView.swift in Sources */,
 				FA2C329123A3704B002DF6F7 /* PatternsView.swift in Sources */,
 				FA37C45D239DE7330037BFE3 /* Item.swift in Sources */,
+				FAB94A1323A384BA00EBEB8C /* HalfCapsule.swift in Sources */,
 				FA37C437239DE2560037BFE3 /* AppDelegate.swift in Sources */,
 				FA37C44F239DE6820037BFE3 /* ModularGridView.swift in Sources */,
+				FAB94A1523A384BA00EBEB8C /* Model.swift in Sources */,
 				FA37C450239DE6820037BFE3 /* ModularGridSettingsView.swift in Sources */,
 				FA2C329D23A37993002DF6F7 /* ChartsView.swift in Sources */,
+				FAB94A1C23A3850100EBEB8C /* HorizontalSliderExamplesView.swift in Sources */,
 				FA37C439239DE2560037BFE3 /* SceneDelegate.swift in Sources */,
 				FA37C452239DE6820037BFE3 /* StaggeredGridView.swift in Sources */,
 				FA2C329223A3704B002DF6F7 /* RegularPolygonsView.swift in Sources */,
 				FA37C45F239DE7330037BFE3 /* Card.swift in Sources */,
 				FA37C451239DE6820037BFE3 /* StaggeredGridSettingsView.swift in Sources */,
 				FA37C43B239DE2560037BFE3 /* ContentView.swift in Sources */,
+				FAB94A1B23A3850100EBEB8C /* VerticalSliderExamplesView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -798,16 +853,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FAB94A1623A384BA00EBEB8C /* Model.swift in Sources */,
 				FA37C484239DEB2C0037BFE3 /* Color+Random.swift in Sources */,
+				FA01CE6023A3871200954D66 /* PointSliderExamplesView.swift in Sources */,
 				FA37C486239DEB2C0037BFE3 /* Card.swift in Sources */,
 				FA37C480239DEB200037BFE3 /* ModularGridView.swift in Sources */,
+				FA01CE5F23A3871200954D66 /* VerticalSliderExamplesView.swift in Sources */,
 				FA2C329823A3725A002DF6F7 /* PatternsView.swift in Sources */,
 				FA37C482239DEB200037BFE3 /* StaggeredGridSettingsView.swift in Sources */,
 				FA37C469239DE9960037BFE3 /* ContentView.swift in Sources */,
 				FA37C485239DEB2C0037BFE3 /* Item.swift in Sources */,
+				FA01CE6123A3871200954D66 /* HorizontalSliderExamplesView.swift in Sources */,
 				FA37C481239DEB200037BFE3 /* ModularGridSettingsView.swift in Sources */,
 				FAB94A0823A37B7500EBEB8C /* ChartsView.swift in Sources */,
 				FA2C329A23A3725A002DF6F7 /* RegularPolygonsView.swift in Sources */,
+				FAB94A1423A384BA00EBEB8C /* HalfCapsule.swift in Sources */,
 				FA37C467239DE9960037BFE3 /* AppDelegate.swift in Sources */,
 				FA37C483239DEB200037BFE3 /* StaggeredGridView.swift in Sources */,
 				FA2C329923A3725A002DF6F7 /* LinesView.swift in Sources */,

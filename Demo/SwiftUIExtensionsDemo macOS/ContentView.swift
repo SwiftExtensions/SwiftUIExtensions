@@ -20,6 +20,20 @@ struct ContentView: View {
                     }
                 }
                 
+                Section(header: Text("Sliders")) {
+                    NavigationLink(destination: HorizontalSliderExamplesView()) {
+                        Text("Horizontal")
+                    }
+                    
+                    NavigationLink(destination: VerticalSliderExamplesView()) {
+                        Text("Vertical")
+                    }
+                    
+                    NavigationLink(destination: PointSliderExamplesView()) {
+                        Text("Point")
+                    }
+                }
+                
                 Section(header: Text("Shapes")) {
                     NavigationLink(destination: RegularPolygonsView()) {
                         Text("Regular Polygons")

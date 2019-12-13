@@ -18,6 +18,10 @@ let package = Package(
             name: "SwiftUIExtensions",
             dependencies: [],
             exclude: ["Demo", "Resources"]
+        ),
+        .testTarget(
+            name: "SwiftUIExtensionsTests",
+            dependencies: ["SwiftUIExtensions"]
         )
     ]
 )

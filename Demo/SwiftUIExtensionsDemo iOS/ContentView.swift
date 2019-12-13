@@ -30,6 +30,30 @@ struct ContentView: View {
                     }
                 }
                 
+                
+                Section(header: Text("Sliders")) {
+                    NavigationLink(destination: HorizontalSliderExamplesView()) {
+                        HStack {
+                            Image(systemName: "square.split.1x2.fill")
+                            Text("Horizontal")
+                        }
+                    }
+                    
+                    NavigationLink(destination: VerticalSliderExamplesView()) {
+                        HStack {
+                            Image(systemName: "square.split.2x1.fill")
+                            Text("Vertical")
+                        }
+                    }
+                    
+                    NavigationLink(destination: PointSliderExamplesView()) {
+                        HStack {
+                            Image(systemName: "square.split.2x2.fill")
+                            Text("Point")
+                        }
+                    }
+                }
+                
                 Section(header: Text("Shapes")) {
                     NavigationLink(destination: RegularPolygonsView()) {
                         HStack {
