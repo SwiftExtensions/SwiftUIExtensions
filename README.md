@@ -2,6 +2,8 @@
 Collection of useful SwiftUI extensions and elements
 
 - Grid based layouts
+- Custom shapes
+- Data charts
 - Supports all apple platforms
 - SwiftUI code patterns (Styles, EnvironmentValues, ViewBuilder)
 - Active development for production apps
@@ -224,6 +226,7 @@ GridPattern(horizontalLines: 20, verticalLines: 40)
 - 'CSS Grid'-like features for Modular Grid
 - View Modifiers
 - Rounded regular polygons
+- Bar chart style
 
 ## Code Contibutions
 Feel free to contribute via fork/pull request to master branch. If you want to request a feature or report a bug please start a new issue.
