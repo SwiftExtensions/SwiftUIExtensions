@@ -19,6 +19,7 @@
 		FA2C328723A35FE6002DF6F7 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA37C459239DE7330037BFE3 /* Item.swift */; };
 		FA2C328823A35FE6002DF6F7 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA37C45B239DE7330037BFE3 /* Card.swift */; };
 		FA2C328923A35FE6002DF6F7 /* SharedAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA37C45A239DE7330037BFE3 /* SharedAssets.xcassets */; };
+		FA2C328C23A36DB5002DF6F7 /* SwiftUIExtensions in Frameworks */ = {isa = PBXBuildFile; productRef = FA2C328B23A36DB5002DF6F7 /* SwiftUIExtensions */; };
 		FA37C437239DE2560037BFE3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA37C436239DE2560037BFE3 /* AppDelegate.swift */; };
 		FA37C439239DE2560037BFE3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA37C438239DE2560037BFE3 /* SceneDelegate.swift */; };
 		FA37C43B239DE2560037BFE3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA37C43A239DE2560037BFE3 /* ContentView.swift */; };
@@ -181,6 +182,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA2C328C23A36DB5002DF6F7 /* SwiftUIExtensions in Frameworks */,
 				FA37C455239DE6B60037BFE3 /* SwiftUIExtensions in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -503,6 +505,7 @@
 			name = "SwiftUIExtensionsDemo iOS";
 			packageProductDependencies = (
 				FA37C454239DE6B60037BFE3 /* SwiftUIExtensions */,
+				FA2C328B23A36DB5002DF6F7 /* SwiftUIExtensions */,
 			);
 			productName = "SwiftUIExtensionsDemo iOS";
 			productReference = FA37C433239DE2560037BFE3 /* SwiftUIExtensionsDemo iOS.app */;
@@ -621,7 +624,7 @@
 			);
 			mainGroup = FA800E28239DE09A005D2211;
 			packageReferences = (
-				FA800E2F239DE12C005D2211 /* XCRemoteSwiftPackageReference "Grid" */,
+				FA2C328A23A36DB5002DF6F7 /* XCRemoteSwiftPackageReference "SwiftUIExtensions" */,
 			);
 			productRefGroup = FA37C434239DE2560037BFE3 /* Products */;
 			projectDirPath = "";
@@ -1583,9 +1586,9 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		FA800E2F239DE12C005D2211 /* XCRemoteSwiftPackageReference "Grid" */ = {
+		FA2C328A23A36DB5002DF6F7 /* XCRemoteSwiftPackageReference "SwiftUIExtensions" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "git@github.com:SwiftUIExtensions/Grid.git";
+			repositoryURL = "git@github.com:SwiftExtensions/SwiftUIExtensions.git";
 			requirement = {
 				branch = master;
 				kind = branch;
@@ -1596,6 +1599,11 @@
 /* Begin XCSwiftPackageProductDependency section */
 		FA2C328423A35FD2002DF6F7 /* SwiftUIExtensions */ = {
 			isa = XCSwiftPackageProductDependency;
+			productName = SwiftUIExtensions;
+		};
+		FA2C328B23A36DB5002DF6F7 /* SwiftUIExtensions */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FA2C328A23A36DB5002DF6F7 /* XCRemoteSwiftPackageReference "SwiftUIExtensions" */;
 			productName = SwiftUIExtensions;
 		};
 		FA37C454239DE6B60037BFE3 /* SwiftUIExtensions */ = {
