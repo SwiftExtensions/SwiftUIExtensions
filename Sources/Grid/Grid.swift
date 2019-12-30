@@ -1,9 +1,14 @@
 import SwiftUI
 
+struct GridItem: Identifiable {
+    let view: AnyView
+    let id: AnyHashable
+}
+
 /// A view that arranges its children in a grid.
 public struct Grid<Content>: View where Content: View {
     @Environment(\.gridStyle) private var style
-    let items: [AnyView]
+    let items: [GridItem]
     @State private var itemsPreferences: [AnyHashable : GridItemPreferences] = [:]
     
     public var body: some View {
@@ -26,15 +31,15 @@ public struct Grid<Content>: View where Content: View {
     private func grid(with geometry: GeometryProxy) -> some View {
         ScrollView(self.style.axis == .vertical ? .vertical : .horizontal) {
             ZStack(alignment: .topLeading) {
-                ForEach(0..<self.items.count, id: \.self) { index in
-                    self.items[index]
+                ForEach(self.items) { item in
+                    item.view
                         .frame(
-                            width: self.style.autoWidth ? self.itemsPreferences[AnyHashable(index)]?.bounds.width : nil,
-                            height: self.style.autoHeight ? self.itemsPreferences[AnyHashable(index)]?.bounds.height : nil
+                            width: self.style.autoWidth ? self.itemsPreferences[item.id]?.bounds.width : nil,
+                            height: self.style.autoHeight ? self.itemsPreferences[item.id]?.bounds.height : nil
                         )
-                        .alignmentGuide(.leading, computeValue: { _ in self.itemsPreferences[AnyHashable(index)]?.bounds.origin.x ?? 0 })
-                        .alignmentGuide(.top, computeValue: { _ in self.itemsPreferences[AnyHashable(index)]?.bounds.origin.y ?? 0 })
-                        .background(GridItemPreferencesModifier(id: AnyHashable(index), bounds: self.itemsPreferences[AnyHashable(index)]?.bounds ?? .zero))
+                        .alignmentGuide(.leading, computeValue: { _ in self.itemsPreferences[item.id]?.bounds.origin.x ?? 0 })
+                        .alignmentGuide(.top, computeValue: { _ in self.itemsPreferences[item.id]?.bounds.origin.y ?? 0 })
+                        .background(GridItemPreferencesModifier(id: item.id, bounds: self.itemsPreferences[item.id]?.bounds ?? .zero))
                         .anchorPreference(key: GridItemBoundsPreferencesKey.self, value: .bounds) { [geometry[$0]] }
                 }
             }
