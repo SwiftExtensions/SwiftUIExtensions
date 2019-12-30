@@ -13,7 +13,7 @@ Collection of useful SwiftUI extensions and elements
 
 Open `/Demo/SwiftUIExtensionsDemo.xcodeproj` for more examples for iOS, macOS, watchOS and tvOS
 
-## Layouts
+## Grid
 
 ### Modular Grid
 <center>
@@ -198,7 +198,7 @@ XYSlider(x: $x, y: $y,
 .padding()
 ```
 
-## Data Visualization
+## Chart
 
 Build custom charts with SwiftUI
 
