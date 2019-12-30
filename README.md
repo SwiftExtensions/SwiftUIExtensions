@@ -1,7 +1,7 @@
 # SwiftUI Extensions
 Collection of useful SwiftUI extensions and elements
 
-[![Build Status](https://github.com/swift-extensions/swiftui-extensions/workflows/CI/badge.svg)](https://github.com/swift-extensions/swiftui-extensions/actions)
+[![Build Status](https://github.com/swift-extensions/swiftui-extensions/workflows/ci/badge.svg)](https://github.com/swift-extensions/swiftui-extensions/actions)
 
 - Grid based layouts
 - Sliders (horizontal, vertical, point)
