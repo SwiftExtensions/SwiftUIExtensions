@@ -1,4 +1,5 @@
 import SwiftUI
+import Shapes
 
 public struct LineChartStyle: ChartStyle {
     private let lineType: LineType

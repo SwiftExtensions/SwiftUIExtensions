@@ -1,5 +1,4 @@
 import SwiftUI
-import SwiftUIExtensions
 
 struct ContentView: View {
     var body: some View {

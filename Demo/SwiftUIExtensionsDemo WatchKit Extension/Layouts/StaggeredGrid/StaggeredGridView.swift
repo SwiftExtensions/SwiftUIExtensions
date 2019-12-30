@@ -1,5 +1,5 @@
 import SwiftUI
-import SwiftUIExtensions
+import Grid
 
 struct StaggeredGridView: View {
     var body: some View {

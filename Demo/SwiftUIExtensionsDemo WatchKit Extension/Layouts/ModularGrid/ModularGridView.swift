@@ -1,5 +1,5 @@
 import SwiftUI
-import SwiftUIExtensions
+import Grid
 
 struct ModularGridView: View {
     @State var selection: Int = 0

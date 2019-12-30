@@ -17,12 +17,10 @@
 		FA2C327823A35EA1002DF6F7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA2C327623A35EA1002DF6F7 /* LaunchScreen.storyboard */; };
 		FA2C328123A35F58002DF6F7 /* StaggeredGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2C328023A35F58002DF6F7 /* StaggeredGridView.swift */; };
 		FA2C328323A35F73002DF6F7 /* ModularGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2C328223A35F73002DF6F7 /* ModularGridView.swift */; };
-		FA2C328523A35FD2002DF6F7 /* SwiftUIExtensions in Frameworks */ = {isa = PBXBuildFile; productRef = FA2C328423A35FD2002DF6F7 /* SwiftUIExtensions */; };
 		FA2C328623A35FE6002DF6F7 /* Color+Random.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA37C458239DE7330037BFE3 /* Color+Random.swift */; };
 		FA2C328723A35FE6002DF6F7 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA37C459239DE7330037BFE3 /* Item.swift */; };
 		FA2C328823A35FE6002DF6F7 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA37C45B239DE7330037BFE3 /* Card.swift */; };
 		FA2C328923A35FE6002DF6F7 /* SharedAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA37C45A239DE7330037BFE3 /* SharedAssets.xcassets */; };
-		FA2C328C23A36DB5002DF6F7 /* SwiftUIExtensions in Frameworks */ = {isa = PBXBuildFile; productRef = FA2C328B23A36DB5002DF6F7 /* SwiftUIExtensions */; };
 		FA2C329123A3704B002DF6F7 /* PatternsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2C328E23A3704B002DF6F7 /* PatternsView.swift */; };
 		FA2C329223A3704B002DF6F7 /* RegularPolygonsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2C328F23A3704B002DF6F7 /* RegularPolygonsView.swift */; };
 		FA2C329323A3704B002DF6F7 /* LinesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2C329023A3704B002DF6F7 /* LinesView.swift */; };
@@ -59,6 +57,9 @@
 		FA37C485239DEB2C0037BFE3 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA37C459239DE7330037BFE3 /* Item.swift */; };
 		FA37C486239DEB2C0037BFE3 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA37C45B239DE7330037BFE3 /* Card.swift */; };
 		FA37C487239DEB2C0037BFE3 /* SharedAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA37C45A239DE7330037BFE3 /* SharedAssets.xcassets */; };
+		FA4AB23423B96F61007B0422 /* SwiftUIExtensions in Frameworks */ = {isa = PBXBuildFile; productRef = FA4AB23323B96F61007B0422 /* SwiftUIExtensions */; };
+		FA90447823B975620090B6DA /* Grid in Frameworks */ = {isa = PBXBuildFile; productRef = FA90447723B975620090B6DA /* Grid */; };
+		FA90447A23B975CA0090B6DA /* Grid in Frameworks */ = {isa = PBXBuildFile; productRef = FA90447923B975CA0090B6DA /* Grid */; };
 		FAB94A0823A37B7500EBEB8C /* ChartsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB94A0723A37B7500EBEB8C /* ChartsView.swift */; };
 		FAB94A1323A384BA00EBEB8C /* HalfCapsule.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB94A1123A384B900EBEB8C /* HalfCapsule.swift */; };
 		FAB94A1423A384BA00EBEB8C /* HalfCapsule.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB94A1123A384B900EBEB8C /* HalfCapsule.swift */; };
@@ -78,7 +79,6 @@
 		FAD4B57323A35A2800308E28 /* NotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD4B57223A35A2800308E28 /* NotificationView.swift */; };
 		FAD4B57523A35A2900308E28 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAD4B57423A35A2900308E28 /* Assets.xcassets */; };
 		FAD4B57823A35A2900308E28 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAD4B57723A35A2900308E28 /* Preview Assets.xcassets */; };
-		FAD4B58723A35BCA00308E28 /* SwiftUIExtensions in Frameworks */ = {isa = PBXBuildFile; productRef = FAD4B58623A35BCA00308E28 /* SwiftUIExtensions */; };
 		FAD4B58C23A35C8300308E28 /* ModularGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD4B58B23A35C8300308E28 /* ModularGridView.swift */; };
 		FAD4B58E23A35C9500308E28 /* StaggeredGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD4B58D23A35C9500308E28 /* StaggeredGridView.swift */; };
 		FAD4B58F23A35CC400308E28 /* Color+Random.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA37C458239DE7330037BFE3 /* Color+Random.swift */; };
@@ -208,7 +208,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FA2C328523A35FD2002DF6F7 /* SwiftUIExtensions in Frameworks */,
+				FA90447A23B975CA0090B6DA /* Grid in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -216,7 +216,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FA2C328C23A36DB5002DF6F7 /* SwiftUIExtensions in Frameworks */,
+				FA4AB23423B96F61007B0422 /* SwiftUIExtensions in Frameworks */,
 				FA37C455239DE6B60037BFE3 /* SwiftUIExtensions in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -233,7 +233,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FAD4B58723A35BCA00308E28 /* SwiftUIExtensions in Frameworks */,
+				FA90447823B975620090B6DA /* Grid in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -590,7 +590,7 @@
 			);
 			name = "SwiftUIExtensionsDemo tvOS";
 			packageProductDependencies = (
-				FA2C328423A35FD2002DF6F7 /* SwiftUIExtensions */,
+				FA90447923B975CA0090B6DA /* Grid */,
 			);
 			productName = "SwiftUIExtensionsDemo tvOS";
 			productReference = FA2C326B23A35EA0002DF6F7 /* SwiftUIExtensionsDemo tvOS.app */;
@@ -611,7 +611,7 @@
 			name = "SwiftUIExtensionsDemo iOS";
 			packageProductDependencies = (
 				FA37C454239DE6B60037BFE3 /* SwiftUIExtensions */,
-				FA2C328B23A36DB5002DF6F7 /* SwiftUIExtensions */,
+				FA4AB23323B96F61007B0422 /* SwiftUIExtensions */,
 			);
 			productName = "SwiftUIExtensionsDemo iOS";
 			productReference = FA37C433239DE2560037BFE3 /* SwiftUIExtensionsDemo iOS.app */;
@@ -685,7 +685,7 @@
 			);
 			name = "SwiftUIExtensionsDemo WatchKit Extension";
 			packageProductDependencies = (
-				FAD4B58623A35BCA00308E28 /* SwiftUIExtensions */,
+				FA90447723B975620090B6DA /* Grid */,
 			);
 			productName = "SwiftUIExtensionsDemo WatchKit Extension";
 			productReference = FAD4B56523A35A2800308E28 /* SwiftUIExtensionsDemo WatchKit Extension.appex */;
@@ -730,7 +730,7 @@
 			);
 			mainGroup = FA800E28239DE09A005D2211;
 			packageReferences = (
-				FA2C328A23A36DB5002DF6F7 /* XCRemoteSwiftPackageReference "SwiftUIExtensions" */,
+				FA4AB23223B96F61007B0422 /* XCRemoteSwiftPackageReference "swiftui-extensions" */,
 			);
 			productRefGroup = FA37C434239DE2560037BFE3 /* Products */;
 			projectDirPath = "";
@@ -1710,9 +1710,9 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		FA2C328A23A36DB5002DF6F7 /* XCRemoteSwiftPackageReference "SwiftUIExtensions" */ = {
+		FA4AB23223B96F61007B0422 /* XCRemoteSwiftPackageReference "swiftui-extensions" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "git@github.com:SwiftExtensions/SwiftUIExtensions.git";
+			repositoryURL = "git@github.com:swift-extensions/swiftui-extensions.git";
 			requirement = {
 				branch = master;
 				kind = branch;
@@ -1721,15 +1721,6 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		FA2C328423A35FD2002DF6F7 /* SwiftUIExtensions */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = SwiftUIExtensions;
-		};
-		FA2C328B23A36DB5002DF6F7 /* SwiftUIExtensions */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = FA2C328A23A36DB5002DF6F7 /* XCRemoteSwiftPackageReference "SwiftUIExtensions" */;
-			productName = SwiftUIExtensions;
-		};
 		FA37C454239DE6B60037BFE3 /* SwiftUIExtensions */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = SwiftUIExtensions;
@@ -1738,9 +1729,18 @@
 			isa = XCSwiftPackageProductDependency;
 			productName = SwiftUIExtensions;
 		};
-		FAD4B58623A35BCA00308E28 /* SwiftUIExtensions */ = {
+		FA4AB23323B96F61007B0422 /* SwiftUIExtensions */ = {
 			isa = XCSwiftPackageProductDependency;
+			package = FA4AB23223B96F61007B0422 /* XCRemoteSwiftPackageReference "swiftui-extensions" */;
 			productName = SwiftUIExtensions;
+		};
+		FA90447723B975620090B6DA /* Grid */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Grid;
+		};
+		FA90447923B975CA0090B6DA /* Grid */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Grid;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
