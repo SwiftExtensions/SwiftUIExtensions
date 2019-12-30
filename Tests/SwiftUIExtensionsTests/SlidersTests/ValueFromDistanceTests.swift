@@ -1,4 +1,4 @@
-@testable import SwiftUIExtensions
+@testable import Sliders
 import XCTest
 
 class ValueFromDistanceTests: XCTestCase {
