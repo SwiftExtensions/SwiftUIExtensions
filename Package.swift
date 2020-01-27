@@ -12,6 +12,7 @@ let package = Package(
         .library(name: "Grid", targets: ["Grid"])
     ],
     targets: [
-        .target(name: "Grid", dependencies: [])
+        .target(name: "Grid", dependencies: []),
+        .testTarget(name: "GridTests", dependencies: ["Grid"])
     ]
 )

@@ -120,7 +120,7 @@ struct CardsView: View {
 - Xcode 11.0+
 
 ## Roadmap
--  Animations
+- Item rearranging
 - 'CSS Grid'-like features
 
 ## Code Contributions

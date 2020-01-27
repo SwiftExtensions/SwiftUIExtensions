@@ -1,10 +1,3 @@
-//
-//  AppDelegate.swift
-//  GridDemo tvOS
-//
-//  Created by Alex on 2020-01-26.
-//
-
 import UIKit
 import SwiftUI
 

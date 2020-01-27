@@ -1,16 +1,7 @@
-//
-//  AppDelegate.swift
-//  GridDemo iOS
-//
-//  Created by Alex on 2020-01-26.
-//
-
 import UIKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
-
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
