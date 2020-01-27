@@ -21,7 +21,6 @@
 		FAA2C99023DEB00100FBDE39 /* StaggeredGridSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA2C98C23DEB00100FBDE39 /* StaggeredGridSettingsView.swift */; };
 		FAA2C99123DEB00100FBDE39 /* StaggeredGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA2C98D23DEB00100FBDE39 /* StaggeredGridView.swift */; };
 		FAA2C99323DEB08D00FBDE39 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAA2C99223DEB08D00FBDE39 /* Preview Assets.xcassets */; };
-		FAA2C99623DEB0A700FBDE39 /* Grid in Frameworks */ = {isa = PBXBuildFile; productRef = FAA2C99523DEB0A700FBDE39 /* Grid */; };
 		FAA2C99F23DEB26200FBDE39 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA2C99E23DEB26200FBDE39 /* AppDelegate.swift */; };
 		FAA2C9A123DEB26200FBDE39 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA2C9A023DEB26200FBDE39 /* ContentView.swift */; };
 		FAA2C9A323DEB26300FBDE39 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAA2C9A223DEB26300FBDE39 /* Assets.xcassets */; };
@@ -35,7 +34,6 @@
 		FAA2C9BA23DEB31900FBDE39 /* ModularGridSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA2C9B523DEB31800FBDE39 /* ModularGridSettingsView.swift */; };
 		FAA2C9BB23DEB31900FBDE39 /* StaggeredGridSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA2C9B723DEB31800FBDE39 /* StaggeredGridSettingsView.swift */; };
 		FAA2C9BC23DEB31900FBDE39 /* StaggeredGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA2C9B823DEB31800FBDE39 /* StaggeredGridView.swift */; };
-		FAA2C9BE23DEB32900FBDE39 /* Grid in Frameworks */ = {isa = PBXBuildFile; productRef = FAA2C9BD23DEB32900FBDE39 /* Grid */; };
 		FAA2C9FB23DEB4D700FBDE39 /* GridDemo watchOS WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = FAA2C9FA23DEB4D700FBDE39 /* GridDemo watchOS WatchKit App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		FAA2CA0123DEB4D700FBDE39 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAA2C9FF23DEB4D700FBDE39 /* Interface.storyboard */; };
 		FAA2CA0323DEB4D800FBDE39 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAA2CA0223DEB4D800FBDE39 /* Assets.xcassets */; };
@@ -53,7 +51,6 @@
 		FAA2CA3123DEB5AB00FBDE39 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA2C98123DEAFF100FBDE39 /* Item.swift */; };
 		FAA2CA3223DEB5AB00FBDE39 /* SharedAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAA2C98223DEAFF100FBDE39 /* SharedAssets.xcassets */; };
 		FAA2CA3323DEB5AB00FBDE39 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA2C98323DEAFF100FBDE39 /* Card.swift */; };
-		FAA2CA3523DEB5BE00FBDE39 /* Grid in Frameworks */ = {isa = PBXBuildFile; productRef = FAA2CA3423DEB5BE00FBDE39 /* Grid */; };
 		FAA2CA3D23DEB64800FBDE39 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA2CA3C23DEB64800FBDE39 /* AppDelegate.swift */; };
 		FAA2CA3F23DEB64800FBDE39 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA2CA3E23DEB64800FBDE39 /* ContentView.swift */; };
 		FAA2CA4123DEB64900FBDE39 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAA2CA4023DEB64900FBDE39 /* Assets.xcassets */; };
@@ -65,9 +62,11 @@
 		FAA2CA4F23DEB66000FBDE39 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA2C98323DEAFF100FBDE39 /* Card.swift */; };
 		FAA2CA5423DEB66A00FBDE39 /* ModularGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA2CA5123DEB66900FBDE39 /* ModularGridView.swift */; };
 		FAA2CA5523DEB66A00FBDE39 /* StaggeredGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA2CA5323DEB66900FBDE39 /* StaggeredGridView.swift */; };
-		FAA2CA5723DEB6A400FBDE39 /* Grid in Frameworks */ = {isa = PBXBuildFile; productRef = FAA2CA5623DEB6A400FBDE39 /* Grid */; };
 		FAA2CA5923DEB73200FBDE39 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = FAA2CA5823DEB73200FBDE39 /* README.md */; };
 		FAC9D4DA23DF8A910007B7DD /* Grid in Frameworks */ = {isa = PBXBuildFile; productRef = FAC9D4D923DF8A910007B7DD /* Grid */; };
+		FAC9D4DE23DF8CE20007B7DD /* Grid in Frameworks */ = {isa = PBXBuildFile; productRef = FAC9D4DD23DF8CE20007B7DD /* Grid */; };
+		FAC9D4E023DF8CE90007B7DD /* Grid in Frameworks */ = {isa = PBXBuildFile; productRef = FAC9D4DF23DF8CE90007B7DD /* Grid */; };
+		FAC9D4E223DF8CEE0007B7DD /* Grid in Frameworks */ = {isa = PBXBuildFile; productRef = FAC9D4E123DF8CEE0007B7DD /* Grid */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -168,7 +167,7 @@
 		FAA2CA5123DEB66900FBDE39 /* ModularGridView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModularGridView.swift; sourceTree = "<group>"; };
 		FAA2CA5323DEB66900FBDE39 /* StaggeredGridView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StaggeredGridView.swift; sourceTree = "<group>"; };
 		FAA2CA5823DEB73200FBDE39 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		FAC9D4DB23DF8AA70007B7DD /* grid */ = {isa = PBXFileReference; lastKnownFileType = folder; name = grid; sourceTree = "<group>"; };
+		FAC9D4DC23DF8C750007B7DD /*  */ = {isa = PBXFileReference; lastKnownFileType = folder; name = ""; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -177,7 +176,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				FAC9D4DA23DF8A910007B7DD /* Grid in Frameworks */,
-				FAA2C99623DEB0A700FBDE39 /* Grid in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -185,7 +183,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FAA2C9BE23DEB32900FBDE39 /* Grid in Frameworks */,
+				FAC9D4DE23DF8CE20007B7DD /* Grid in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -193,7 +191,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FAA2CA3523DEB5BE00FBDE39 /* Grid in Frameworks */,
+				FAC9D4E023DF8CE90007B7DD /* Grid in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -201,7 +199,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FAA2CA5723DEB6A400FBDE39 /* Grid in Frameworks */,
+				FAC9D4E223DF8CEE0007B7DD /* Grid in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -220,7 +218,7 @@
 				FAA2CA3B23DEB64800FBDE39 /* GridDemo tvOS */,
 				FAA2C94923DEAE7B00FBDE39 /* Products */,
 				FAA2C99423DEB0A700FBDE39 /* Frameworks */,
-				FAC9D4DB23DF8AA70007B7DD /* grid */,
+				FAC9D4DC23DF8C750007B7DD /*  */,
 			);
 			sourceTree = "<group>";
 		};
@@ -447,7 +445,6 @@
 			);
 			name = "GridDemo iOS";
 			packageProductDependencies = (
-				FAA2C99523DEB0A700FBDE39 /* Grid */,
 				FAC9D4D923DF8A910007B7DD /* Grid */,
 			);
 			productName = "GridDemo iOS";
@@ -468,7 +465,7 @@
 			);
 			name = "GridDemo macOS";
 			packageProductDependencies = (
-				FAA2C9BD23DEB32900FBDE39 /* Grid */,
+				FAC9D4DD23DF8CE20007B7DD /* Grid */,
 			);
 			productName = "GridDemo macOS";
 			productReference = FAA2C99C23DEB26200FBDE39 /* GridDemo macOS.app */;
@@ -522,7 +519,7 @@
 			);
 			name = "GridDemo watchOS WatchKit Extension";
 			packageProductDependencies = (
-				FAA2CA3423DEB5BE00FBDE39 /* Grid */,
+				FAC9D4DF23DF8CE90007B7DD /* Grid */,
 			);
 			productName = "GridDemo watchOS WatchKit Extension";
 			productReference = FAA2CA0923DEB4D800FBDE39 /* GridDemo watchOS WatchKit Extension.appex */;
@@ -542,7 +539,7 @@
 			);
 			name = "GridDemo tvOS";
 			packageProductDependencies = (
-				FAA2CA5623DEB6A400FBDE39 /* Grid */,
+				FAC9D4E123DF8CEE0007B7DD /* Grid */,
 			);
 			productName = "GridDemo tvOS";
 			productReference = FAA2CA3A23DEB64800FBDE39 /* GridDemo tvOS.app */;
@@ -1697,25 +1694,21 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		FAA2C99523DEB0A700FBDE39 /* Grid */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = Grid;
-		};
-		FAA2C9BD23DEB32900FBDE39 /* Grid */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = Grid;
-		};
-		FAA2CA3423DEB5BE00FBDE39 /* Grid */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = Grid;
-		};
-		FAA2CA5623DEB6A400FBDE39 /* Grid */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = Grid;
-		};
 		FAC9D4D923DF8A910007B7DD /* Grid */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = FAC9D4D823DF8A910007B7DD /* XCRemoteSwiftPackageReference "grid" */;
+			productName = Grid;
+		};
+		FAC9D4DD23DF8CE20007B7DD /* Grid */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Grid;
+		};
+		FAC9D4DF23DF8CE90007B7DD /* Grid */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Grid;
+		};
+		FAC9D4E123DF8CEE0007B7DD /* Grid */ = {
+			isa = XCSwiftPackageProductDependency;
 			productName = Grid;
 		};
 /* End XCSwiftPackageProductDependency section */
