@@ -1,0 +1,1724 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 52;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		FAA2C96C23DEAECC00FBDE39 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA2C96B23DEAECC00FBDE39 /* SceneDelegate.swift */; };
+		FAA2C96E23DEAECC00FBDE39 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA2C96D23DEAECC00FBDE39 /* ContentView.swift */; };
+		FAA2C97623DEAECD00FBDE39 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAA2C97423DEAECD00FBDE39 /* LaunchScreen.storyboard */; };
+		FAA2C97C23DEAF9200FBDE39 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA2C97B23DEAF9200FBDE39 /* AppDelegate.swift */; };
+		FAA2C97E23DEAFD700FBDE39 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAA2C97D23DEAFD700FBDE39 /* Assets.xcassets */; };
+		FAA2C98423DEAFF100FBDE39 /* Color+Random.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA2C98023DEAFF100FBDE39 /* Color+Random.swift */; };
+		FAA2C98523DEAFF100FBDE39 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA2C98123DEAFF100FBDE39 /* Item.swift */; };
+		FAA2C98623DEAFF100FBDE39 /* SharedAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAA2C98223DEAFF100FBDE39 /* SharedAssets.xcassets */; };
+		FAA2C98723DEAFF100FBDE39 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA2C98323DEAFF100FBDE39 /* Card.swift */; };
+		FAA2C98E23DEB00100FBDE39 /* ModularGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA2C98923DEB00100FBDE39 /* ModularGridView.swift */; };
+		FAA2C98F23DEB00100FBDE39 /* ModularGridSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA2C98A23DEB00100FBDE39 /* ModularGridSettingsView.swift */; };
+		FAA2C99023DEB00100FBDE39 /* StaggeredGridSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA2C98C23DEB00100FBDE39 /* StaggeredGridSettingsView.swift */; };
+		FAA2C99123DEB00100FBDE39 /* StaggeredGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA2C98D23DEB00100FBDE39 /* StaggeredGridView.swift */; };
+		FAA2C99323DEB08D00FBDE39 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAA2C99223DEB08D00FBDE39 /* Preview Assets.xcassets */; };
+		FAA2C99623DEB0A700FBDE39 /* Grid in Frameworks */ = {isa = PBXBuildFile; productRef = FAA2C99523DEB0A700FBDE39 /* Grid */; };
+		FAA2C99F23DEB26200FBDE39 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA2C99E23DEB26200FBDE39 /* AppDelegate.swift */; };
+		FAA2C9A123DEB26200FBDE39 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA2C9A023DEB26200FBDE39 /* ContentView.swift */; };
+		FAA2C9A323DEB26300FBDE39 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAA2C9A223DEB26300FBDE39 /* Assets.xcassets */; };
+		FAA2C9A623DEB26300FBDE39 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAA2C9A523DEB26300FBDE39 /* Preview Assets.xcassets */; };
+		FAA2C9A923DEB26400FBDE39 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAA2C9A723DEB26400FBDE39 /* Main.storyboard */; };
+		FAA2C9AF23DEB26B00FBDE39 /* Color+Random.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA2C98023DEAFF100FBDE39 /* Color+Random.swift */; };
+		FAA2C9B023DEB26B00FBDE39 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA2C98123DEAFF100FBDE39 /* Item.swift */; };
+		FAA2C9B123DEB26B00FBDE39 /* SharedAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAA2C98223DEAFF100FBDE39 /* SharedAssets.xcassets */; };
+		FAA2C9B223DEB26B00FBDE39 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA2C98323DEAFF100FBDE39 /* Card.swift */; };
+		FAA2C9B923DEB31900FBDE39 /* ModularGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA2C9B423DEB31800FBDE39 /* ModularGridView.swift */; };
+		FAA2C9BA23DEB31900FBDE39 /* ModularGridSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA2C9B523DEB31800FBDE39 /* ModularGridSettingsView.swift */; };
+		FAA2C9BB23DEB31900FBDE39 /* StaggeredGridSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA2C9B723DEB31800FBDE39 /* StaggeredGridSettingsView.swift */; };
+		FAA2C9BC23DEB31900FBDE39 /* StaggeredGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA2C9B823DEB31800FBDE39 /* StaggeredGridView.swift */; };
+		FAA2C9BE23DEB32900FBDE39 /* Grid in Frameworks */ = {isa = PBXBuildFile; productRef = FAA2C9BD23DEB32900FBDE39 /* Grid */; };
+		FAA2C9FB23DEB4D700FBDE39 /* GridDemo watchOS WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = FAA2C9FA23DEB4D700FBDE39 /* GridDemo watchOS WatchKit App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		FAA2CA0123DEB4D700FBDE39 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAA2C9FF23DEB4D700FBDE39 /* Interface.storyboard */; };
+		FAA2CA0323DEB4D800FBDE39 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAA2CA0223DEB4D800FBDE39 /* Assets.xcassets */; };
+		FAA2CA0A23DEB4D800FBDE39 /* GridDemo watchOS WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = FAA2CA0923DEB4D800FBDE39 /* GridDemo watchOS WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		FAA2CA0F23DEB4D800FBDE39 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA2CA0E23DEB4D800FBDE39 /* ContentView.swift */; };
+		FAA2CA1123DEB4D800FBDE39 /* HostingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA2CA1023DEB4D800FBDE39 /* HostingController.swift */; };
+		FAA2CA1323DEB4D800FBDE39 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA2CA1223DEB4D800FBDE39 /* ExtensionDelegate.swift */; };
+		FAA2CA1523DEB4D800FBDE39 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA2CA1423DEB4D800FBDE39 /* NotificationController.swift */; };
+		FAA2CA1723DEB4D800FBDE39 /* NotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA2CA1623DEB4D800FBDE39 /* NotificationView.swift */; };
+		FAA2CA1923DEB4D900FBDE39 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAA2CA1823DEB4D900FBDE39 /* Assets.xcassets */; };
+		FAA2CA1C23DEB4D900FBDE39 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAA2CA1B23DEB4D900FBDE39 /* Preview Assets.xcassets */; };
+		FAA2CA2E23DEB56D00FBDE39 /* ModularGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA2CA2B23DEB56D00FBDE39 /* ModularGridView.swift */; };
+		FAA2CA2F23DEB56D00FBDE39 /* StaggeredGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA2CA2D23DEB56D00FBDE39 /* StaggeredGridView.swift */; };
+		FAA2CA3023DEB5AB00FBDE39 /* Color+Random.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA2C98023DEAFF100FBDE39 /* Color+Random.swift */; };
+		FAA2CA3123DEB5AB00FBDE39 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA2C98123DEAFF100FBDE39 /* Item.swift */; };
+		FAA2CA3223DEB5AB00FBDE39 /* SharedAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAA2C98223DEAFF100FBDE39 /* SharedAssets.xcassets */; };
+		FAA2CA3323DEB5AB00FBDE39 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA2C98323DEAFF100FBDE39 /* Card.swift */; };
+		FAA2CA3523DEB5BE00FBDE39 /* Grid in Frameworks */ = {isa = PBXBuildFile; productRef = FAA2CA3423DEB5BE00FBDE39 /* Grid */; };
+		FAA2CA3D23DEB64800FBDE39 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA2CA3C23DEB64800FBDE39 /* AppDelegate.swift */; };
+		FAA2CA3F23DEB64800FBDE39 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA2CA3E23DEB64800FBDE39 /* ContentView.swift */; };
+		FAA2CA4123DEB64900FBDE39 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAA2CA4023DEB64900FBDE39 /* Assets.xcassets */; };
+		FAA2CA4423DEB64900FBDE39 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAA2CA4323DEB64900FBDE39 /* Preview Assets.xcassets */; };
+		FAA2CA4723DEB64900FBDE39 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAA2CA4523DEB64900FBDE39 /* LaunchScreen.storyboard */; };
+		FAA2CA4C23DEB66000FBDE39 /* Color+Random.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA2C98023DEAFF100FBDE39 /* Color+Random.swift */; };
+		FAA2CA4D23DEB66000FBDE39 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA2C98123DEAFF100FBDE39 /* Item.swift */; };
+		FAA2CA4E23DEB66000FBDE39 /* SharedAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAA2C98223DEAFF100FBDE39 /* SharedAssets.xcassets */; };
+		FAA2CA4F23DEB66000FBDE39 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA2C98323DEAFF100FBDE39 /* Card.swift */; };
+		FAA2CA5423DEB66A00FBDE39 /* ModularGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA2CA5123DEB66900FBDE39 /* ModularGridView.swift */; };
+		FAA2CA5523DEB66A00FBDE39 /* StaggeredGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA2CA5323DEB66900FBDE39 /* StaggeredGridView.swift */; };
+		FAA2CA5723DEB6A400FBDE39 /* Grid in Frameworks */ = {isa = PBXBuildFile; productRef = FAA2CA5623DEB6A400FBDE39 /* Grid */; };
+		FAA2CA5923DEB73200FBDE39 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = FAA2CA5823DEB73200FBDE39 /* README.md */; };
+		FAC9D4DA23DF8A910007B7DD /* Grid in Frameworks */ = {isa = PBXBuildFile; productRef = FAC9D4D923DF8A910007B7DD /* Grid */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		FAA2C9FC23DEB4D700FBDE39 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FAA2C93C23DEAD2600FBDE39 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FAA2C9F923DEB4D700FBDE39;
+			remoteInfo = "GridDemo watchOS WatchKit App";
+		};
+		FAA2CA0B23DEB4D800FBDE39 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FAA2C93C23DEAD2600FBDE39 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FAA2CA0823DEB4D800FBDE39;
+			remoteInfo = "GridDemo watchOS WatchKit Extension";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		FAA2CA2223DEB4D900FBDE39 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				FAA2CA0A23DEB4D800FBDE39 /* GridDemo watchOS WatchKit Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FAA2CA2623DEB4D900FBDE39 /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				FAA2C9FB23DEB4D700FBDE39 /* GridDemo watchOS WatchKit App.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		FAA2C96723DEAECC00FBDE39 /* GridDemo iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "GridDemo iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FAA2C96B23DEAECC00FBDE39 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		FAA2C96D23DEAECC00FBDE39 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		FAA2C97523DEAECD00FBDE39 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		FAA2C97723DEAECD00FBDE39 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FAA2C97B23DEAF9200FBDE39 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		FAA2C97D23DEAFD700FBDE39 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FAA2C98023DEAFF100FBDE39 /* Color+Random.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Color+Random.swift"; sourceTree = "<group>"; };
+		FAA2C98123DEAFF100FBDE39 /* Item.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		FAA2C98223DEAFF100FBDE39 /* SharedAssets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = SharedAssets.xcassets; sourceTree = "<group>"; };
+		FAA2C98323DEAFF100FBDE39 /* Card.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
+		FAA2C98923DEB00100FBDE39 /* ModularGridView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModularGridView.swift; sourceTree = "<group>"; };
+		FAA2C98A23DEB00100FBDE39 /* ModularGridSettingsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModularGridSettingsView.swift; sourceTree = "<group>"; };
+		FAA2C98C23DEB00100FBDE39 /* StaggeredGridSettingsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StaggeredGridSettingsView.swift; sourceTree = "<group>"; };
+		FAA2C98D23DEB00100FBDE39 /* StaggeredGridView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StaggeredGridView.swift; sourceTree = "<group>"; };
+		FAA2C99223DEB08D00FBDE39 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		FAA2C99C23DEB26200FBDE39 /* GridDemo macOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "GridDemo macOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FAA2C99E23DEB26200FBDE39 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		FAA2C9A023DEB26200FBDE39 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		FAA2C9A223DEB26300FBDE39 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FAA2C9A523DEB26300FBDE39 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		FAA2C9A823DEB26400FBDE39 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		FAA2C9AA23DEB26400FBDE39 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FAA2C9AB23DEB26400FBDE39 /* GridDemo_macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = GridDemo_macOS.entitlements; sourceTree = "<group>"; };
+		FAA2C9B423DEB31800FBDE39 /* ModularGridView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModularGridView.swift; sourceTree = "<group>"; };
+		FAA2C9B523DEB31800FBDE39 /* ModularGridSettingsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModularGridSettingsView.swift; sourceTree = "<group>"; };
+		FAA2C9B723DEB31800FBDE39 /* StaggeredGridSettingsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StaggeredGridSettingsView.swift; sourceTree = "<group>"; };
+		FAA2C9B823DEB31800FBDE39 /* StaggeredGridView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StaggeredGridView.swift; sourceTree = "<group>"; };
+		FAA2C9F723DEB4D700FBDE39 /* GridDemo watchOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "GridDemo watchOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FAA2C9FA23DEB4D700FBDE39 /* GridDemo watchOS WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "GridDemo watchOS WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FAA2CA0023DEB4D700FBDE39 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		FAA2CA0223DEB4D800FBDE39 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FAA2CA0423DEB4D800FBDE39 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FAA2CA0923DEB4D800FBDE39 /* GridDemo watchOS WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "GridDemo watchOS WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FAA2CA0E23DEB4D800FBDE39 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		FAA2CA1023DEB4D800FBDE39 /* HostingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostingController.swift; sourceTree = "<group>"; };
+		FAA2CA1223DEB4D800FBDE39 /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
+		FAA2CA1423DEB4D800FBDE39 /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
+		FAA2CA1623DEB4D800FBDE39 /* NotificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationView.swift; sourceTree = "<group>"; };
+		FAA2CA1823DEB4D900FBDE39 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FAA2CA1B23DEB4D900FBDE39 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		FAA2CA1D23DEB4D900FBDE39 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FAA2CA1E23DEB4D900FBDE39 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		FAA2CA2B23DEB56D00FBDE39 /* ModularGridView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModularGridView.swift; sourceTree = "<group>"; };
+		FAA2CA2D23DEB56D00FBDE39 /* StaggeredGridView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StaggeredGridView.swift; sourceTree = "<group>"; };
+		FAA2CA3A23DEB64800FBDE39 /* GridDemo tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "GridDemo tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FAA2CA3C23DEB64800FBDE39 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		FAA2CA3E23DEB64800FBDE39 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		FAA2CA4023DEB64900FBDE39 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FAA2CA4323DEB64900FBDE39 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		FAA2CA4623DEB64900FBDE39 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		FAA2CA4823DEB64900FBDE39 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FAA2CA5123DEB66900FBDE39 /* ModularGridView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModularGridView.swift; sourceTree = "<group>"; };
+		FAA2CA5323DEB66900FBDE39 /* StaggeredGridView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StaggeredGridView.swift; sourceTree = "<group>"; };
+		FAA2CA5823DEB73200FBDE39 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		FAC9D4DB23DF8AA70007B7DD /* grid */ = {isa = PBXFileReference; lastKnownFileType = folder; name = grid; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FAA2C96423DEAECC00FBDE39 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FAC9D4DA23DF8A910007B7DD /* Grid in Frameworks */,
+				FAA2C99623DEB0A700FBDE39 /* Grid in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FAA2C99923DEB26200FBDE39 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FAA2C9BE23DEB32900FBDE39 /* Grid in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FAA2CA0623DEB4D800FBDE39 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FAA2CA3523DEB5BE00FBDE39 /* Grid in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FAA2CA3723DEB64800FBDE39 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FAA2CA5723DEB6A400FBDE39 /* Grid in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		FAA2C93B23DEAD2600FBDE39 = {
+			isa = PBXGroup;
+			children = (
+				FAA2CA5823DEB73200FBDE39 /* README.md */,
+				FAA2C97F23DEAFF100FBDE39 /* GridDemo */,
+				FAA2C96823DEAECC00FBDE39 /* GridDemo iOS */,
+				FAA2C99D23DEB26200FBDE39 /* GridDemo macOS */,
+				FAA2C9FE23DEB4D700FBDE39 /* GridDemo watchOS WatchKit App */,
+				FAA2CA0D23DEB4D800FBDE39 /* GridDemo watchOS WatchKit Extension */,
+				FAA2CA3B23DEB64800FBDE39 /* GridDemo tvOS */,
+				FAA2C94923DEAE7B00FBDE39 /* Products */,
+				FAA2C99423DEB0A700FBDE39 /* Frameworks */,
+				FAC9D4DB23DF8AA70007B7DD /* grid */,
+			);
+			sourceTree = "<group>";
+		};
+		FAA2C94923DEAE7B00FBDE39 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FAA2C96723DEAECC00FBDE39 /* GridDemo iOS.app */,
+				FAA2C99C23DEB26200FBDE39 /* GridDemo macOS.app */,
+				FAA2C9F723DEB4D700FBDE39 /* GridDemo watchOS.app */,
+				FAA2C9FA23DEB4D700FBDE39 /* GridDemo watchOS WatchKit App.app */,
+				FAA2CA0923DEB4D800FBDE39 /* GridDemo watchOS WatchKit Extension.appex */,
+				FAA2CA3A23DEB64800FBDE39 /* GridDemo tvOS.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FAA2C96823DEAECC00FBDE39 /* GridDemo iOS */ = {
+			isa = PBXGroup;
+			children = (
+				FAA2C98823DEB00100FBDE39 /* ModularGrid */,
+				FAA2C98B23DEB00100FBDE39 /* StaggeredGrid */,
+				FAA2C97B23DEAF9200FBDE39 /* AppDelegate.swift */,
+				FAA2C96B23DEAECC00FBDE39 /* SceneDelegate.swift */,
+				FAA2C96D23DEAECC00FBDE39 /* ContentView.swift */,
+				FAA2C97423DEAECD00FBDE39 /* LaunchScreen.storyboard */,
+				FAA2C97D23DEAFD700FBDE39 /* Assets.xcassets */,
+				FAA2C97723DEAECD00FBDE39 /* Info.plist */,
+				FAA2C97123DEAECD00FBDE39 /* Preview Content */,
+			);
+			path = "GridDemo iOS";
+			sourceTree = "<group>";
+		};
+		FAA2C97123DEAECD00FBDE39 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				FAA2C99223DEB08D00FBDE39 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		FAA2C97F23DEAFF100FBDE39 /* GridDemo */ = {
+			isa = PBXGroup;
+			children = (
+				FAA2C98023DEAFF100FBDE39 /* Color+Random.swift */,
+				FAA2C98123DEAFF100FBDE39 /* Item.swift */,
+				FAA2C98223DEAFF100FBDE39 /* SharedAssets.xcassets */,
+				FAA2C98323DEAFF100FBDE39 /* Card.swift */,
+			);
+			path = GridDemo;
+			sourceTree = "<group>";
+		};
+		FAA2C98823DEB00100FBDE39 /* ModularGrid */ = {
+			isa = PBXGroup;
+			children = (
+				FAA2C98923DEB00100FBDE39 /* ModularGridView.swift */,
+				FAA2C98A23DEB00100FBDE39 /* ModularGridSettingsView.swift */,
+			);
+			path = ModularGrid;
+			sourceTree = "<group>";
+		};
+		FAA2C98B23DEB00100FBDE39 /* StaggeredGrid */ = {
+			isa = PBXGroup;
+			children = (
+				FAA2C98C23DEB00100FBDE39 /* StaggeredGridSettingsView.swift */,
+				FAA2C98D23DEB00100FBDE39 /* StaggeredGridView.swift */,
+			);
+			path = StaggeredGrid;
+			sourceTree = "<group>";
+		};
+		FAA2C99423DEB0A700FBDE39 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FAA2C99D23DEB26200FBDE39 /* GridDemo macOS */ = {
+			isa = PBXGroup;
+			children = (
+				FAA2C9B323DEB31800FBDE39 /* ModularGrid */,
+				FAA2C9B623DEB31800FBDE39 /* StaggeredGrid */,
+				FAA2C99E23DEB26200FBDE39 /* AppDelegate.swift */,
+				FAA2C9A023DEB26200FBDE39 /* ContentView.swift */,
+				FAA2C9A223DEB26300FBDE39 /* Assets.xcassets */,
+				FAA2C9A723DEB26400FBDE39 /* Main.storyboard */,
+				FAA2C9AA23DEB26400FBDE39 /* Info.plist */,
+				FAA2C9AB23DEB26400FBDE39 /* GridDemo_macOS.entitlements */,
+				FAA2C9A423DEB26300FBDE39 /* Preview Content */,
+			);
+			path = "GridDemo macOS";
+			sourceTree = "<group>";
+		};
+		FAA2C9A423DEB26300FBDE39 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				FAA2C9A523DEB26300FBDE39 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		FAA2C9B323DEB31800FBDE39 /* ModularGrid */ = {
+			isa = PBXGroup;
+			children = (
+				FAA2C9B423DEB31800FBDE39 /* ModularGridView.swift */,
+				FAA2C9B523DEB31800FBDE39 /* ModularGridSettingsView.swift */,
+			);
+			path = ModularGrid;
+			sourceTree = "<group>";
+		};
+		FAA2C9B623DEB31800FBDE39 /* StaggeredGrid */ = {
+			isa = PBXGroup;
+			children = (
+				FAA2C9B723DEB31800FBDE39 /* StaggeredGridSettingsView.swift */,
+				FAA2C9B823DEB31800FBDE39 /* StaggeredGridView.swift */,
+			);
+			path = StaggeredGrid;
+			sourceTree = "<group>";
+		};
+		FAA2C9FE23DEB4D700FBDE39 /* GridDemo watchOS WatchKit App */ = {
+			isa = PBXGroup;
+			children = (
+				FAA2C9FF23DEB4D700FBDE39 /* Interface.storyboard */,
+				FAA2CA0223DEB4D800FBDE39 /* Assets.xcassets */,
+				FAA2CA0423DEB4D800FBDE39 /* Info.plist */,
+			);
+			path = "GridDemo watchOS WatchKit App";
+			sourceTree = "<group>";
+		};
+		FAA2CA0D23DEB4D800FBDE39 /* GridDemo watchOS WatchKit Extension */ = {
+			isa = PBXGroup;
+			children = (
+				FAA2CA2A23DEB56D00FBDE39 /* ModularGrid */,
+				FAA2CA2C23DEB56D00FBDE39 /* StaggeredGrid */,
+				FAA2CA0E23DEB4D800FBDE39 /* ContentView.swift */,
+				FAA2CA1023DEB4D800FBDE39 /* HostingController.swift */,
+				FAA2CA1223DEB4D800FBDE39 /* ExtensionDelegate.swift */,
+				FAA2CA1423DEB4D800FBDE39 /* NotificationController.swift */,
+				FAA2CA1623DEB4D800FBDE39 /* NotificationView.swift */,
+				FAA2CA1823DEB4D900FBDE39 /* Assets.xcassets */,
+				FAA2CA1D23DEB4D900FBDE39 /* Info.plist */,
+				FAA2CA1E23DEB4D900FBDE39 /* PushNotificationPayload.apns */,
+				FAA2CA1A23DEB4D900FBDE39 /* Preview Content */,
+			);
+			path = "GridDemo watchOS WatchKit Extension";
+			sourceTree = "<group>";
+		};
+		FAA2CA1A23DEB4D900FBDE39 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				FAA2CA1B23DEB4D900FBDE39 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		FAA2CA2A23DEB56D00FBDE39 /* ModularGrid */ = {
+			isa = PBXGroup;
+			children = (
+				FAA2CA2B23DEB56D00FBDE39 /* ModularGridView.swift */,
+			);
+			path = ModularGrid;
+			sourceTree = "<group>";
+		};
+		FAA2CA2C23DEB56D00FBDE39 /* StaggeredGrid */ = {
+			isa = PBXGroup;
+			children = (
+				FAA2CA2D23DEB56D00FBDE39 /* StaggeredGridView.swift */,
+			);
+			path = StaggeredGrid;
+			sourceTree = "<group>";
+		};
+		FAA2CA3B23DEB64800FBDE39 /* GridDemo tvOS */ = {
+			isa = PBXGroup;
+			children = (
+				FAA2CA5023DEB66900FBDE39 /* ModularGrid */,
+				FAA2CA5223DEB66900FBDE39 /* StaggeredGrid */,
+				FAA2CA3C23DEB64800FBDE39 /* AppDelegate.swift */,
+				FAA2CA3E23DEB64800FBDE39 /* ContentView.swift */,
+				FAA2CA4023DEB64900FBDE39 /* Assets.xcassets */,
+				FAA2CA4523DEB64900FBDE39 /* LaunchScreen.storyboard */,
+				FAA2CA4823DEB64900FBDE39 /* Info.plist */,
+				FAA2CA4223DEB64900FBDE39 /* Preview Content */,
+			);
+			path = "GridDemo tvOS";
+			sourceTree = "<group>";
+		};
+		FAA2CA4223DEB64900FBDE39 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				FAA2CA4323DEB64900FBDE39 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		FAA2CA5023DEB66900FBDE39 /* ModularGrid */ = {
+			isa = PBXGroup;
+			children = (
+				FAA2CA5123DEB66900FBDE39 /* ModularGridView.swift */,
+			);
+			path = ModularGrid;
+			sourceTree = "<group>";
+		};
+		FAA2CA5223DEB66900FBDE39 /* StaggeredGrid */ = {
+			isa = PBXGroup;
+			children = (
+				FAA2CA5323DEB66900FBDE39 /* StaggeredGridView.swift */,
+			);
+			path = StaggeredGrid;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FAA2C96623DEAECC00FBDE39 /* GridDemo iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FAA2C97823DEAECD00FBDE39 /* Build configuration list for PBXNativeTarget "GridDemo iOS" */;
+			buildPhases = (
+				FAA2C96323DEAECC00FBDE39 /* Sources */,
+				FAA2C96423DEAECC00FBDE39 /* Frameworks */,
+				FAA2C96523DEAECC00FBDE39 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "GridDemo iOS";
+			packageProductDependencies = (
+				FAA2C99523DEB0A700FBDE39 /* Grid */,
+				FAC9D4D923DF8A910007B7DD /* Grid */,
+			);
+			productName = "GridDemo iOS";
+			productReference = FAA2C96723DEAECC00FBDE39 /* GridDemo iOS.app */;
+			productType = "com.apple.product-type.application";
+		};
+		FAA2C99B23DEB26200FBDE39 /* GridDemo macOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FAA2C9AC23DEB26400FBDE39 /* Build configuration list for PBXNativeTarget "GridDemo macOS" */;
+			buildPhases = (
+				FAA2C99823DEB26200FBDE39 /* Sources */,
+				FAA2C99923DEB26200FBDE39 /* Frameworks */,
+				FAA2C99A23DEB26200FBDE39 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "GridDemo macOS";
+			packageProductDependencies = (
+				FAA2C9BD23DEB32900FBDE39 /* Grid */,
+			);
+			productName = "GridDemo macOS";
+			productReference = FAA2C99C23DEB26200FBDE39 /* GridDemo macOS.app */;
+			productType = "com.apple.product-type.application";
+		};
+		FAA2C9F623DEB4D700FBDE39 /* GridDemo watchOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FAA2CA2723DEB4D900FBDE39 /* Build configuration list for PBXNativeTarget "GridDemo watchOS" */;
+			buildPhases = (
+				FAA2C9F523DEB4D700FBDE39 /* Resources */,
+				FAA2CA2623DEB4D900FBDE39 /* Embed Watch Content */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FAA2C9FD23DEB4D700FBDE39 /* PBXTargetDependency */,
+			);
+			name = "GridDemo watchOS";
+			productName = "GridDemo watchOS";
+			productReference = FAA2C9F723DEB4D700FBDE39 /* GridDemo watchOS.app */;
+			productType = "com.apple.product-type.application.watchapp2-container";
+		};
+		FAA2C9F923DEB4D700FBDE39 /* GridDemo watchOS WatchKit App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FAA2CA2323DEB4D900FBDE39 /* Build configuration list for PBXNativeTarget "GridDemo watchOS WatchKit App" */;
+			buildPhases = (
+				FAA2C9F823DEB4D700FBDE39 /* Resources */,
+				FAA2CA2223DEB4D900FBDE39 /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FAA2CA0C23DEB4D800FBDE39 /* PBXTargetDependency */,
+			);
+			name = "GridDemo watchOS WatchKit App";
+			productName = "GridDemo watchOS WatchKit App";
+			productReference = FAA2C9FA23DEB4D700FBDE39 /* GridDemo watchOS WatchKit App.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		FAA2CA0823DEB4D800FBDE39 /* GridDemo watchOS WatchKit Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FAA2CA1F23DEB4D900FBDE39 /* Build configuration list for PBXNativeTarget "GridDemo watchOS WatchKit Extension" */;
+			buildPhases = (
+				FAA2CA0523DEB4D800FBDE39 /* Sources */,
+				FAA2CA0623DEB4D800FBDE39 /* Frameworks */,
+				FAA2CA0723DEB4D800FBDE39 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "GridDemo watchOS WatchKit Extension";
+			packageProductDependencies = (
+				FAA2CA3423DEB5BE00FBDE39 /* Grid */,
+			);
+			productName = "GridDemo watchOS WatchKit Extension";
+			productReference = FAA2CA0923DEB4D800FBDE39 /* GridDemo watchOS WatchKit Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
+		};
+		FAA2CA3923DEB64800FBDE39 /* GridDemo tvOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FAA2CA4923DEB64900FBDE39 /* Build configuration list for PBXNativeTarget "GridDemo tvOS" */;
+			buildPhases = (
+				FAA2CA3623DEB64800FBDE39 /* Sources */,
+				FAA2CA3723DEB64800FBDE39 /* Frameworks */,
+				FAA2CA3823DEB64800FBDE39 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "GridDemo tvOS";
+			packageProductDependencies = (
+				FAA2CA5623DEB6A400FBDE39 /* Grid */,
+			);
+			productName = "GridDemo tvOS";
+			productReference = FAA2CA3A23DEB64800FBDE39 /* GridDemo tvOS.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FAA2C93C23DEAD2600FBDE39 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1130;
+				LastUpgradeCheck = 1130;
+				TargetAttributes = {
+					FAA2C96623DEAECC00FBDE39 = {
+						CreatedOnToolsVersion = 11.3.1;
+					};
+					FAA2C99B23DEB26200FBDE39 = {
+						CreatedOnToolsVersion = 11.3.1;
+					};
+					FAA2C9F623DEB4D700FBDE39 = {
+						CreatedOnToolsVersion = 11.3.1;
+					};
+					FAA2C9F923DEB4D700FBDE39 = {
+						CreatedOnToolsVersion = 11.3.1;
+					};
+					FAA2CA0823DEB4D800FBDE39 = {
+						CreatedOnToolsVersion = 11.3.1;
+					};
+					FAA2CA3923DEB64800FBDE39 = {
+						CreatedOnToolsVersion = 11.3.1;
+					};
+				};
+			};
+			buildConfigurationList = FAA2C93F23DEAD2600FBDE39 /* Build configuration list for PBXProject "GridDemo" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = FAA2C93B23DEAD2600FBDE39;
+			packageReferences = (
+				FAC9D4D823DF8A910007B7DD /* XCRemoteSwiftPackageReference "grid" */,
+			);
+			productRefGroup = FAA2C94923DEAE7B00FBDE39 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FAA2C96623DEAECC00FBDE39 /* GridDemo iOS */,
+				FAA2C99B23DEB26200FBDE39 /* GridDemo macOS */,
+				FAA2C9F623DEB4D700FBDE39 /* GridDemo watchOS */,
+				FAA2C9F923DEB4D700FBDE39 /* GridDemo watchOS WatchKit App */,
+				FAA2CA0823DEB4D800FBDE39 /* GridDemo watchOS WatchKit Extension */,
+				FAA2CA3923DEB64800FBDE39 /* GridDemo tvOS */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FAA2C96523DEAECC00FBDE39 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FAA2C99323DEB08D00FBDE39 /* Preview Assets.xcassets in Resources */,
+				FAA2C97623DEAECD00FBDE39 /* LaunchScreen.storyboard in Resources */,
+				FAA2C97E23DEAFD700FBDE39 /* Assets.xcassets in Resources */,
+				FAA2C98623DEAFF100FBDE39 /* SharedAssets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FAA2C99A23DEB26200FBDE39 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FAA2C9A923DEB26400FBDE39 /* Main.storyboard in Resources */,
+				FAA2C9A623DEB26300FBDE39 /* Preview Assets.xcassets in Resources */,
+				FAA2C9A323DEB26300FBDE39 /* Assets.xcassets in Resources */,
+				FAA2C9B123DEB26B00FBDE39 /* SharedAssets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FAA2C9F523DEB4D700FBDE39 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FAA2C9F823DEB4D700FBDE39 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FAA2CA0323DEB4D800FBDE39 /* Assets.xcassets in Resources */,
+				FAA2CA0123DEB4D700FBDE39 /* Interface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FAA2CA0723DEB4D800FBDE39 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FAA2CA3223DEB5AB00FBDE39 /* SharedAssets.xcassets in Resources */,
+				FAA2CA1C23DEB4D900FBDE39 /* Preview Assets.xcassets in Resources */,
+				FAA2CA1923DEB4D900FBDE39 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FAA2CA3823DEB64800FBDE39 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FAA2CA4723DEB64900FBDE39 /* LaunchScreen.storyboard in Resources */,
+				FAA2CA4423DEB64900FBDE39 /* Preview Assets.xcassets in Resources */,
+				FAA2CA5923DEB73200FBDE39 /* README.md in Resources */,
+				FAA2CA4123DEB64900FBDE39 /* Assets.xcassets in Resources */,
+				FAA2CA4E23DEB66000FBDE39 /* SharedAssets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FAA2C96323DEAECC00FBDE39 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FAA2C98523DEAFF100FBDE39 /* Item.swift in Sources */,
+				FAA2C99123DEB00100FBDE39 /* StaggeredGridView.swift in Sources */,
+				FAA2C99023DEB00100FBDE39 /* StaggeredGridSettingsView.swift in Sources */,
+				FAA2C98723DEAFF100FBDE39 /* Card.swift in Sources */,
+				FAA2C98423DEAFF100FBDE39 /* Color+Random.swift in Sources */,
+				FAA2C97C23DEAF9200FBDE39 /* AppDelegate.swift in Sources */,
+				FAA2C96C23DEAECC00FBDE39 /* SceneDelegate.swift in Sources */,
+				FAA2C96E23DEAECC00FBDE39 /* ContentView.swift in Sources */,
+				FAA2C98F23DEB00100FBDE39 /* ModularGridSettingsView.swift in Sources */,
+				FAA2C98E23DEB00100FBDE39 /* ModularGridView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FAA2C99823DEB26200FBDE39 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FAA2C9B023DEB26B00FBDE39 /* Item.swift in Sources */,
+				FAA2C9AF23DEB26B00FBDE39 /* Color+Random.swift in Sources */,
+				FAA2C9BB23DEB31900FBDE39 /* StaggeredGridSettingsView.swift in Sources */,
+				FAA2C9BA23DEB31900FBDE39 /* ModularGridSettingsView.swift in Sources */,
+				FAA2C9B223DEB26B00FBDE39 /* Card.swift in Sources */,
+				FAA2C9B923DEB31900FBDE39 /* ModularGridView.swift in Sources */,
+				FAA2C9A123DEB26200FBDE39 /* ContentView.swift in Sources */,
+				FAA2C99F23DEB26200FBDE39 /* AppDelegate.swift in Sources */,
+				FAA2C9BC23DEB31900FBDE39 /* StaggeredGridView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FAA2CA0523DEB4D800FBDE39 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FAA2CA3023DEB5AB00FBDE39 /* Color+Random.swift in Sources */,
+				FAA2CA3123DEB5AB00FBDE39 /* Item.swift in Sources */,
+				FAA2CA1123DEB4D800FBDE39 /* HostingController.swift in Sources */,
+				FAA2CA0F23DEB4D800FBDE39 /* ContentView.swift in Sources */,
+				FAA2CA1523DEB4D800FBDE39 /* NotificationController.swift in Sources */,
+				FAA2CA2E23DEB56D00FBDE39 /* ModularGridView.swift in Sources */,
+				FAA2CA2F23DEB56D00FBDE39 /* StaggeredGridView.swift in Sources */,
+				FAA2CA3323DEB5AB00FBDE39 /* Card.swift in Sources */,
+				FAA2CA1323DEB4D800FBDE39 /* ExtensionDelegate.swift in Sources */,
+				FAA2CA1723DEB4D800FBDE39 /* NotificationView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FAA2CA3623DEB64800FBDE39 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FAA2CA4D23DEB66000FBDE39 /* Item.swift in Sources */,
+				FAA2CA4C23DEB66000FBDE39 /* Color+Random.swift in Sources */,
+				FAA2CA4F23DEB66000FBDE39 /* Card.swift in Sources */,
+				FAA2CA5423DEB66A00FBDE39 /* ModularGridView.swift in Sources */,
+				FAA2CA5523DEB66A00FBDE39 /* StaggeredGridView.swift in Sources */,
+				FAA2CA3F23DEB64800FBDE39 /* ContentView.swift in Sources */,
+				FAA2CA3D23DEB64800FBDE39 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		FAA2C9FD23DEB4D700FBDE39 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FAA2C9F923DEB4D700FBDE39 /* GridDemo watchOS WatchKit App */;
+			targetProxy = FAA2C9FC23DEB4D700FBDE39 /* PBXContainerItemProxy */;
+		};
+		FAA2CA0C23DEB4D800FBDE39 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FAA2CA0823DEB4D800FBDE39 /* GridDemo watchOS WatchKit Extension */;
+			targetProxy = FAA2CA0B23DEB4D800FBDE39 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		FAA2C97423DEAECD00FBDE39 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FAA2C97523DEAECD00FBDE39 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		FAA2C9A723DEB26400FBDE39 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FAA2C9A823DEB26400FBDE39 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		FAA2C9FF23DEB4D700FBDE39 /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FAA2CA0023DEB4D700FBDE39 /* Base */,
+			);
+			name = Interface.storyboard;
+			sourceTree = "<group>";
+		};
+		FAA2CA4523DEB64900FBDE39 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FAA2CA4623DEB64900FBDE39 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		FAA2C94023DEAD2600FBDE39 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Debug;
+		};
+		FAA2C94123DEAD2600FBDE39 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Release;
+		};
+		FAA2C97923DEAECD00FBDE39 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_ASSET_PATHS = "GridDemo\\ iOS/Preview\\ Content/Preview\\ Assets.xcassets";
+				ENABLE_PREVIEWS = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "GridDemo iOS/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.swiftextensions.grid.demo.ios;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		FAA2C97A23DEAECD00FBDE39 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_ASSET_PATHS = "GridDemo\\ iOS/Preview\\ Content/Preview\\ Assets.xcassets";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_PREVIEWS = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "GridDemo iOS/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.swiftextensions.grid.demo.ios;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FAA2C9AD23DEB26400FBDE39 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_ENTITLEMENTS = "GridDemo macOS/GridDemo_macOS.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_ASSET_PATHS = "\"GridDemo macOS/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "GridDemo macOS/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.swiftextensions.grid.demo.macos;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		FAA2C9AE23DEB26400FBDE39 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_ENTITLEMENTS = "GridDemo macOS/GridDemo_macOS.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_ASSET_PATHS = "\"GridDemo macOS/Preview Content\"";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_PREVIEWS = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "GridDemo macOS/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.swiftextensions.grid.demo.macos;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		FAA2CA2023DEB4D900FBDE39 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_ASSET_PATHS = "\"GridDemo watchOS WatchKit Extension/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "GridDemo watchOS WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.swiftextensions.GridDemo-watchOS.watchkitapp.watchkitextension";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 6.1;
+			};
+			name = Debug;
+		};
+		FAA2CA2123DEB4D900FBDE39 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_ASSET_PATHS = "\"GridDemo watchOS WatchKit Extension/Preview Content\"";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_PREVIEWS = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "GridDemo watchOS WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.swiftextensions.GridDemo-watchOS.watchkitapp.watchkitextension";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				VALIDATE_PRODUCT = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 6.1;
+			};
+			name = Release;
+		};
+		FAA2CA2423DEB4D900FBDE39 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IBSC_MODULE = GridDemo_watchOS_WatchKit_Extension;
+				INFOPLIST_FILE = "GridDemo watchOS WatchKit App/Info.plist";
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.swiftextensions.GridDemo-watchOS.watchkitapp";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 6.1;
+			};
+			name = Debug;
+		};
+		FAA2CA2523DEB4D900FBDE39 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IBSC_MODULE = GridDemo_watchOS_WatchKit_Extension;
+				INFOPLIST_FILE = "GridDemo watchOS WatchKit App/Info.plist";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.swiftextensions.GridDemo-watchOS.watchkitapp";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				VALIDATE_PRODUCT = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 6.1;
+			};
+			name = Release;
+		};
+		FAA2CA2823DEB4D900FBDE39 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MARKETING_VERSION = 1.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.swiftextensions.GridDemo-watchOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		FAA2CA2923DEB4D900FBDE39 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MARKETING_VERSION = 1.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.swiftextensions.GridDemo-watchOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FAA2CA4A23DEB64900FBDE39 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_ASSET_PATHS = "\"GridDemo tvOS/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "GridDemo tvOS/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.swiftextensions.grid.demo.tvos;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 13.2;
+			};
+			name = Debug;
+		};
+		FAA2CA4B23DEB64900FBDE39 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_ASSET_PATHS = "\"GridDemo tvOS/Preview Content\"";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_PREVIEWS = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "GridDemo tvOS/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.swiftextensions.grid.demo.tvos;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 13.2;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FAA2C93F23DEAD2600FBDE39 /* Build configuration list for PBXProject "GridDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FAA2C94023DEAD2600FBDE39 /* Debug */,
+				FAA2C94123DEAD2600FBDE39 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FAA2C97823DEAECD00FBDE39 /* Build configuration list for PBXNativeTarget "GridDemo iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FAA2C97923DEAECD00FBDE39 /* Debug */,
+				FAA2C97A23DEAECD00FBDE39 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FAA2C9AC23DEB26400FBDE39 /* Build configuration list for PBXNativeTarget "GridDemo macOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FAA2C9AD23DEB26400FBDE39 /* Debug */,
+				FAA2C9AE23DEB26400FBDE39 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FAA2CA1F23DEB4D900FBDE39 /* Build configuration list for PBXNativeTarget "GridDemo watchOS WatchKit Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FAA2CA2023DEB4D900FBDE39 /* Debug */,
+				FAA2CA2123DEB4D900FBDE39 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FAA2CA2323DEB4D900FBDE39 /* Build configuration list for PBXNativeTarget "GridDemo watchOS WatchKit App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FAA2CA2423DEB4D900FBDE39 /* Debug */,
+				FAA2CA2523DEB4D900FBDE39 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FAA2CA2723DEB4D900FBDE39 /* Build configuration list for PBXNativeTarget "GridDemo watchOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FAA2CA2823DEB4D900FBDE39 /* Debug */,
+				FAA2CA2923DEB4D900FBDE39 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FAA2CA4923DEB64900FBDE39 /* Build configuration list for PBXNativeTarget "GridDemo tvOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FAA2CA4A23DEB64900FBDE39 /* Debug */,
+				FAA2CA4B23DEB64900FBDE39 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		FAC9D4D823DF8A910007B7DD /* XCRemoteSwiftPackageReference "grid" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "git@github.com:swift-extensions/grid.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		FAA2C99523DEB0A700FBDE39 /* Grid */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Grid;
+		};
+		FAA2C9BD23DEB32900FBDE39 /* Grid */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Grid;
+		};
+		FAA2CA3423DEB5BE00FBDE39 /* Grid */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Grid;
+		};
+		FAA2CA5623DEB6A400FBDE39 /* Grid */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Grid;
+		};
+		FAC9D4D923DF8A910007B7DD /* Grid */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FAC9D4D823DF8A910007B7DD /* XCRemoteSwiftPackageReference "grid" */;
+			productName = Grid;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = FAA2C93C23DEAD2600FBDE39 /* Project object */;
+}
