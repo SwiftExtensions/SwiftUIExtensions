@@ -1,5 +1,5 @@
 import SwiftUI
-import SwiftUIExtensions
+import Grid
 
 struct StaggeredGridSettingsView: View {
     @Environment(\.presentationMode) var presentationMode
