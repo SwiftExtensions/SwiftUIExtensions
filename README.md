@@ -1,7 +1,7 @@
 # SwiftUI Grid
 SwiftUI Grid view layout with custom styles.
 
-[![Build Status](https://github.com/swift-extensions/grid/workflows/ci/badge.svg)](https://github.com/swift-extensions/grid/actions)
+[![Build Status](https://github.com/spacenation/swiftui-grid/workflows/ci/badge.svg)](https://github.com/spacenation/swiftui-grid/actions)
 
 ## Features
 - ZStack based layout
