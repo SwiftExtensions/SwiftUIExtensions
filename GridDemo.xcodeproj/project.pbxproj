@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FA6203C323F8AD77009CB0C9 /* Grid in Frameworks */ = {isa = PBXBuildFile; productRef = FA6203C223F8AD77009CB0C9 /* Grid */; };
 		FAA2C96C23DEAECC00FBDE39 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA2C96B23DEAECC00FBDE39 /* SceneDelegate.swift */; };
 		FAA2C96E23DEAECC00FBDE39 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA2C96D23DEAECC00FBDE39 /* ContentView.swift */; };
 		FAA2C97623DEAECD00FBDE39 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAA2C97423DEAECD00FBDE39 /* LaunchScreen.storyboard */; };
@@ -63,7 +64,6 @@
 		FAA2CA5423DEB66A00FBDE39 /* ModularGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA2CA5123DEB66900FBDE39 /* ModularGridView.swift */; };
 		FAA2CA5523DEB66A00FBDE39 /* StaggeredGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA2CA5323DEB66900FBDE39 /* StaggeredGridView.swift */; };
 		FAA2CA5923DEB73200FBDE39 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = FAA2CA5823DEB73200FBDE39 /* README.md */; };
-		FAC9D4DA23DF8A910007B7DD /* Grid in Frameworks */ = {isa = PBXBuildFile; productRef = FAC9D4D923DF8A910007B7DD /* Grid */; };
 		FAC9D4DE23DF8CE20007B7DD /* Grid in Frameworks */ = {isa = PBXBuildFile; productRef = FAC9D4DD23DF8CE20007B7DD /* Grid */; };
 		FAC9D4E023DF8CE90007B7DD /* Grid in Frameworks */ = {isa = PBXBuildFile; productRef = FAC9D4DF23DF8CE90007B7DD /* Grid */; };
 		FAC9D4E223DF8CEE0007B7DD /* Grid in Frameworks */ = {isa = PBXBuildFile; productRef = FAC9D4E123DF8CEE0007B7DD /* Grid */; };
@@ -175,7 +175,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FAC9D4DA23DF8A910007B7DD /* Grid in Frameworks */,
+				FA6203C323F8AD77009CB0C9 /* Grid in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -445,7 +445,7 @@
 			);
 			name = "GridDemo iOS";
 			packageProductDependencies = (
-				FAC9D4D923DF8A910007B7DD /* Grid */,
+				FA6203C223F8AD77009CB0C9 /* Grid */,
 			);
 			productName = "GridDemo iOS";
 			productReference = FAA2C96723DEAECC00FBDE39 /* GridDemo iOS.app */;
@@ -584,7 +584,7 @@
 			);
 			mainGroup = FAA2C93B23DEAD2600FBDE39;
 			packageReferences = (
-				FAC9D4D823DF8A910007B7DD /* XCRemoteSwiftPackageReference "grid" */,
+				FA6203C123F8AD77009CB0C9 /* XCRemoteSwiftPackageReference "swiftui-grid" */,
 			);
 			productRefGroup = FAA2C94923DEAE7B00FBDE39 /* Products */;
 			projectDirPath = "";
@@ -1683,9 +1683,9 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		FAC9D4D823DF8A910007B7DD /* XCRemoteSwiftPackageReference "grid" */ = {
+		FA6203C123F8AD77009CB0C9 /* XCRemoteSwiftPackageReference "swiftui-grid" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "git@github.com:swift-extensions/grid.git";
+			repositoryURL = "git@github.com:spacenation/swiftui-grid.git";
 			requirement = {
 				branch = master;
 				kind = branch;
@@ -1694,9 +1694,9 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		FAC9D4D923DF8A910007B7DD /* Grid */ = {
+		FA6203C223F8AD77009CB0C9 /* Grid */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = FAC9D4D823DF8A910007B7DD /* XCRemoteSwiftPackageReference "grid" */;
+			package = FA6203C123F8AD77009CB0C9 /* XCRemoteSwiftPackageReference "swiftui-grid" */;
 			productName = Grid;
 		};
 		FAC9D4DD23DF8CE20007B7DD /* Grid */ = {
