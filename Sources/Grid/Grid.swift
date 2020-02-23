@@ -1,15 +1,10 @@
 import SwiftUI
 
-struct GridItem: Identifiable {
-    let view: AnyView
-    let id: AnyHashable
-}
-
 /// A view that arranges its children in a grid.
 public struct Grid<Content>: View where Content: View {
     @Environment(\.gridStyle) private var style
+    @State var itemsPreferences: [AnyHashable : GridItemPreferences] = [:]
     let items: [GridItem]
-    @State private var itemsPreferences: [AnyHashable : GridItemPreferences] = [:]
     
     public var body: some View {
         GeometryReader { geometry in
