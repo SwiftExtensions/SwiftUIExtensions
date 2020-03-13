@@ -14,14 +14,23 @@ struct ModularGridView: View {
             self.style
         )
         .navigationBarTitle("Modular Grid", displayMode: .inline)
-        .navigationBarItems(trailing:
-            Button(action: { self.showSettings = true }) {
-                Image(systemName: "gear")
-            }
+        .navigationBarItems(
+            leading:
+                Button(action: { self.addMoreItems() }) {
+                    Text("Add items")
+                },
+            trailing:
+                Button(action: { self.showSettings = true }) {
+                    Image(systemName: "gear")
+                }
         )
         .sheet(isPresented: $showSettings) {
             ModularGridSettingsView(style: self.$style).accentColor(.purple)
         }
+    }
+    
+    func addMoreItems() {
+        self.items += (items.count...items.count + 99).map { Item(number: $0) }
     }
 }
 
