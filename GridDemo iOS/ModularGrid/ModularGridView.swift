@@ -15,13 +15,15 @@ struct ModularGridView: View {
         )
         .navigationBarTitle("Modular Grid", displayMode: .inline)
         .navigationBarItems(
-            leading:
-                Button(action: { self.addMoreItems() }) {
-                    Text("Add items")
-                },
             trailing:
-                Button(action: { self.showSettings = true }) {
-                    Image(systemName: "gear")
+                HStack {
+                    Button(action: { self.addMoreItems() }) {
+                        Text("Add items")
+                    }
+                    
+                    Button(action: { self.showSettings = true }) {
+                        Image(systemName: "gear")
+                    }
                 }
         )
         .sheet(isPresented: $showSettings) {

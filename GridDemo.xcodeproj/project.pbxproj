@@ -64,6 +64,7 @@
 		FAA2CA5423DEB66A00FBDE39 /* ModularGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA2CA5123DEB66900FBDE39 /* ModularGridView.swift */; };
 		FAA2CA5523DEB66A00FBDE39 /* StaggeredGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA2CA5323DEB66900FBDE39 /* StaggeredGridView.swift */; };
 		FAA2CA5923DEB73200FBDE39 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = FAA2CA5823DEB73200FBDE39 /* README.md */; };
+		FAAA2FCD241C42E4007021F7 /* ImageDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAA2FCC241C42E4007021F7 /* ImageDetailView.swift */; };
 		FAC9D4DE23DF8CE20007B7DD /* Grid in Frameworks */ = {isa = PBXBuildFile; productRef = FAC9D4DD23DF8CE20007B7DD /* Grid */; };
 		FAC9D4E023DF8CE90007B7DD /* Grid in Frameworks */ = {isa = PBXBuildFile; productRef = FAC9D4DF23DF8CE90007B7DD /* Grid */; };
 		FAC9D4E223DF8CEE0007B7DD /* Grid in Frameworks */ = {isa = PBXBuildFile; productRef = FAC9D4E123DF8CEE0007B7DD /* Grid */; };
@@ -167,6 +168,7 @@
 		FAA2CA5123DEB66900FBDE39 /* ModularGridView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModularGridView.swift; sourceTree = "<group>"; };
 		FAA2CA5323DEB66900FBDE39 /* StaggeredGridView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StaggeredGridView.swift; sourceTree = "<group>"; };
 		FAA2CA5823DEB73200FBDE39 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		FAAA2FCC241C42E4007021F7 /* ImageDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDetailView.swift; sourceTree = "<group>"; };
 		FAC9D4DC23DF8C750007B7DD /*  */ = {isa = PBXFileReference; lastKnownFileType = folder; name = ""; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -284,6 +286,7 @@
 			children = (
 				FAA2C98C23DEB00100FBDE39 /* StaggeredGridSettingsView.swift */,
 				FAA2C98D23DEB00100FBDE39 /* StaggeredGridView.swift */,
+				FAAA2FCC241C42E4007021F7 /* ImageDetailView.swift */,
 			);
 			path = StaggeredGrid;
 			sourceTree = "<group>";
@@ -671,6 +674,7 @@
 				FAA2C98523DEAFF100FBDE39 /* Item.swift in Sources */,
 				FAA2C99123DEB00100FBDE39 /* StaggeredGridView.swift in Sources */,
 				FAA2C99023DEB00100FBDE39 /* StaggeredGridSettingsView.swift in Sources */,
+				FAAA2FCD241C42E4007021F7 /* ImageDetailView.swift in Sources */,
 				FAA2C98723DEAFF100FBDE39 /* Card.swift in Sources */,
 				FAA2C98423DEAFF100FBDE39 /* Color+Random.swift in Sources */,
 				FAA2C97C23DEAF9200FBDE39 /* AppDelegate.swift in Sources */,
