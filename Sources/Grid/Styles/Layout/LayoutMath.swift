@@ -1,39 +1,37 @@
 import SwiftUI
 
-func itemLength(tracks: Tracks, spacing: CGFloat, padding: CGFloat, availableLength: CGFloat) -> CGFloat {
+func itemLength(tracks: Tracks, spacing: CGFloat, availableLength: CGFloat) -> CGFloat {
     switch tracks {
     case .count(let count):
-        return itemLength(tracksCount: count, spacing: spacing, padding: padding, availableLength: availableLength)
+        return itemLength(tracksCount: count, spacing: spacing, availableLength: availableLength)
     case .fixed(let length):
         return length
     case .min:
-        let suggestedTracksCount = tracksCount(tracks: tracks, spacing: spacing, padding: padding, availableLength: availableLength)
-        return itemLength(tracksCount: suggestedTracksCount, spacing: spacing, padding: padding, availableLength: availableLength)
+        let suggestedTracksCount = tracksCount(tracks: tracks, spacing: spacing, availableLength: availableLength)
+        return itemLength(tracksCount: suggestedTracksCount, spacing: spacing, availableLength: availableLength)
     }
 }
 
-func tracksCount(tracks: Tracks, spacing: CGFloat, padding: CGFloat, availableLength: CGFloat) -> Int {
+func tracksCount(tracks: Tracks, spacing: CGFloat, availableLength: CGFloat) -> Int {
     switch tracks {
     case .count(let count):
         return count
     case .fixed(let length):
-        let usableAvailableWidth = availableLength - padding
-        let columnCount = Int(usableAvailableWidth / length)
+        let columnCount = Int(availableLength / length)
         
         for columns in (0...columnCount).reversed() {
-            let suggestedItemWidth = itemLength(tracksCount: columns, spacing: spacing, padding: padding, availableLength: availableLength)
-            if (suggestedItemWidth * CGFloat(columns)) + (CGFloat(columns - 1) * spacing) <= usableAvailableWidth {
+            let suggestedItemWidth = itemLength(tracksCount: columns, spacing: spacing, availableLength: availableLength)
+            if (suggestedItemWidth * CGFloat(columns)) + (CGFloat(columns - 1) * spacing) <= availableLength {
                 return columns
             }
         }
         return 1
     case .min(let minWidth):
-        let usableAvailableWidth = availableLength - padding
-        let columnCount = Int(usableAvailableWidth / minWidth)
+        let columnCount = Int(availableLength / minWidth)
         
         for columns in (0...columnCount).reversed() {
-            let suggestedItemWidth = itemLength(tracksCount: columns, spacing: spacing, padding: padding, availableLength: availableLength)
-            if (suggestedItemWidth * CGFloat(columns)) + (CGFloat(columns - 1) * spacing) <= usableAvailableWidth {
+            let suggestedItemWidth = itemLength(tracksCount: columns, spacing: spacing, availableLength: availableLength)
+            if (suggestedItemWidth * CGFloat(columns)) + (CGFloat(columns - 1) * spacing) <= availableLength {
                 return columns
             }
         }
@@ -41,7 +39,7 @@ func tracksCount(tracks: Tracks, spacing: CGFloat, padding: CGFloat, availableLe
     }
 }
 
-func itemLength(tracksCount: Int, spacing: CGFloat, padding: CGFloat, availableLength: CGFloat) -> CGFloat {
-    let width = availableLength - padding - (spacing * (CGFloat(tracksCount) - 1))
+func itemLength(tracksCount: Int, spacing: CGFloat, availableLength: CGFloat) -> CGFloat {
+    let width = availableLength - (spacing * (CGFloat(tracksCount) - 1))
     return (width / CGFloat(tracksCount))
 }

@@ -5,7 +5,6 @@ public struct StaggeredGridStyle: GridStyle {
     public var tracks: Tracks
     public var axis: Axis
     public var spacing: CGFloat
-    public var padding: EdgeInsets
     
     public var autoWidth: Bool {
         axis == .vertical
@@ -14,25 +13,22 @@ public struct StaggeredGridStyle: GridStyle {
         axis == .horizontal
     }
 
-    public init(tracks: Tracks, axis: Axis = .vertical, spacing: CGFloat = 8, padding: EdgeInsets = .init(top: 8, leading: 8, bottom: 8, trailing: 8)) {
+    public init(_ axis: Axis = .vertical, tracks: Tracks, spacing: CGFloat = 8) {
         self.tracks = tracks
         self.spacing = spacing
         self.axis = axis
-        self.padding = padding
     }
 
-    public func transform(preferences: inout [GridItemPreferences], in size: CGSize) {
+    public func transform(preferences: inout GridPreferences, in size: CGSize) {
         let computedTracksCount = self.axis == .vertical ?
             tracksCount(
                 tracks: self.tracks,
                 spacing: self.spacing,
-                padding: self.padding.leading + self.padding.trailing,
                 availableLength: size.width
             ) :
             tracksCount(
                 tracks: self.tracks,
                 spacing: self.spacing,
-                padding: self.padding.top + self.padding.bottom,
                 availableLength: size.height
             )
 
@@ -40,29 +36,27 @@ public struct StaggeredGridStyle: GridStyle {
             width: itemLength(
                 tracks: self.tracks,
                 spacing: self.spacing,
-                padding: self.padding.leading + self.padding.trailing,
                 availableLength: size.width
             ),
             height: itemLength(
                 tracks: self.tracks,
                 spacing: self.spacing,
-                padding: self.padding.top + self.padding.bottom,
                 availableLength: size.height
             )
         )
 
-        preferences = layoutPreferences(
+        preferences.items = layoutPreferences(
             tracks: computedTracksCount,
             spacing: self.spacing,
             axis: self.axis,
             itemSize: size,
-            preferences: preferences
+            preferences: preferences.items
         )
     }
     
-    private func layoutPreferences(tracks: Int, spacing: CGFloat, axis: Axis, itemSize: CGSize, preferences: [GridItemPreferences]) -> [GridItemPreferences] {
+    private func layoutPreferences(tracks: Int, spacing: CGFloat, axis: Axis, itemSize: CGSize, preferences: [GridPreferences.Item]) -> [GridPreferences.Item] {
         var tracksLengths = Array(repeating: CGFloat(0.0), count: tracks)
-        var newPreferences: [GridItemPreferences] = []
+        var newPreferences: [GridPreferences.Item] = []
         
         preferences.forEach { preference in
             if let minValue = tracksLengths.min(), let indexMin = tracksLengths.firstIndex(of: minValue) {
@@ -75,7 +69,7 @@ public struct StaggeredGridStyle: GridStyle {
                 tracksLengths[indexMin] += (axis == .vertical ? itemSizeHeight : itemSizeWidth) + spacing
                 
                 newPreferences.append(
-                    GridItemPreferences(
+                    GridPreferences.Item(
                         id: preference.id,
                         bounds: CGRect(origin: origin, size: CGSize(width: itemSizeWidth, height: itemSizeHeight))
                     )

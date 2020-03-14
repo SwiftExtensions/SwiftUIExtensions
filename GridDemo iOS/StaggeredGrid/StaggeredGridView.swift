@@ -3,19 +3,21 @@ import Grid
 
 struct StaggeredGridView: View {
     @State var showSettings: Bool = false
-    @State var style = StaggeredGridStyle(tracks: .min(100), axis: .vertical, spacing: 1, padding: .init(top: 1, leading: 1, bottom: 1, trailing: 1))
+    @State var style = StaggeredGridStyle(.vertical, tracks: .min(100), spacing: 1)
     @State var items: [Int] = (1...69).map { $0 }
     
     var body: some View {
-        Grid(self.items, id: \.self) { index in
-            NavigationLink(destination: ImageDetailView(imageName: "\(index)")) {
-                Image("\(index)")
-                    .renderingMode(.original)
-                    .resizable()
-                    .scaledToFit()
+        ScrollView(style.axes) {
+            Grid(self.items, id: \.self) { index in
+                NavigationLink(destination: ImageDetailView(imageName: "\(index)")) {
+                    Image("\(index)")
+                        .renderingMode(.original)
+                        .resizable()
+                        .scaledToFit()
+                }
             }
+            .animation(.easeInOut)
         }
-        .animation(.easeInOut)
         .navigationBarTitle("Staggered Grid", displayMode: .inline)
         .navigationBarItems(trailing:
             HStack {

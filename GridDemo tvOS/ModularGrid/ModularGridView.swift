@@ -6,13 +6,15 @@ struct ModularGridView: View {
     @State var items: [Item] = (0...100).map { Item(number: $0) }
     
     var body: some View {
-        Grid(items) { item in
-            Card(title: "\(item.number)", color: item.color)
-                .focusable(true) { focus in
-                    if focus {
-                       self.selection = item.number
+        ScrollView {
+            Grid(items) { item in
+                Card(title: "\(item.number)", color: item.color)
+                    .focusable(true) { focus in
+                        if focus {
+                           self.selection = item.number
+                        }
                     }
-                }
+            }
         }
         .overlayPreferenceValue(GridItemBoundsPreferencesKey.self) { preferences in
             RoundedRectangle(cornerRadius: 16)
@@ -29,7 +31,7 @@ struct ModularGridView: View {
                 .animation(.linear)
         }
         .gridStyle(
-            ModularGridStyle(columns: .min(300), rows: .min(100))
+            ModularGridStyle(columns: .min(300), rows: .fixed(100))
         )
         .navigationBarTitle("Modular Grid")
     }

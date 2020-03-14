@@ -2,6 +2,8 @@ import SwiftUI
 import Grid
 
 struct StaggeredGridView: View {
+    @State var selection: Int = 0
+    
     var body: some View {
         Grid(1...69, id: \.self) { index in
             Image("\(index)")

@@ -2,17 +2,20 @@ import SwiftUI
 import Grid
 
 struct ModularGridView: View {
-    @State var items: [Item] = (0...100).map { Item(number: $0) }
+    @State var items: [Item] = (0...2).map { Item(number: $0) }
     @State var showSettings: Bool = false
-    @State var style = ModularGridStyle(columns: .min(100), rows: .min(100))
+    @State var style = ModularGridStyle(.vertical, columns: .min(100), rows: .fixed(100))
     
     var body: some View {
-        Grid(items) { item in
-            Card(title: "\(item.number)", color: item.color)
+        ScrollView(style.axes) {
+            Grid(items) { item in
+                Card(title: "\(item.number)", color: item.color)
+            }
+            .padding(8)
+            .gridStyle(
+                self.style
+            )
         }
-        .gridStyle(
-            self.style
-        )
         .navigationBarTitle("Modular Grid", displayMode: .inline)
         .navigationBarItems(
             trailing:

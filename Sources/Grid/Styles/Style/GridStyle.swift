@@ -2,9 +2,14 @@ import SwiftUI
 
 /// A specification for the appearance of a `Grid`.
 public protocol GridStyle {
-    var padding: EdgeInsets { get }
     var axis: Axis { get }
     var autoWidth: Bool { get }
     var autoHeight: Bool { get }
-    func transform(preferences: inout [GridItemPreferences], in size: CGSize)
+    func transform(preferences: inout GridPreferences, in size: CGSize)
+}
+
+public extension GridStyle {
+    var axes: Axis.Set {
+        self.axis == .horizontal ? .horizontal : .vertical
+    }
 }
