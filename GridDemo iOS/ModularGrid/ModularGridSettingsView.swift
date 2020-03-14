@@ -10,7 +10,7 @@ struct ModularGridSettingsView: View {
     @State var columnsMin: CGFloat = 100.0
     
     @State var rowsCount: Int = 3
-    @State var rowsFixed: CGFloat = 150
+    @State var rowsFixed: CGFloat = 100
     @State var rowsMin: CGFloat = 100.0
     
     var body: some View {

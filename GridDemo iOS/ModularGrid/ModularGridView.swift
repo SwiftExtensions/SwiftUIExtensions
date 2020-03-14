@@ -2,7 +2,7 @@ import SwiftUI
 import Grid
 
 struct ModularGridView: View {
-    @State var items: [Item] = (0...2).map { Item(number: $0) }
+    @State var items: [Item] = (0...100).map { Item(number: $0) }
     @State var showSettings: Bool = false
     @State var style = ModularGridStyle(.vertical, columns: .min(100), rows: .fixed(100))
     

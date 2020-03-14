@@ -6,6 +6,7 @@ SwiftUI Grid view layout with custom styles.
 ## Features
 - ZStack based layout
 - Vertical and horizontal scrolling
+- Supports grid of grids, each with it's own style
 - Supports all apple platforms
 - Custom styles (ModularGridStyle, StaggeredGridStyle)
 - SwiftUI code patterns (StyleStructs, EnvironmentValues, ViewBuilder)
@@ -21,12 +22,14 @@ Open `GridDemo.xcodeproj` for more examples for iOS, macOS, watchOS and tvOS
 </center>
 
 ```swift
-Grid(colors) {
-    Rectangle()
-        .foregroundColor($0)
+ScrollView {
+    Grid(colors) {
+        Rectangle()
+            .foregroundColor($0)
+    }
 }
 .gridStyle(
-    ModularGridStyle(columns: .min(100), rows: .min(100))
+    ModularGridStyle(columns: .min(100), rows: .fixed(100))
 )
 ```
 
@@ -37,13 +40,15 @@ Grid(colors) {
 </center>
 
 ```swift
-Grid(1...69, id: \.self) { index in
-    Image("\(index)")
-        .resizable()
-        .scaledToFit()
+ScrollView {
+    Grid(1...69, id: \.self) { index in
+        Image("\(index)")
+            .resizable()
+            .scaledToFit()
+    }
 }
 .gridStyle(
-    StaggeredGridStyle(tracks: 8, axis: .horizontal, spacing: 4)
+    StaggeredGridStyle(.horizontal, tracks: 8, spacing: 4)
 )
 ```
 
@@ -76,7 +81,7 @@ StaggeredGridStyle(tracks: .fixed(100))
 ### Min
 Autolayout respecting a min item width or height.
 ```swift
-ModularGridStyle(columns: .min(100), rows: .min(100))
+ModularGridStyle(columns: .min(100), rows: .fixed(100))
 StaggeredGridStyle(tracks: .min(100))
 ```
 
@@ -87,26 +92,28 @@ struct CardsView: View {
     @State var selection: Int = 0
     
     var body: some View {
-        Grid(0..<100) { number in
-            Card(title: "\(number)")
-                .onTapGesture {
-                    self.selection = number
-                }
-        }
-        .padding()
-        .overlayPreferenceValue(GridItemBoundsPreferencesKey.self) { preferences in
-            RoundedRectangle(cornerRadius: 16)
-                .strokeBorder(lineWidth: 4)
-                .foregroundColor(.white)
-                .frame(
-                    width: preferences[self.selection].width,
-                    height: preferences[self.selection].height
-                )
-                .position(
-                    x: preferences[self.selection].midX,
-                    y: preferences[self.selection].midY
-                )
-                .animation(.linear)
+        ScrollView {
+            Grid(0..<100) { number in
+                Card(title: "\(number)")
+                    .onTapGesture {
+                        self.selection = number
+                    }
+            }
+            .padding()
+            .overlayPreferenceValue(GridItemBoundsPreferencesKey.self) { preferences in
+                RoundedRectangle(cornerRadius: 16)
+                    .strokeBorder(lineWidth: 4)
+                    .foregroundColor(.white)
+                    .frame(
+                        width: preferences[self.selection].width,
+                        height: preferences[self.selection].height
+                    )
+                    .position(
+                        x: preferences[self.selection].midX,
+                        y: preferences[self.selection].midY
+                    )
+                    .animation(.linear)
+            }
         }
     }
 }
@@ -120,7 +127,7 @@ struct CardsView: View {
 - Xcode 11.0+
 
 ## Roadmap
-- Item rearranging
+- Items span
 - 'CSS Grid'-like features
 
 ## Code Contributions
