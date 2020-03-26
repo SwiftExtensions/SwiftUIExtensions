@@ -12,9 +12,7 @@ struct ModularGridView: View {
                 Card(title: "\(item.number)", color: item.color)
             }
             .padding(8)
-            .gridStyle(
-                self.style
-            )
+ 
         }
         .navigationBarTitle("Modular Grid", displayMode: .inline)
         .navigationBarItems(
@@ -32,6 +30,9 @@ struct ModularGridView: View {
         .sheet(isPresented: $showSettings) {
             ModularGridSettingsView(style: self.$style).accentColor(.purple)
         }
+        .gridStyle(
+             self.style
+         )
     }
     
     func addMoreItems() {

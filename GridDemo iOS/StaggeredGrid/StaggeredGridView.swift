@@ -31,12 +31,12 @@ struct StaggeredGridView: View {
             }
 
         )
-        .gridStyle(
-            self.style
-        )
         .sheet(isPresented: $showSettings) {
             StaggeredGridSettingsView(style: self.$style).accentColor(.purple)
         }
+        .gridStyle(
+            self.style
+        )
     }
     
     func shuffleImages() {
