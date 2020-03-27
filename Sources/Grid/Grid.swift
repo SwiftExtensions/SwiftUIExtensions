@@ -24,14 +24,14 @@ public struct Grid<Content>: View where Content: View {
             .transformPreference(GridPreferencesKey.self) {
                 self.style.transform(preferences: &$0, in: geometry.size)
             }
-            .onPreferenceChange(GridPreferencesKey.self) { preferences in
-                self.preferences = preferences
-            }
-            
+        }
+        .onPreferenceChange(GridPreferencesKey.self) { preferences in
+            self.preferences = preferences
         }
         .frame(
             width: self.style.axis == .horizontal ? self.preferences.size.width : nil,
-            height: self.style.axis == .vertical ? self.preferences.size.height : nil
+            height: self.style.axis == .vertical ? self.preferences.size.height : nil,
+            alignment: .topLeading
         )
     }
 }

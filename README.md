@@ -120,8 +120,8 @@ struct CardsView: View {
 ```
 
 ## SDKs
-- iOS 13+
-- Mac Catalyst 13.0+
+- iOS 13.1+
+- Mac Catalyst 13.1+
 - macOS 10.15+
 - watchOS 6+
 - Xcode 11.0+
