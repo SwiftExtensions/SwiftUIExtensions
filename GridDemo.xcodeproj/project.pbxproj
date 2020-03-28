@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		FA6203C323F8AD77009CB0C9 /* Grid in Frameworks */ = {isa = PBXBuildFile; productRef = FA6203C223F8AD77009CB0C9 /* Grid */; };
+		FA9FFB6D242FFECD0047D145 /* SectionedGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9FFB6C242FFECD0047D145 /* SectionedGrid.swift */; };
 		FAA2C96C23DEAECC00FBDE39 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA2C96B23DEAECC00FBDE39 /* SceneDelegate.swift */; };
 		FAA2C96E23DEAECC00FBDE39 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA2C96D23DEAECC00FBDE39 /* ContentView.swift */; };
 		FAA2C97623DEAECD00FBDE39 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAA2C97423DEAECD00FBDE39 /* LaunchScreen.storyboard */; };
@@ -113,6 +114,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		FA9FFB6C242FFECD0047D145 /* SectionedGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionedGrid.swift; sourceTree = "<group>"; };
 		FAA2C96723DEAECC00FBDE39 /* GridDemo iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "GridDemo iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAA2C96B23DEAECC00FBDE39 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		FAA2C96D23DEAECC00FBDE39 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -169,7 +171,7 @@
 		FAA2CA5323DEB66900FBDE39 /* StaggeredGridView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StaggeredGridView.swift; sourceTree = "<group>"; };
 		FAA2CA5823DEB73200FBDE39 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		FAAA2FCC241C42E4007021F7 /* ImageDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDetailView.swift; sourceTree = "<group>"; };
-		FAC9D4DC23DF8C750007B7DD /*  */ = {isa = PBXFileReference; lastKnownFileType = folder; name = ""; sourceTree = "<group>"; };
+		FAC9D4DC23DF8C750007B7DD /*  */ = {isa = PBXFileReference; lastKnownFileType = folder; name = ""; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -208,6 +210,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FA9FFB6B242FFE510047D145 /* SectionedGrid */ = {
+			isa = PBXGroup;
+			children = (
+				FA9FFB6C242FFECD0047D145 /* SectionedGrid.swift */,
+			);
+			path = SectionedGrid;
+			sourceTree = "<group>";
+		};
 		FAA2C93B23DEAD2600FBDE39 = {
 			isa = PBXGroup;
 			children = (
@@ -301,6 +311,7 @@
 		FAA2C99D23DEB26200FBDE39 /* GridDemo macOS */ = {
 			isa = PBXGroup;
 			children = (
+				FA9FFB6B242FFE510047D145 /* SectionedGrid */,
 				FAA2C9B323DEB31800FBDE39 /* ModularGrid */,
 				FAA2C9B623DEB31800FBDE39 /* StaggeredGrid */,
 				FAA2C99E23DEB26200FBDE39 /* AppDelegate.swift */,
@@ -689,6 +700,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA9FFB6D242FFECD0047D145 /* SectionedGrid.swift in Sources */,
 				FAA2C9B023DEB26B00FBDE39 /* Item.swift in Sources */,
 				FAA2C9AF23DEB26B00FBDE39 /* Color+Random.swift in Sources */,
 				FAA2C9BB23DEB31900FBDE39 /* StaggeredGridSettingsView.swift in Sources */,
