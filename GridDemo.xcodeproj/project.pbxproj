@@ -8,7 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		FA6203C323F8AD77009CB0C9 /* Grid in Frameworks */ = {isa = PBXBuildFile; productRef = FA6203C223F8AD77009CB0C9 /* Grid */; };
-		FA9FFB6D242FFECD0047D145 /* SectionedGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9FFB6C242FFECD0047D145 /* SectionedGrid.swift */; };
+		FA9FFB6D242FFECD0047D145 /* SectionedGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9FFB6C242FFECD0047D145 /* SectionedGridView.swift */; };
+		FA9FFB70243005B80047D145 /* SectionedGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9FFB6F243005B80047D145 /* SectionedGridView.swift */; };
 		FAA2C96C23DEAECC00FBDE39 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA2C96B23DEAECC00FBDE39 /* SceneDelegate.swift */; };
 		FAA2C96E23DEAECC00FBDE39 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA2C96D23DEAECC00FBDE39 /* ContentView.swift */; };
 		FAA2C97623DEAECD00FBDE39 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAA2C97423DEAECD00FBDE39 /* LaunchScreen.storyboard */; };
@@ -114,7 +115,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		FA9FFB6C242FFECD0047D145 /* SectionedGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionedGrid.swift; sourceTree = "<group>"; };
+		FA9FFB6C242FFECD0047D145 /* SectionedGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionedGridView.swift; sourceTree = "<group>"; };
+		FA9FFB6F243005B80047D145 /* SectionedGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionedGridView.swift; sourceTree = "<group>"; };
+		FA9FFB71243006110047D145 /* swiftui-grid */ = {isa = PBXFileReference; lastKnownFileType = folder; name = "swiftui-grid"; sourceTree = "<group>"; };
 		FAA2C96723DEAECC00FBDE39 /* GridDemo iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "GridDemo iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAA2C96B23DEAECC00FBDE39 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		FAA2C96D23DEAECC00FBDE39 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -171,7 +174,6 @@
 		FAA2CA5323DEB66900FBDE39 /* StaggeredGridView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StaggeredGridView.swift; sourceTree = "<group>"; };
 		FAA2CA5823DEB73200FBDE39 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		FAAA2FCC241C42E4007021F7 /* ImageDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDetailView.swift; sourceTree = "<group>"; };
-		FAC9D4DC23DF8C750007B7DD /*  */ = {isa = PBXFileReference; lastKnownFileType = folder; name = ""; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -213,7 +215,15 @@
 		FA9FFB6B242FFE510047D145 /* SectionedGrid */ = {
 			isa = PBXGroup;
 			children = (
-				FA9FFB6C242FFECD0047D145 /* SectionedGrid.swift */,
+				FA9FFB6C242FFECD0047D145 /* SectionedGridView.swift */,
+			);
+			path = SectionedGrid;
+			sourceTree = "<group>";
+		};
+		FA9FFB6E2430057F0047D145 /* SectionedGrid */ = {
+			isa = PBXGroup;
+			children = (
+				FA9FFB6F243005B80047D145 /* SectionedGridView.swift */,
 			);
 			path = SectionedGrid;
 			sourceTree = "<group>";
@@ -230,7 +240,7 @@
 				FAA2CA3B23DEB64800FBDE39 /* GridDemo tvOS */,
 				FAA2C94923DEAE7B00FBDE39 /* Products */,
 				FAA2C99423DEB0A700FBDE39 /* Frameworks */,
-				FAC9D4DC23DF8C750007B7DD /*  */,
+				FA9FFB71243006110047D145 /* swiftui-grid */,
 			);
 			sourceTree = "<group>";
 		};
@@ -250,6 +260,7 @@
 		FAA2C96823DEAECC00FBDE39 /* GridDemo iOS */ = {
 			isa = PBXGroup;
 			children = (
+				FA9FFB6E2430057F0047D145 /* SectionedGrid */,
 				FAA2C98823DEB00100FBDE39 /* ModularGrid */,
 				FAA2C98B23DEB00100FBDE39 /* StaggeredGrid */,
 				FAA2C97B23DEAF9200FBDE39 /* AppDelegate.swift */,
@@ -683,6 +694,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FAA2C98523DEAFF100FBDE39 /* Item.swift in Sources */,
+				FA9FFB70243005B80047D145 /* SectionedGridView.swift in Sources */,
 				FAA2C99123DEB00100FBDE39 /* StaggeredGridView.swift in Sources */,
 				FAA2C99023DEB00100FBDE39 /* StaggeredGridSettingsView.swift in Sources */,
 				FAAA2FCD241C42E4007021F7 /* ImageDetailView.swift in Sources */,
@@ -700,7 +712,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FA9FFB6D242FFECD0047D145 /* SectionedGrid.swift in Sources */,
+				FA9FFB6D242FFECD0047D145 /* SectionedGridView.swift in Sources */,
 				FAA2C9B023DEB26B00FBDE39 /* Item.swift in Sources */,
 				FAA2C9AF23DEB26B00FBDE39 /* Color+Random.swift in Sources */,
 				FAA2C9BB23DEB31900FBDE39 /* StaggeredGridSettingsView.swift in Sources */,
