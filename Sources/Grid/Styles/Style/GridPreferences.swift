@@ -1,5 +1,5 @@
 import Foundation
-import SwiftUI
+import CoreGraphics
 
 public struct GridPreferences: Equatable {
     public struct Item: Equatable {
@@ -9,9 +9,10 @@ public struct GridPreferences: Equatable {
     
     public var items: [Item]
 
-    public var size: CGSize = .zero
+    public var size: CGSize
 
-    public init(items: [Item]) {
+    public init(size: CGSize = .zero, items: [Item]) {
+        self.size = size
         self.items = items
     }
     
@@ -24,16 +25,8 @@ public struct GridPreferences: Equatable {
     mutating func merge(with preferences: GridPreferences) {
         self.items.append(contentsOf: preferences.items)
         self.size = CGSize(
-            width: max(self.size.width, abs(self.items.map { $0.bounds.origin.x - $0.bounds.size.width }.min() ?? 0.0).rounded()),
-            height: max(self.size.height, abs(self.items.map { $0.bounds.origin.y - $0.bounds.size.height }.min() ?? 0.0).rounded())
+            width: (self.items.map { $0.bounds.origin.x + $0.bounds.size.width }.max() ?? 0.0).rounded(),
+            height: (self.items.map { $0.bounds.origin.y + $0.bounds.size.height }.max() ?? 0.0).rounded()
         )
-    }
-}
-
-public struct GridPreferencesKey: PreferenceKey {
-    public static var defaultValue: GridPreferences = .init(items: [])
-    
-    public static func reduce(value: inout GridPreferences, nextValue: () -> GridPreferences) {
-        value.merge(with: nextValue())
     }
 }

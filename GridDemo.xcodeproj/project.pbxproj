@@ -10,6 +10,7 @@
 		FA6203C323F8AD77009CB0C9 /* Grid in Frameworks */ = {isa = PBXBuildFile; productRef = FA6203C223F8AD77009CB0C9 /* Grid */; };
 		FA9FFB6D242FFECD0047D145 /* SectionedGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9FFB6C242FFECD0047D145 /* SectionedGridView.swift */; };
 		FA9FFB70243005B80047D145 /* SectionedGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9FFB6F243005B80047D145 /* SectionedGridView.swift */; };
+		FA9FFB74243008060047D145 /* StaticGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9FFB73243008060047D145 /* StaticGridView.swift */; };
 		FAA2C96C23DEAECC00FBDE39 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA2C96B23DEAECC00FBDE39 /* SceneDelegate.swift */; };
 		FAA2C96E23DEAECC00FBDE39 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA2C96D23DEAECC00FBDE39 /* ContentView.swift */; };
 		FAA2C97623DEAECD00FBDE39 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAA2C97423DEAECD00FBDE39 /* LaunchScreen.storyboard */; };
@@ -67,6 +68,7 @@
 		FAA2CA5523DEB66A00FBDE39 /* StaggeredGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA2CA5323DEB66900FBDE39 /* StaggeredGridView.swift */; };
 		FAA2CA5923DEB73200FBDE39 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = FAA2CA5823DEB73200FBDE39 /* README.md */; };
 		FAAA2FCD241C42E4007021F7 /* ImageDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAA2FCC241C42E4007021F7 /* ImageDetailView.swift */; };
+		FAC1C78B2430694C00FFA885 /* StaticGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC1C78A2430694C00FFA885 /* StaticGridView.swift */; };
 		FAC9D4DE23DF8CE20007B7DD /* Grid in Frameworks */ = {isa = PBXBuildFile; productRef = FAC9D4DD23DF8CE20007B7DD /* Grid */; };
 		FAC9D4E023DF8CE90007B7DD /* Grid in Frameworks */ = {isa = PBXBuildFile; productRef = FAC9D4DF23DF8CE90007B7DD /* Grid */; };
 		FAC9D4E223DF8CEE0007B7DD /* Grid in Frameworks */ = {isa = PBXBuildFile; productRef = FAC9D4E123DF8CEE0007B7DD /* Grid */; };
@@ -117,7 +119,7 @@
 /* Begin PBXFileReference section */
 		FA9FFB6C242FFECD0047D145 /* SectionedGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionedGridView.swift; sourceTree = "<group>"; };
 		FA9FFB6F243005B80047D145 /* SectionedGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionedGridView.swift; sourceTree = "<group>"; };
-		FA9FFB71243006110047D145 /* swiftui-grid */ = {isa = PBXFileReference; lastKnownFileType = folder; name = "swiftui-grid"; sourceTree = "<group>"; };
+		FA9FFB73243008060047D145 /* StaticGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaticGridView.swift; sourceTree = "<group>"; };
 		FAA2C96723DEAECC00FBDE39 /* GridDemo iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "GridDemo iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAA2C96B23DEAECC00FBDE39 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		FAA2C96D23DEAECC00FBDE39 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -174,6 +176,8 @@
 		FAA2CA5323DEB66900FBDE39 /* StaggeredGridView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StaggeredGridView.swift; sourceTree = "<group>"; };
 		FAA2CA5823DEB73200FBDE39 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		FAAA2FCC241C42E4007021F7 /* ImageDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDetailView.swift; sourceTree = "<group>"; };
+		FAC1C7882430682100FFA885 /* swiftui-grid */ = {isa = PBXFileReference; lastKnownFileType = folder; name = "swiftui-grid"; sourceTree = "<group>"; };
+		FAC1C78A2430694C00FFA885 /* StaticGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaticGridView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -228,6 +232,14 @@
 			path = SectionedGrid;
 			sourceTree = "<group>";
 		};
+		FA9FFB72243007EA0047D145 /* StaticGrid */ = {
+			isa = PBXGroup;
+			children = (
+				FA9FFB73243008060047D145 /* StaticGridView.swift */,
+			);
+			path = StaticGrid;
+			sourceTree = "<group>";
+		};
 		FAA2C93B23DEAD2600FBDE39 = {
 			isa = PBXGroup;
 			children = (
@@ -240,7 +252,7 @@
 				FAA2CA3B23DEB64800FBDE39 /* GridDemo tvOS */,
 				FAA2C94923DEAE7B00FBDE39 /* Products */,
 				FAA2C99423DEB0A700FBDE39 /* Frameworks */,
-				FA9FFB71243006110047D145 /* swiftui-grid */,
+				FAC1C7882430682100FFA885 /* swiftui-grid */,
 			);
 			sourceTree = "<group>";
 		};
@@ -260,6 +272,7 @@
 		FAA2C96823DEAECC00FBDE39 /* GridDemo iOS */ = {
 			isa = PBXGroup;
 			children = (
+				FAC1C7892430693900FFA885 /* StaticGrid */,
 				FA9FFB6E2430057F0047D145 /* SectionedGrid */,
 				FAA2C98823DEB00100FBDE39 /* ModularGrid */,
 				FAA2C98B23DEB00100FBDE39 /* StaggeredGrid */,
@@ -322,6 +335,7 @@
 		FAA2C99D23DEB26200FBDE39 /* GridDemo macOS */ = {
 			isa = PBXGroup;
 			children = (
+				FA9FFB72243007EA0047D145 /* StaticGrid */,
 				FA9FFB6B242FFE510047D145 /* SectionedGrid */,
 				FAA2C9B323DEB31800FBDE39 /* ModularGrid */,
 				FAA2C9B623DEB31800FBDE39 /* StaggeredGrid */,
@@ -451,6 +465,14 @@
 				FAA2CA5323DEB66900FBDE39 /* StaggeredGridView.swift */,
 			);
 			path = StaggeredGrid;
+			sourceTree = "<group>";
+		};
+		FAC1C7892430693900FFA885 /* StaticGrid */ = {
+			isa = PBXGroup;
+			children = (
+				FAC1C78A2430694C00FFA885 /* StaticGridView.swift */,
+			);
+			path = StaticGrid;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -705,6 +727,7 @@
 				FAA2C96E23DEAECC00FBDE39 /* ContentView.swift in Sources */,
 				FAA2C98F23DEB00100FBDE39 /* ModularGridSettingsView.swift in Sources */,
 				FAA2C98E23DEB00100FBDE39 /* ModularGridView.swift in Sources */,
+				FAC1C78B2430694C00FFA885 /* StaticGridView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -713,6 +736,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA9FFB6D242FFECD0047D145 /* SectionedGridView.swift in Sources */,
+				FA9FFB74243008060047D145 /* StaticGridView.swift in Sources */,
 				FAA2C9B023DEB26B00FBDE39 /* Item.swift in Sources */,
 				FAA2C9AF23DEB26B00FBDE39 /* Color+Random.swift in Sources */,
 				FAA2C9BB23DEB31900FBDE39 /* StaggeredGridSettingsView.swift in Sources */,

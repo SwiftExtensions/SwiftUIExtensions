@@ -16,6 +16,10 @@ struct ContentView: View {
                     NavigationLink(destination: SectionedGridView()) {
                         Text("Sectioned Grid")
                     }
+                    
+                    NavigationLink(destination: StaticGridView()) {
+                        Text("Static Grid")
+                    }
                 }
             }
             .frame(minWidth: 200, maxWidth: 300)

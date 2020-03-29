@@ -26,6 +26,13 @@ struct ContentView: View {
                             Text("Sectioned Grid")
                         }
                     }
+                    
+                    NavigationLink(destination: StaticGridView()) {
+                        HStack {
+                            Image(systemName: "circle.grid.2x2.fill")
+                            Text("Static Grid")
+                        }
+                    }
                 }
             }
             .listStyle(

@@ -42,34 +42,34 @@ public struct ModularGridStyle: GridStyle {
             )
         )
         
-        preferences.items = layoutPreferences(
+        preferences = layoutPreferences(
             tracks: computedTracksCount,
             spacing: self.spacing,
             axis: self.axis,
             itemSize: itemSize,
-            preferences: preferences.items
+            preferences: preferences
         )
     }
     
-    private func layoutPreferences(tracks: Int, spacing: CGFloat, axis: Axis, itemSize: CGSize, preferences: [GridPreferences.Item]) -> [GridPreferences.Item] {
+    private func layoutPreferences(tracks: Int, spacing: CGFloat, axis: Axis, itemSize: CGSize, preferences: GridPreferences) -> GridPreferences {
         var tracksLengths = Array(repeating: CGFloat(0.0), count: tracks)
-        var newPreferences: [GridPreferences.Item] = []
+        var newPreferences: GridPreferences = GridPreferences(items: [])
         
-        preferences.forEach { preference in
+        preferences.items.forEach { preference in
             if let minValue = tracksLengths.min(), let indexMin = tracksLengths.firstIndex(of: minValue) {
                 let itemSizeWidth = itemSize.width
                 let itemSizeHeight = itemSize.height
                 let width = axis == .vertical ? itemSizeWidth * CGFloat(indexMin) + CGFloat(indexMin) * spacing : tracksLengths[indexMin]
                 let height = axis == .vertical ? tracksLengths[indexMin] : itemSizeHeight * CGFloat(indexMin) + CGFloat(indexMin) * spacing
         
-                let origin = CGPoint(x: 0 - width, y: 0 - height)
+                let origin = CGPoint(x: width, y: height)
                 tracksLengths[indexMin] += (axis == .vertical ? itemSizeHeight : itemSizeWidth) + spacing
                 
-                newPreferences.append(
-                    GridPreferences.Item(
+                newPreferences.merge(with:
+                    GridPreferences(items: [GridPreferences.Item(
                         id: preference.id,
                         bounds: CGRect(origin: origin, size: CGSize(width: itemSizeWidth, height: itemSizeHeight))
-                    )
+                    )])
                 )
             }
         }
