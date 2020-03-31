@@ -114,7 +114,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		FA68D97A2433C32600132A37 /*  */ = {isa = PBXFileReference; lastKnownFileType = folder; name = ""; sourceTree = "<group>"; };
+		FA68D97B2433C62B00132A37 /* swiftui-grid */ = {isa = PBXFileReference; lastKnownFileType = folder; name = "swiftui-grid"; path = ..; sourceTree = "<group>"; };
 		FA9FFB6C242FFECD0047D145 /* SectionedGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionedGridView.swift; sourceTree = "<group>"; };
 		FA9FFB6F243005B80047D145 /* SectionedGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionedGridView.swift; sourceTree = "<group>"; };
 		FA9FFB73243008060047D145 /* StaticGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaticGridView.swift; sourceTree = "<group>"; };
@@ -246,7 +246,7 @@
 				FAA2CA3B23DEB64800FBDE39 /* GridDemo tvOS */,
 				FAA2C94923DEAE7B00FBDE39 /* Products */,
 				FAA2C99423DEB0A700FBDE39 /* Frameworks */,
-				FA68D97A2433C32600132A37 /*  */,
+				FA68D97B2433C62B00132A37 /* swiftui-grid */,
 			);
 			sourceTree = "<group>";
 		};
