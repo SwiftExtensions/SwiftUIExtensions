@@ -17,8 +17,9 @@ struct StaticGridView: View {
                 Capsule().foregroundColor(.random)
             }
             .padding(16)
-            .frame(height: 300)
+            .frame(height: 200)
         }
+
         .navigationBarTitle("Static Grid", displayMode: .inline)
         .gridStyle(
             ModularGridStyle(columns: 5, rows: 2, spacing: 16)

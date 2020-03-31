@@ -13,6 +13,6 @@ public struct StaggeredGridStyle: GridStyle {
     }
     
     public func makeBody(configuration: Self.Configuration) -> some View {
-        StaggeredGridStyleView(items: configuration.items, tracks: tracks, axis: axis, spacing: spacing)
+        StaggeredGrid(items: configuration.items, tracks: tracks, axis: axis, spacing: spacing)
     }
 }

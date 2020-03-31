@@ -12,7 +12,7 @@ struct ModularGridView: View {
             Button(action: { self.showSettings = true }) {
                 Text("Settings")
             }
-            ScrollView(style.axes) {
+            ScrollView(style.axis == .horizontal ? .horizontal : .vertical) {
                 Grid(items) { item in
                     Card(title: "\(item.number)", color: item.color)
                         .onTapGesture {

@@ -1,6 +1,6 @@
 import SwiftUI
 
-struct StaggeredGridStyleView: View {
+struct StaggeredGrid: View {
     @State var preferences: GridPreferences = GridPreferences(size: .zero, items: [])
     let items: [GridItem]
     public var tracks: Tracks
@@ -56,7 +56,7 @@ struct StaggeredGridStyleView: View {
                 availableLength: size.height
             )
 
-        let size = CGSize(
+        let itemSize = CGSize(
             width: itemLength(
                 tracks: self.tracks,
                 spacing: self.spacing,
@@ -73,7 +73,7 @@ struct StaggeredGridStyleView: View {
             tracks: computedTracksCount,
             spacing: self.spacing,
             axis: self.axis,
-            itemSize: size,
+            itemSize: itemSize,
             preferences: preferences
         )
     }
@@ -91,7 +91,8 @@ struct StaggeredGridStyleView: View {
         
                 let origin = CGPoint(x: width, y: height)
                 tracksLengths[indexMin] += (axis == .vertical ? itemSizeHeight : itemSizeWidth) + spacing
-                
+                print(tracksLengths)
+                print(itemSizeWidth, itemSizeHeight)
                 newPreferences.merge(with:
                     GridPreferences(items: [GridPreferences.Item(
                         id: preference.id,

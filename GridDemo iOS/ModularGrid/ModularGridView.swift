@@ -7,7 +7,7 @@ struct ModularGridView: View {
     @State var style = ModularGridStyle(.vertical, columns: .min(100), rows: .fixed(100))
     
     var body: some View {
-        ScrollView {
+        ScrollView(style.axis == .horizontal ? .horizontal : .vertical) {
             Grid(items) { item in
                 Card(title: "\(item.number)", color: item.color)
             }

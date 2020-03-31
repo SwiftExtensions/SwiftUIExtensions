@@ -11,7 +11,7 @@ struct StaggeredGridView: View {
                 Text("Settings")
             }
         
-            ScrollView(style.axes) {
+            ScrollView(style.axis == .horizontal ? .horizontal : .vertical) {
                 Grid(1...69, id: \.self) { index in
                     Image("\(index)")
                         .resizable()

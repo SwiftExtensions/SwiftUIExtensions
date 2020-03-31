@@ -41,5 +41,5 @@ func tracksCount(tracks: Tracks, spacing: CGFloat, availableLength: CGFloat) -> 
 
 func itemLength(tracksCount: Int, spacing: CGFloat, availableLength: CGFloat) -> CGFloat {
     let width = availableLength - (spacing * (CGFloat(tracksCount) - 1))
-    return (width / CGFloat(tracksCount))
+    return max(0, (width / CGFloat(tracksCount)))
 }

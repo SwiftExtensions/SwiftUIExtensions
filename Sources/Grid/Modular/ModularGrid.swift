@@ -1,14 +1,12 @@
 import SwiftUI
 
 struct ModularGrid: View {
-    @State var preferences: GridPreferences = GridPreferences(size: .zero, items: [])
+    @State var preferences = GridPreferences()
     let items: [GridItem]
     var columns: Tracks
     var rows: Tracks
     var axis: Axis
     var spacing: CGFloat
-    var autoWidth: Bool = true
-    var autoHeight: Bool = true
     
     var body: some View {
         GeometryReader { geometry in
@@ -16,8 +14,8 @@ struct ModularGrid: View {
                 ForEach(self.items) { item in
                     item.view
                         .frame(
-                            width: self.autoWidth ? self.preferences[item.id]?.bounds.width : nil,
-                            height: self.autoHeight ? self.preferences[item.id]?.bounds.height : nil
+                            width: self.preferences[item.id]?.bounds.width,
+                            height: self.preferences[item.id]?.bounds.height
                         )
                         .alignmentGuide(.leading, computeValue: { _ in geometry.size.width - (self.preferences[item.id]?.bounds.origin.x ?? 0) })
                         .alignmentGuide(.top, computeValue: { _ in geometry.size.height - (self.preferences[item.id]?.bounds.origin.y ?? 0) })
@@ -38,8 +36,9 @@ struct ModularGrid: View {
             self.preferences = preferences
         }
     }
+
     
-    public func transform(preferences: inout GridPreferences, in size: CGSize) {
+    @inlinable func transform(preferences: inout GridPreferences, in size: CGSize) {
         let computedTracksCount = self.axis == .vertical ?
             tracksCount(
                 tracks: self.columns,
@@ -87,7 +86,6 @@ struct ModularGrid: View {
         
                 let origin = CGPoint(x: width, y: height)
                 tracksLengths[indexMin] += (axis == .vertical ? itemSizeHeight : itemSizeWidth) + spacing
-                
                 newPreferences.merge(with:
                     GridPreferences(items: [GridPreferences.Item(
                         id: preference.id,
