@@ -24,7 +24,8 @@ struct ModularGrid: View {
                 }
             }
             .transformPreference(GridPreferencesKey.self) {
-                self.transform(preferences: &$0, in: geometry.size)
+                ModularGridLayout(axis: self.axis, columns: self.columns, rows: self.rows, spacing: self.spacing)
+                    .transform(preferences: &$0, in: geometry.size)
             }
         }
         .frame(
@@ -35,66 +36,5 @@ struct ModularGrid: View {
         .onPreferenceChange(GridPreferencesKey.self) { preferences in
             self.preferences = preferences
         }
-    }
-
-    
-    @inlinable func transform(preferences: inout GridPreferences, in size: CGSize) {
-        let computedTracksCount = self.axis == .vertical ?
-            tracksCount(
-                tracks: self.columns,
-                spacing: self.spacing,
-                availableLength: size.width
-            ) :
-            tracksCount(
-                tracks: self.rows,
-                spacing: self.spacing,
-                availableLength: size.height
-            )
-        
-        let itemSize = CGSize(
-            width: itemLength(
-                tracks: self.columns,
-                spacing: self.spacing,
-                availableLength: size.width
-            ),
-            height: itemLength(
-                tracks: self.rows,
-                spacing: self.spacing,
-                availableLength: size.height
-            )
-        )
-        
-        preferences = layoutPreferences(
-            tracks: computedTracksCount,
-            spacing: self.spacing,
-            axis: self.axis,
-            itemSize: itemSize,
-            preferences: preferences
-        )
-    }
-    
-    private func layoutPreferences(tracks: Int, spacing: CGFloat, axis: Axis, itemSize: CGSize, preferences: GridPreferences) -> GridPreferences {
-        var tracksLengths = Array(repeating: CGFloat(0.0), count: tracks)
-        var newPreferences: GridPreferences = GridPreferences(items: [])
-        
-        preferences.items.forEach { preference in
-            if let minValue = tracksLengths.min(), let indexMin = tracksLengths.firstIndex(of: minValue) {
-                let itemSizeWidth = itemSize.width
-                let itemSizeHeight = itemSize.height
-                let width = axis == .vertical ? itemSizeWidth * CGFloat(indexMin) + CGFloat(indexMin) * spacing : tracksLengths[indexMin]
-                let height = axis == .vertical ? tracksLengths[indexMin] : itemSizeHeight * CGFloat(indexMin) + CGFloat(indexMin) * spacing
-        
-                let origin = CGPoint(x: width, y: height)
-                tracksLengths[indexMin] += (axis == .vertical ? itemSizeHeight : itemSizeWidth) + spacing
-                newPreferences.merge(with:
-                    GridPreferences(items: [GridPreferences.Item(
-                        id: preference.id,
-                        bounds: CGRect(origin: origin, size: CGSize(width: itemSizeWidth, height: itemSizeHeight))
-                    )])
-                )
-            }
-        }
-
-        return newPreferences
     }
 }

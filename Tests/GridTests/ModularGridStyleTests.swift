@@ -3,7 +3,7 @@ import XCTest
 
 class ModularGridStyleTests: XCTestCase {
     func testModularGridStyleWithOneRow() {
-        let style = ModularGridStyle(.vertical, columns: 4, rows: 1, spacing: 0)
+        let layout = ModularGridLayout(axis: .vertical, columns: 4, rows: 1, spacing: 0)
         
         var preferences = GridPreferences(items: [
             GridPreferences.Item(id: 1, bounds: .zero),
@@ -12,7 +12,7 @@ class ModularGridStyleTests: XCTestCase {
             GridPreferences.Item(id: 4, bounds: .zero)
         ])
         
-        style.transform(preferences: &preferences, in: CGSize(width: 100, height: 50))
+        layout.transform(preferences: &preferences, in: CGSize(width: 100, height: 50))
         
         XCTAssertEqual(preferences, GridPreferences(
             size: CGSize(width: 100, height: 50),
@@ -26,7 +26,7 @@ class ModularGridStyleTests: XCTestCase {
     }
     
     func testModularGridStyleWithTwoRows() {
-        let style = ModularGridStyle(.vertical, columns: 2, rows: .fixed(50), spacing: 0)
+        let layout = ModularGridLayout(axis: .vertical, columns: 2, rows: .fixed(50), spacing: 0)
         
         var preferences = GridPreferences(items: [
             GridPreferences.Item(id: 1, bounds: .zero),
@@ -35,7 +35,7 @@ class ModularGridStyleTests: XCTestCase {
             GridPreferences.Item(id: 4, bounds: .zero)
         ])
         
-        style.transform(preferences: &preferences, in: CGSize(width: 100, height: 100))
+        layout.transform(preferences: &preferences, in: CGSize(width: 100, height: 100))
         
         XCTAssertEqual(preferences, GridPreferences(
             size: CGSize(width: 100, height: 100),
@@ -49,12 +49,12 @@ class ModularGridStyleTests: XCTestCase {
     }
     
     func testModularGridStyleWithZeroSizeAndNoItems() {
-        let style = ModularGridStyle(.vertical, columns: 5, rows: 5, spacing: 0)
+        let layout = ModularGridLayout(axis: .vertical, columns: 5, rows: 5, spacing: 0)
         
         var preferences = GridPreferences(items: [])
         XCTAssertEqual(preferences.size, .zero)
         
-        style.transform(preferences: &preferences, in: .zero)
+        layout.transform(preferences: &preferences, in: .zero)
         XCTAssertEqual(preferences.size, .zero)
         XCTAssertEqual(preferences.items, [])
         XCTAssertEqual(preferences.items, [])
