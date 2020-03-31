@@ -1,5 +1,5 @@
 import SwiftUI
 
 struct GridStyleKey: EnvironmentKey {
-    static let defaultValue: GridStyle = ModularGridStyle(columns: .min(100), rows: .fixed(100))
+    static let defaultValue: AnyGridStyle = AnyGridStyle(ModularGridStyle(columns: .min(100), rows: .fixed(100)))
 }

@@ -176,8 +176,8 @@
 		FAA2CA5323DEB66900FBDE39 /* StaggeredGridView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StaggeredGridView.swift; sourceTree = "<group>"; };
 		FAA2CA5823DEB73200FBDE39 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		FAAA2FCC241C42E4007021F7 /* ImageDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDetailView.swift; sourceTree = "<group>"; };
-		FAC1C7882430682100FFA885 /* swiftui-grid */ = {isa = PBXFileReference; lastKnownFileType = folder; name = "swiftui-grid"; sourceTree = "<group>"; };
 		FAC1C78A2430694C00FFA885 /* StaticGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaticGridView.swift; sourceTree = "<group>"; };
+		FAC379222432E5170058D04E /*  */ = {isa = PBXFileReference; lastKnownFileType = folder; name = ""; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -252,7 +252,7 @@
 				FAA2CA3B23DEB64800FBDE39 /* GridDemo tvOS */,
 				FAA2C94923DEAE7B00FBDE39 /* Products */,
 				FAA2C99423DEB0A700FBDE39 /* Frameworks */,
-				FAC1C7882430682100FFA885 /* swiftui-grid */,
+				FAC379222432E5170058D04E /*  */,
 			);
 			sourceTree = "<group>";
 		};

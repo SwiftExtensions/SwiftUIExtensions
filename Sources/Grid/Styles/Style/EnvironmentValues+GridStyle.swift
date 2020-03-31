@@ -1,7 +1,7 @@
 import SwiftUI
 
 public extension EnvironmentValues {
-    var gridStyle: GridStyle {
+    var gridStyle: AnyGridStyle {
         get {
             return self[GridStyleKey.self]
         }

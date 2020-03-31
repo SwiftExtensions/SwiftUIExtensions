@@ -1,7 +1,7 @@
 import SwiftUI
 
 /// Modular `Grid` style.
-public struct ModularGridStyle: GridStyle {
+public struct ModularGridStyle: GridStyle, Equatable {
     public var columns: Tracks
     public var rows: Tracks
     public var axis: Axis
@@ -14,6 +14,10 @@ public struct ModularGridStyle: GridStyle {
         self.rows = rows
         self.axis = axis
         self.spacing = spacing
+    }
+    
+    public func makeBody(configuration: Self.Configuration) -> some View {
+        ModularGridStyleView(style: self, items: configuration.items)
     }
     
     public func transform(preferences: inout GridPreferences, in size: CGSize) {
@@ -75,5 +79,41 @@ public struct ModularGridStyle: GridStyle {
         }
 
         return newPreferences
+    }
+}
+
+
+private struct ModularGridStyleView: View {
+    let style: ModularGridStyle
+    @State var preferences: GridPreferences = GridPreferences(size: .zero, items: [])
+    let items: [GridItem]
+    
+    var body: some View {
+        GeometryReader { geometry in
+            ZStack(alignment: .topLeading) {
+                ForEach(self.items) { item in
+                    item.view
+                        .frame(
+                            width: self.style.autoWidth ? self.preferences[item.id]?.bounds.width : nil,
+                            height: self.style.autoHeight ? self.preferences[item.id]?.bounds.height : nil
+                        )
+                        .alignmentGuide(.leading, computeValue: { _ in geometry.size.width - (self.preferences[item.id]?.bounds.origin.x ?? 0) })
+                        .alignmentGuide(.top, computeValue: { _ in geometry.size.height - (self.preferences[item.id]?.bounds.origin.y ?? 0) })
+                        .background(GridPreferencesModifier(id: item.id, bounds: self.preferences[item.id]?.bounds ?? .zero))
+                        .anchorPreference(key: GridItemBoundsPreferencesKey.self, value: .bounds) { [geometry[$0]] }
+                }
+            }
+            .transformPreference(GridPreferencesKey.self) {
+                self.style.transform(preferences: &$0, in: geometry.size)
+            }
+        }
+        .frame(
+            width: self.style.axis == .horizontal ? self.preferences.size.width : nil,
+            height: self.style.axis == .vertical ? self.preferences.size.height : nil,
+            alignment: .topLeading
+        )
+        .onPreferenceChange(GridPreferencesKey.self) { preferences in
+            self.preferences = preferences
+        }
     }
 }
