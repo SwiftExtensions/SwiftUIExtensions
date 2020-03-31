@@ -69,9 +69,6 @@
 		FAA2CA5923DEB73200FBDE39 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = FAA2CA5823DEB73200FBDE39 /* README.md */; };
 		FAAA2FCD241C42E4007021F7 /* ImageDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAA2FCC241C42E4007021F7 /* ImageDetailView.swift */; };
 		FAC1C78B2430694C00FFA885 /* StaticGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC1C78A2430694C00FFA885 /* StaticGridView.swift */; };
-		FAC9D4DE23DF8CE20007B7DD /* Grid in Frameworks */ = {isa = PBXBuildFile; productRef = FAC9D4DD23DF8CE20007B7DD /* Grid */; };
-		FAC9D4E023DF8CE90007B7DD /* Grid in Frameworks */ = {isa = PBXBuildFile; productRef = FAC9D4DF23DF8CE90007B7DD /* Grid */; };
-		FAC9D4E223DF8CEE0007B7DD /* Grid in Frameworks */ = {isa = PBXBuildFile; productRef = FAC9D4E123DF8CEE0007B7DD /* Grid */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -117,6 +114,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		FA68D97A2433C32600132A37 /*  */ = {isa = PBXFileReference; lastKnownFileType = folder; name = ""; sourceTree = "<group>"; };
 		FA9FFB6C242FFECD0047D145 /* SectionedGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionedGridView.swift; sourceTree = "<group>"; };
 		FA9FFB6F243005B80047D145 /* SectionedGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionedGridView.swift; sourceTree = "<group>"; };
 		FA9FFB73243008060047D145 /* StaticGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaticGridView.swift; sourceTree = "<group>"; };
@@ -176,7 +174,6 @@
 		FAA2CA5323DEB66900FBDE39 /* StaggeredGridView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StaggeredGridView.swift; sourceTree = "<group>"; };
 		FAA2CA5823DEB73200FBDE39 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		FAAA2FCC241C42E4007021F7 /* ImageDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDetailView.swift; sourceTree = "<group>"; };
-		FAC1C7882430682100FFA885 /* swiftui-grid */ = {isa = PBXFileReference; lastKnownFileType = folder; name = "swiftui-grid"; sourceTree = "<group>"; };
 		FAC1C78A2430694C00FFA885 /* StaticGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaticGridView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -193,7 +190,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FAC9D4DE23DF8CE20007B7DD /* Grid in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -201,7 +197,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FAC9D4E023DF8CE90007B7DD /* Grid in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -209,7 +204,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FAC9D4E223DF8CEE0007B7DD /* Grid in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -252,7 +246,7 @@
 				FAA2CA3B23DEB64800FBDE39 /* GridDemo tvOS */,
 				FAA2C94923DEAE7B00FBDE39 /* Products */,
 				FAA2C99423DEB0A700FBDE39 /* Frameworks */,
-				FAC1C7882430682100FFA885 /* swiftui-grid */,
+				FA68D97A2433C32600132A37 /*  */,
 			);
 			sourceTree = "<group>";
 		};
@@ -512,7 +506,6 @@
 			);
 			name = "GridDemo macOS";
 			packageProductDependencies = (
-				FAC9D4DD23DF8CE20007B7DD /* Grid */,
 			);
 			productName = "GridDemo macOS";
 			productReference = FAA2C99C23DEB26200FBDE39 /* GridDemo macOS.app */;
@@ -566,7 +559,6 @@
 			);
 			name = "GridDemo watchOS WatchKit Extension";
 			packageProductDependencies = (
-				FAC9D4DF23DF8CE90007B7DD /* Grid */,
 			);
 			productName = "GridDemo watchOS WatchKit Extension";
 			productReference = FAA2CA0923DEB4D800FBDE39 /* GridDemo watchOS WatchKit Extension.appex */;
@@ -586,7 +578,6 @@
 			);
 			name = "GridDemo tvOS";
 			packageProductDependencies = (
-				FAC9D4E123DF8CEE0007B7DD /* Grid */,
 			);
 			productName = "GridDemo tvOS";
 			productReference = FAA2CA3A23DEB64800FBDE39 /* GridDemo tvOS.app */;
@@ -1809,18 +1800,6 @@
 		FA6203C223F8AD77009CB0C9 /* Grid */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = FA6203C123F8AD77009CB0C9 /* XCRemoteSwiftPackageReference "swiftui-grid" */;
-			productName = Grid;
-		};
-		FAC9D4DD23DF8CE20007B7DD /* Grid */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = Grid;
-		};
-		FAC9D4DF23DF8CE90007B7DD /* Grid */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = Grid;
-		};
-		FAC9D4E123DF8CEE0007B7DD /* Grid */ = {
-			isa = XCSwiftPackageProductDependency;
 			productName = Grid;
 		};
 /* End XCSwiftPackageProductDependency section */
