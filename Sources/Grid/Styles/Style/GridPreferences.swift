@@ -11,7 +11,7 @@ public struct GridPreferences: Equatable {
 
     public var size: CGSize
 
-    public init(size: CGSize = .zero, items: [Item]) {
+    public init(size: CGSize = .zero, items: [Item] = []) {
         self.size = size
         self.items = items
     }
