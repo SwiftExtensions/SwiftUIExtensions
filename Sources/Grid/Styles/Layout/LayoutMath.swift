@@ -17,6 +17,7 @@ func tracksCount(tracks: Tracks, spacing: CGFloat, availableLength: CGFloat) -> 
     case .count(let count):
         return count
     case .fixed(let length):
+         precondition(length > 0, "Minimum track length should be greated than 0")
         let columnCount = Int(availableLength / length)
         
         for columns in (0...columnCount).reversed() {
@@ -26,8 +27,9 @@ func tracksCount(tracks: Tracks, spacing: CGFloat, availableLength: CGFloat) -> 
             }
         }
         return 1
-    case .min(let minWidth):
-        let columnCount = Int(availableLength / minWidth)
+    case .min(let length):
+        precondition(length > 0, "Minimum track length should be greated than 0")
+        let columnCount = Int(availableLength / length)
         
         for columns in (0...columnCount).reversed() {
             let suggestedItemWidth = itemLength(tracksCount: columns, spacing: spacing, availableLength: availableLength)
