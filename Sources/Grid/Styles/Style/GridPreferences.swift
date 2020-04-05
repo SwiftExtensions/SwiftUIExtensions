@@ -5,6 +5,11 @@ public struct GridPreferences: Equatable {
     public struct Item: Equatable {
         public let id: AnyHashable
         public let bounds: CGRect
+        
+        public init(id: AnyHashable, bounds: CGRect) {
+            self.id = id
+            self.bounds = bounds
+        }
     }
     
     public var items: [Item]
