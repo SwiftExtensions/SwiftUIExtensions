@@ -1,4 +1,4 @@
-[![Build Status](https://github.com/spacenation/swiftui-grid/workflows/ci/badge.svg)](https://github.com/spacenation/swiftui-grid/actions)
+[![Build Status](https://github.com/swift-extensions/swiftui-grid/workflows/ci/badge.svg)](https://github.com/swift-extensions/swiftui-grid/actions)
 
 ## SwiftUI Grid
 SwiftUI Grid view layout with custom styles.
