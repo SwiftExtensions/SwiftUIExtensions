@@ -31,7 +31,9 @@ public struct Grid<Content>: View where Content: View {
             alignment: .topLeading
         )
         .onPreferenceChange(GridPreferencesKey.self) { preferences in
-            self.preferences = preferences
+            DispatchQueue.main.async {
+                self.preferences = preferences
+            }
         }
     }
 }
